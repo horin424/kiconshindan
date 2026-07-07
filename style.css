@@ -921,9 +921,7 @@ table {
 
 /* Concerns Area */
 .concerns {
-    padding: 0 0 60px 0;
-    background-image: url("images/backgrounds/wall-texture-background.png");
-    background-repeat: repeat;
+    padding: 60px 0;
 }
 
 .concerns__intro {
@@ -945,7 +943,7 @@ table {
 
 .concerns__intro-body {
     max-width: var(--max-width);
-    margin: 0 auto;
+    margin: 40px auto 0;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
@@ -1257,6 +1255,926 @@ table {
     font-size: 1.15rem;
 }
 
+/* Attorney Profile Area */
+.attorney {
+    background-color: var(--color-bg-light);
+    padding: 60px 0;
+}
+
+.attorney__header {
+    background-color: var(--color-primary);
+    color: var(--color-bg-light);
+    padding: 30px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.attorney__header-text {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.attorney__container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.attorney__office-title {
+    font-size: 1.1rem;
+}
+
+.attorney__name {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 8px;
+}
+
+.attorney__career-table th {
+    background-color: var(--color-bg-base);
+    font-weight: 700;
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+    width: 160px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.attorney__career-table td {
+    padding: 12px;
+    vertical-align: top;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.attorney__photo-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.attorney__photo {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.attorney__philosophy {
+    background-image: url("images/backgrounds/philosophy-bg.svg");
+    background-size: 100% 100%;
+    padding: 40px 20px;
+    max-width: var(--max-width);
+    margin: 40px auto 0;
+}
+
+.attorney__philosophy-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.attorney__media {
+    max-width: var(--max-width);
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+/* Benefits Area */
+.benefits {
+    padding: 60px 0;
+}
+
+.benefits__intro {
+    margin-bottom: 60px;
+}
+
+.benefits__intro-header {
+    background-color: var(--color-primary);
+    color: var(--color-bg-light);
+    padding: 24px 20px;
+    text-align: center;
+}
+
+.benefits__intro-header-dots {
+    display: none;
+}
+
+.benefits__intro-header-text {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.benefits__intro-card {
+    background-color: var(--color-bg-peach);
+    border-radius: 8px;
+    padding: 30px 20px;
+    max-width: var(--max-width);
+    margin: 30px auto 0;
+    box-shadow: var(--box-shadow);
+    position: relative;
+}
+
+.benefits__intro-card-dots {
+    display: none;
+}
+
+.benefits__intro-card-title {
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.benefits__intro-card-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.benefits__intro-quotes {
+    background-color: var(--color-bg-light);
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.benefits__intro-quote-text {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.8;
+}
+
+.benefits__intro-desc {
+    font-size: 1.1rem;
+}
+
+.benefits__text-accent {
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+.benefits__why {
+    margin-bottom: 60px;
+}
+
+.benefits__why-heading {
+    background-color: var(--color-bg-light);
+    padding: 16px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    max-width: 400px;
+    margin: 0 auto 30px;
+}
+
+.benefits__why-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.benefits__why-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.benefits__why-photo {
+    max-width: 320px;
+    width: 100%;
+    align-self: center;
+}
+
+.benefits__why-details {
+    background-color: var(--color-bg-peach);
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.benefits__why-icons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.benefits__why-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.benefits__why-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.benefits__text-em {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--color-primary);
+}
+
+.benefits__text-strong {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 900;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 12px;
+    margin: 16px 0;
+}
+
+.benefits__points {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.benefits__points-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.benefits__points-line {
+    border: none;
+    border-top: 3px solid var(--color-primary);
+    margin: 10px auto;
+    max-width: 600px;
+}
+
+.benefits__points-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.benefits__points-title-accent {
+    color: var(--color-accent);
+    font-weight: 900;
+}
+
+.benefits__points-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.benefits__point-card {
+    background-color: var(--color-bg-rose-tint);
+    border-radius: 50%;
+    /* Recreated circle effect cleanly */
+    aspect-ratio: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    max-width: 320px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.benefits__point-num {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: var(--font-impact);
+    font-size: 4rem;
+    color: rgba(247, 231, 235, 0.6);
+    line-height: 1;
+}
+
+.benefits__point-inner {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.benefits__point-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.benefits__point-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.benefits__text-pink {
+    color: var(--color-accent);
+}
+
+.benefits__footer {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.benefits__footer-text {
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.benefits__footer-image {
+    max-width: 480px;
+    width: 100%;
+}
+
+/* Reasons Area */
+.reasons {
+    background-color: #ede2db;
+    padding: 60px 20px;
+}
+
+.reasons__heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.reasons__heading-text {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+.reasons__heading-line {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 35px solid var(--color-accent);
+}
+
+.reasons__cards {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.reasons__card {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.reasons__card-header {
+    background-color: var(--color-primary);
+    color: var(--color-bg-light);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.reasons__card-num-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-accent);
+    padding: 4px 10px;
+    border-radius: 4px;
+    min-width: 60px;
+}
+
+.reasons__card-label {
+    font-size: 0.75rem;
+    font-weight: 900;
+}
+
+.reasons__card-num {
+    font-family: var(--font-impact);
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.reasons__card-title {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.reasons__card-body {
+    padding: 30px 20px;
+}
+
+.reasons__card-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.reasons__text-bold {
+    font-weight: 700;
+}
+
+.reasons__text-strong {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 12px;
+    margin: 16px 0;
+}
+
+.reasons__text-accent {
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+/* Pricing Area */
+.pricing {
+    padding: 60px 0;
+}
+
+.pricing__heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pricing__heading-line {
+    border: none;
+    border-top: 3px solid var(--color-primary);
+    margin: 10px auto;
+    max-width: 320px;
+}
+
+.pricing__heading-text {
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+.pricing__subtitle {
+    text-align: center;
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.pricing__cta-bar {
+    background-color: var(--color-primary);
+    color: var(--color-bg-light);
+    padding: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pricing__cta-bar-text {
+    font-size: 1.15rem;
+}
+
+.pricing__text-em {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-accent-light);
+}
+
+.pricing__cards-grid {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.pricing__card {
+    background-color: var(--color-bg-peach);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing__card-header {
+    background-color: #e8b7c6;
+    padding: 16px;
+    text-align: center;
+}
+
+.pricing__card-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.pricing__card-body {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex-grow: 1;
+}
+
+.pricing__card-desc {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.pricing__badge {
+    background-color: var(--color-accent-dark);
+    color: var(--color-bg-light);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+.pricing__badge-text {
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.pricing__table {
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-primary);
+}
+
+.pricing__table th {
+    background-color: var(--color-accent);
+    color: var(--color-bg-light);
+    font-weight: 700;
+    padding: 16px;
+    width: 40%;
+    text-align: center;
+    border-bottom: 1px solid var(--color-bg-light);
+}
+
+.pricing__table td {
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pricing__table-free {
+    color: var(--color-accent);
+    font-weight: 900;
+    font-size: 1.4rem;
+}
+
+.pricing__table-label {
+    font-size: 1rem;
+}
+
+.pricing__table-number {
+    font-family: var(--font-impact);
+    color: var(--color-accent);
+    font-size: 2.2rem;
+}
+
+.pricing__table-percent,
+.pricing__table-unit {
+    color: var(--color-accent);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.pricing__table-tax {
+    font-size: 0.8rem;
+}
+
+.pricing__note {
+    background-color: var(--color-accent-light);
+    border-radius: 12px;
+    padding: 24px;
+    max-width: var(--max-width);
+    margin: 40px auto 0;
+    text-align: center;
+}
+
+.pricing__note-text {
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+/* Service Flow Area */
+.flow {
+    padding: 60px 0;
+}
+
+.flow__heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.flow__heading-line {
+    border: none;
+    border-top: 3px solid var(--color-primary);
+    margin: 10px auto;
+    max-width: 320px;
+}
+
+.flow__heading-text {
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+.flow__steps {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flow__step {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-light);
+    border-bottom: 2px solid var(--color-accent-light);
+    padding: 30px 20px;
+    gap: 24px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+.flow__step--alt {
+    background-color: var(--color-bg-peach);
+}
+
+.flow__step-num {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.flow__step-title {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 16px;
+}
+
+.flow__step-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.flow__text-accent {
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+.flow__text-note {
+    font-size: 0.9rem;
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+.flow__text-em {
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+.flow__text-pink {
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+.flow__step-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.flow__step-image {
+    max-width: 280px;
+    border-radius: 8px;
+}
+
+.flow__arrow-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.flow__arrow {
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 26px solid var(--color-accent);
+}
+
+/* FAQ Area */
+.faq {
+    padding: 60px 0;
+    background-color: var(--color-bg-light);
+}
+
+.faq__container {
+    max-width: var(--max-width);
+    margin: 40px auto 0;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq__item {
+    border: 1px solid var(--color-accent-light);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq__question {
+    background-color: var(--color-accent-light);
+    padding: 20px;
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    list-style: none;
+}
+
+.faq__question::-webkit-details-marker {
+    display: none;
+}
+
+.faq__question::after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+    transform: rotate(45deg);
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+}
+
+details[open] .faq__question::after {
+    transform: rotate(-135deg);
+}
+
+.faq__answer-wrap {
+    padding: 24px;
+    background-color: var(--color-bg-light);
+    display: flex;
+    gap: 16px;
+    border-top: 1px solid var(--color-accent-light);
+}
+
+.faq__answer-label {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-accent);
+}
+
+.faq__answer {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Final Message Area */
+.message {
+    padding: 60px 20px;
+}
+
+.message__container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.message__card {
+    background-color: var(--color-accent-light);
+    border-radius: 20px;
+    padding: 40px 20px;
+}
+
+.message__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.message__text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.message__lead {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.message__signature {
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    text-align: right;
+}
+
+.message__visual {
+    display: flex;
+    justify-content: center;
+}
+
+.message__photo {
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+/* Office Info Area */
+.office {
+    padding: 60px 0;
+}
+
+.office__heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.office__heading-line {
+    border: none;
+    border-top: 3px solid var(--color-primary);
+    margin: 10px auto;
+    max-width: 320px;
+}
+
+.office__heading-text {
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+.office__container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.office__content {
+    display: flex;
+    gap: 30px;
+}
+
+.office__sidebar {
+    display: none;
+    /* Decorative pixel line elements simplified */
+}
+
+.office__details {
+    font-style: normal;
+    width: 100%;
+}
+
+.office__table {
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border-dark);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.office__table th {
+    background-color: var(--color-accent-light);
+    font-weight: 700;
+    padding: 16px;
+    width: 30%;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+}
+
+.office__table td {
+    padding: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+}
+
+.office__table tr:last-child th,
+.office__table tr:last-child td {
+    border-bottom: none;
+}
+
+.office__table a {
+    color: var(--color-accent-dark);
+    text-decoration: underline;
+}
+
 /* ==========================================================================
    6. RESPONSIVE BREAKPOINTS (FLUID & MOBILE FIRST WRAPPER)
    ========================================================================== */
@@ -1350,5 +2268,83 @@ table {
 
     .concerns__rights-text {
         flex: 1;
+    }
+
+    /* Attorney Profile Area */
+    .attorney__container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .attorney__profile {
+        width: 60%;
+    }
+
+    .attorney__photo-wrapper {
+        width: 40%;
+    }
+
+    /* Benefits Area */
+    .benefits__why-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .benefits__why-photo {
+        width: 30%;
+    }
+
+    .benefits__why-details {
+        width: 70%;
+    }
+
+    .benefits__points-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Pricing Area */
+    .pricing__cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Service Flow Area */
+    .flow__step {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .flow__step--alt {
+        flex-direction: row-reverse;
+    }
+
+    .flow__step-main {
+        flex: 1;
+    }
+
+    .flow__step-visual {
+        width: 30%;
+    }
+
+    /* Final Message Area */
+    .message__content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .message__text {
+        flex: 1;
+    }
+
+    .message__visual {
+        width: 35%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* Benefits Area */
+    .benefits__points-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
