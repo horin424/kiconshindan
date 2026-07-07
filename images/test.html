@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ====================================================================
+         CSS STYLES FOR THE CORE CONTENT SECTIONS
+         ==================================================================== */
+    
+        /* --- SECTION 1: INTUITION (違和感について) --- */
+        .intuition {
+            position: relative;
+            padding: 80px 0;
+            overflow: hidden;
+        }
+    
+        /* Renders the background image dynamically behind the content without blocking text readability */
+        .intuition::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('images/7ef95a962ab3a742d427c5217c1f3007b8b0011a.jpeg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+            /* Preserves the original 0.3 opacity */
+            z-index: 1;
+        }
+    
+        .intuition__container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+    
+        /* Header banner with pink background */
+        .intuition__header {
+            background-color: var(--color-primary-pink);
+            color: var(--color-white);
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: var(--border-radius-sm);
+        }
+    
+        .intuition__title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.4;
+            letter-spacing: 2.5px;
+        }
+    
+        /* Grid layout for the character and text area */
+        .intuition__grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: center;
+        }
+    
+        /* Left column: woman image */
+        .intuition__character-box {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .intuition__character-img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            transform: scale(1.1);
+            /* Fits character perfectly */
+        }
+    
+        /* Recreates the elegant original gradient floor reflection */
+        .intuition__character-floor {
+            width: 100%;
+            height: 40px;
+            background-image: linear-gradient(90deg, #b5b2b1 0%, #e8e7e4 100%);
+            margin-top: -10px;
+            filter: blur(2px);
+            border-radius: 50%;
+        }
+    
+        /* Right column: text and quotes */
+        .intuition__text-area {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    
+        .intuition__quote-box {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+    
+        .intuition__quote-row {
+            position: relative;
+            display: inline-block;
+            align-self: flex-start;
+            z-index: 1;
+        }
+    
+        /* Custom pink highlights behind dialogue */
+        .intuition__quote-row::before {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 18px;
+            background-color: #f4c9d2;
+            z-index: -1;
+        }
+    
+        .intuition__quote-text {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-text-dark);
+            letter-spacing: 2px;
+            filter: drop-shadow(2px 2px 4px #fff);
+        }
+    
+        .intuition__paragraph {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: var(--color-text-dark);
+            filter: drop-shadow(2px 2px 4px #fff);
+        }
+    
+        .intuition__paragraph--highlight {
+            font-weight: 700;
+            color: var(--color-navy);
+        }
+    
+        .intuition__definition {
+            background-color: var(--color-primary-pink);
+            border-radius: var(--border-radius-lg);
+            padding: 25px 40px;
+            color: var(--color-white);
+            margin-top: 20px;
+        }
+    
+        .intuition__definition-text {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: 1.6;
+            letter-spacing: 2px;
+        }
+    
+        /* Decorative bullets */
+        .intuition__dots-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+    
+        .intuition__dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--color-white);
+            border-radius: 50%;
+        }
+    
+    
+        /* --- SECTION 2: RIGHTS & LAWS (貞操権侵害について) --- */
+        .rights {
+            padding: 80px 0;
+            background-color: var(--color-white);
+        }
+    
+        .rights__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+    
+        .rights__headline-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1.5fr;
+            gap: 30px;
+            align-items: center;
+            width: 100%;
+        }
+    
+        .rights__circle-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    
+        .rights__intro-text {
+            font-family: var(--font-serif);
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 1.6;
+            color: var(--color-text-dark);
+        }
+    
+        .rights__callout-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 40px;
+            align-items: center;
+            width: 100%;
+        }
+    
+        .rights__explanation {
+            border: 5px solid var(--color-primary-pink);
+            border-radius: var(--border-radius-sm);
+            padding: 35px;
+            background-color: var(--color-white);
+        }
+    
+        .rights__explanation-title {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--color-text-dark);
+            margin-bottom: 20px;
+        }
+    
+        .rights__explanation-lead {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--color-primary-pink);
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+    
+        .rights__explanation-body {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--color-text-dark);
+        }
+    
+        .rights__symbol-img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    
+    
+        /* --- SECTION 3: CAUTION (ご注意ください) --- */
+        .caution {
+            padding: 80px 0;
+            background-color: var(--color-bg-main);
+        }
+    
+        .caution__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+    
+        .caution__header-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            border-bottom: 3px solid var(--color-primary-pink);
+            padding-bottom: 10px;
+            width: 100%;
+            max-width: 500px;
+        }
+    
+        .caution__badge-img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+        }
+    
+        .caution__title {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--color-primary-pink);
+        }
+    
+        .caution__lead-text {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1.6;
+            text-align: center;
+            color: var(--color-text-dark);
+        }
+    
+        /* Card for quotes with light pink borders */
+        .caution__dialogue-card {
+            background-color: var(--color-bg-pink-light);
+            border: 1px solid #e8b7c6;
+            border-radius: var(--border-radius-md);
+            padding: 30px 40px;
+            width: 100%;
+            max-width: 680px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        }
+    
+        .caution__dialogue-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+    
+        .caution__dialogue-icon {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+    
+        .caution__dialogue-text {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-text-dark);
+        }
+    
+        .caution__dialogue-footer {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            text-align: center;
+            color: var(--color-text-muted);
+            margin-top: 10px;
+        }
+    
+        /* Checklist section for judgment factors */
+        .caution__factors-box {
+            background-color: var(--color-white);
+            border: 1px solid #e8b7c6;
+            border-radius: var(--border-radius-md);
+            padding: 40px;
+            width: 100%;
+            max-width: 680px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+        }
+    
+        .caution__factors-title {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--color-text-dark);
+            border-left: 5px solid var(--color-primary-pink);
+            padding-left: 15px;
+        }
+    
+        .caution__factors-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    
+        .caution__factors-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--color-primary-pink);
+        }
+    
+        .caution__factors-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+    
+        .caution__factors-icon-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .caution__factors-icon {
+            width: 26px;
+            height: 26px;
+            object-fit: contain;
+        }
+    
+        .caution__factors-item-text {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-text-dark);
+        }
+    
+        /* Final bottom CTA container */
+        .caution__closing-card {
+            background-color: var(--color-bg-pink-light);
+            border-radius: var(--border-radius-md);
+            padding: 40px;
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+        }
+    
+        .caution__closing-text {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: var(--color-text-dark);
+        }
+    
+    
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 992px) {
+            .intuition__grid {
+                grid-template-columns: 1fr;
+            }
+    
+            .intuition__character-box {
+                max-width: 250px;
+                margin: 0 auto;
+            }
+    
+            .rights__headline-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+    
+            .rights__circle-img {
+                margin: 0 auto;
+            }
+    
+            .rights__callout-grid {
+                grid-template-columns: 1fr;
+            }
+    
+            .rights__symbol-img {
+                max-width: 250px;
+                margin: 0 auto;
+            }
+        }
+    
+        @media (max-width: 576px) {
+            .intuition__title {
+                font-size: 1.5rem;
+            }
+    
+            .intuition__quote-text {
+                font-size: 1.2rem;
+            }
+    
+            .intuition__paragraph {
+                font-size: 1.1rem;
+            }
+    
+            .caution__title {
+                font-size: 1.8rem;
+            }
+    
+            .caution__dialogue-card,
+            .caution__factors-box {
+                padding: 20px;
+            }
+    
+            .caution__factors-item-text {
+                font-size: 1.1rem;
+            }
+        }
+    
+        </style
+</head>
+<body>
+    <!-- ====================================================================
+         SEMANTIC HTML CONTENT BLOCKS (0% INLINE STYLE)
+         ==================================================================== -->
+    
+    <!-- Section 1: Intuition (違和感・独身偽装) -->
+    <section class="intuition">
+        <div class="container intuition__container">
+    
+            <header class="intuition__header">
+                <h2 class="intuition__title">その違和感、気のせいではないかもしれません。</h2>
+            </header>
+    
+            <div class="intuition__grid">
+                <!-- Left side: Character illustration -->
+                <div class="intuition__character-box">
+                    <img src="images/81007364840e732378da5a71c7f967ece0468997.png" alt="悩む女性のイメージ"
+                        class="intuition__character-img">
+                    <div class="intuition__character-floor"></div>
+                </div>
+    
+                <!-- Right side: Content and quotes -->
+                <div class="intuition__text-area">
+                    <div class="intuition__quote-box">
+                        <div class="intuition__quote-row">
+                            <span class="intuition__quote-text">「もしかして既婚者かもしれない」</span>
+                        </div>
+                        <div class="intuition__quote-row">
+                            <span class="intuition__quote-text">「自分の考えすぎかもしれない」</span>
+                        </div>
+                        <div class="intuition__quote-row">
+                            <span class="intuition__quote-text">「疑うのは申し訳ない」</span>
+                        </div>
+                    </div>
+    
+                    <p class="intuition__paragraph">そう感じながらも、確信が持てずに一人で悩んでいる方は少なくありません。</p>
+                    <p class="intuition__paragraph">相手を信じたい気持ちがある一方で、<span
+                            class="intuition__paragraph--highlight">不安を抱えたまま交際を続けてしまうケース</span>もあります。</p>
+                    <p class="intuition__paragraph">しかし実際には、独身だと信じて交際していた相手が既婚者だったというご相談は少なくありません。</p>
+    
+                    <div class="intuition__definition">
+                        <p class="intuition__definition-text">
+                            既婚者であることを隠したまま交際し、相手に独身であると信じ込ませる行為は<span class="pink-highlight">「独身偽装」</span>と呼ばれています。
+                        </p>
+                        <div class="intuition__dots-container">
+                            <div class="intuition__dot"></div>
+                            <div class="intuition__dot"></div>
+                            <div class="intuition__dot"></div>
+                            <div class="intuition__dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+    <!-- Section 2: Rights & Laws (貞操権について) -->
+    <section class="rights">
+        <div class="container rights__container">
+    
+            <div class="rights__headline-grid">
+                <img src="images/a0fe655e760b402547d8811d1103323278ff8529.jpeg" alt="交際の悩み" class="rights__circle-img">
+                <p class="rights__intro-text">
+                    近年では、マッチングアプリやSNSを通じた出会いの増加に伴い、このようなトラブルに関する相談も増えています。
+                </p>
+            </div>
+    
+            <p class="rights__intro-text text-center">
+                そして独身偽装は、単なる恋愛トラブルで終わらない場合があります。<br>
+                既婚者であることを知らずに交際し、結婚を前提に真剣な関係を築いていた場合、<br>
+                <span class="pink-highlight">「貞操権侵害」として慰謝料請求が認められる可能性</span>があるためです。
+            </p>
+    
+            <div class="rights__callout-grid">
+                <div class="rights__explanation">
+                    <h3 class="rights__explanation-title">貞操権とは…</h3>
+                    <p class="rights__explanation-lead">自分の意思で恋愛や結婚相手を選択する権利のことをいいます。</p>
+                    <p class="rights__explanation-body">
+                        相手が独身であると信じて交際していたにもかかわらず、実際には既婚者だった場合、その選択の前提が大きく覆されることになります。<br><br>
+                        そのため、相手の行為によって精神的苦痛を受けたとして、法的責任が認められるケースもあります。
+                    </p>
+                </div>
+                <div>
+                    <img src="images/8b0efb3701a4c854dd7af527537709368d7ef5d3.png" alt="法的な権利の象徴"
+                        class="rights__symbol-img">
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+    <!-- Section 3: Caution (ご注意ください・判断基準) -->
+    <section class="caution">
+        <div class="container caution__container">
+    
+            <header class="caution__header-box">
+                <img src="images/b544f224aab4af6572e186bde26f8454674ad6d6.png" alt="警告バッジ" class="caution__badge-img">
+                <h2 class="caution__title">ご注意ください</h2>
+            </header>
+    
+            <p class="caution__lead-text">
+                もし相手が既婚者だった場合、<br>
+                <span class="pink-highlight">あなたが相手の配偶者から慰謝料を請求される可能性</span>があります。
+            </p>
+    
+            <div class="caution__dialogue-card">
+                <div class="caution__dialogue-row">
+                    <img src="images/d4fe0a044694fccc36e65fb72b055fe8bbfc8937.png" alt="発言者1"
+                        class="caution__dialogue-icon">
+                    <span class="caution__dialogue-text">「結婚しているなんて聞いていなかった」</span>
+                </div>
+                <div class="caution__dialogue-row">
+                    <img src="images/d4fe0a044694fccc36e65fb72b055fe8bbfc8937.png" alt="発言者2"
+                        class="caution__dialogue-icon">
+                    <span class="caution__dialogue-text">「私も騙されていたのに」</span>
+                </div>
+                <p class="caution__dialogue-footer">そう思われるのは当然のことです。</p>
+            </div>
+    
+            <p class="caution__lead-text">
+                しかし法律上は、<br>
+                <span class="pink-highlight">「知らなかった」というだけで必ず責任を免れるとは限りません。</span>
+            </p>
+    
+            <!-- Checklist / actual factors -->
+            <div class="caution__factors-box">
+                <h3 class="caution__factors-title">実際には…</h3>
+                <ul class="caution__factors-list">
+                    <li class="caution__factors-item">
+                        <div class="caution__factors-icon-wrapper">
+                            <svg class="caution__factors-icon" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15 0c3.5 0 6.7 1.2 9.2 3.2h-2.5v6.4l7.3 0c0.7 1.7 1 3.5 1 5.4 0 8.3-6.7 15-15 15-8.3 0-15-6.7-15-15 0-8.3 6.7-15 15-15z"
+                                    fill="#d96c8a" fill-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="caution__factors-item-text">相手からどのような説明を受けていたのか</span>
+                    </li>
+                    <li class="caution__factors-item">
+                        <div class="caution__factors-icon-wrapper">
+                            <svg class="caution__factors-icon" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15 0c3.5 0 6.7 1.2 9.2 3.2h-2.5v6.4l7.3 0c0.7 1.7 1 3.5 1 5.4 0 8.3-6.7 15-15 15-8.3 0-15-6.7-15-15 0-8.3 6.7-15 15-15z"
+                                    fill="#d96c8a" fill-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="caution__factors-item-text">交際中にどのような認識を持っていたのか</span>
+                    </li>
+                    <li class="caution__factors-item">
+                        <div class="caution__factors-icon-wrapper">
+                            <svg class="caution__factors-icon" viewBox="0 0 30 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15 0c3.5 0 6.7 1.2 9.2 3.2h-2.5v6.4l7.3 0c0.7 1.7 1 3.5 1 5.4 0 8.3-6.7 15-15 15-8.3 0-15-6.7-15-15 0-8.3 6.7-15 15-15z"
+                                    fill="#d96c8a" fill-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="caution__factors-item-text">既婚者であることを知る機会があったのか</span>
+                    </li>
+                </ul>
+            </div>
+    
+            <p class="caution__lead-text">
+                など、様々な事情を踏まえて判断されます。<br><br>
+                また、反対にあなたが独身だと信じて交際していた場合には、<br>
+                <span class="pink-highlight">「貞操権侵害」として法的に保護を受けられる可能性</span>もあります。<br><br>
+                つまり、同じ事実であっても、状況によって取るべき対応は大きく異なります。だからこそ、
+            </p>
+    
+            <!-- Closing Callout Box -->
+            <div class="caution__closing-card">
+                <p class="caution__closing-text">
+                    <strong>「本当に独身なのかわからない」「どう対応すればよいかわからない」</strong><br>
+                    という段階であっても、早めに状況を整理することが大切です。<br><br>
+                    <span class="pink-highlight">まずは事実を確認し、今後の選択肢を知るためにご相談ください。</span>
+                </p>
+            </div>
+    
+        </div>
+    </section>
+</body>
+</html>>
+
+

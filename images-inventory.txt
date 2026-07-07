@@ -1,0 +1,617 @@
+COMPLETE IMAGE INVENTORY - Law Firm Website
+=============================================
+
+This document lists every image file in the project, organized by status.
+
+====================================================================
+SECTION 1: LOCAL FILES THAT EXIST AND ARE USED
+====================================================================
+
+1. images/people/attorney-intro.png
+   - index.html: line 305 (intro-profile__photo)
+   - new.html: line 1139 (profile section)
+   - Usage: Photo of lawyer Daisuke Ishida
+   - Alt text: "石田大輔 弁護士"
+
+2. images/office/intro-bg.png
+   - index.html: line 266 (intro-profile__bg-image)
+   - new.html: NOT USED
+   - Usage: Background artwork/texture for the intro-profile hero section
+   - Alt text: none (decorative)
+
+3. images/office/anime-woman.png
+   - index.html: line 269 (intro-profile__character)
+   - new.html: line 936 (hero-image-wrapper)
+   - Usage: Illustration of a distressed woman character
+   - Alt text: "Character" (index) / "悩む女性のイメージ" (new)
+
+4. images/backgrounds/hero-bg.png
+   - index.html: style.css line 71 (hero::before pseudo-element, CSS background)
+   - new.html: style.css line 206 (hero-section, CSS background)
+   - Usage: Full-width hero section background (combined with gradient)
+
+5. images/icons/warning.png
+   - index.html: lines 246, 436
+   - new.html: line 1052
+   - Usage: Triangular warning/exclamation icon
+   - Alt: "重要提示" / "重要"
+
+6. images/icons/phone.png
+   - index.html: lines 35, 165, 330, 598, 785, 1013, 1267, 1387 (8 times)
+   - new.html: lines 905, 990, 1074, 1185, 1429 (5 times)
+   - Usage: Phone handset icon in CTA buttons
+   - Alt: "電話アイコン" / "電話発信"
+
+7. images/icons/email.png
+   - index.html: lines 46, 175, 340, 608, 795, 1023, 1277, 1397 (8 times)
+   - new.html: lines 912, 997, 1081, 1192, 1436 (5 times)
+   - Usage: Envelope/mail icon for email CTA buttons
+   - Alt: "メールアイコン" / "予約"
+
+8. images/icons/check.png
+   - index.html: lines 199-241 (9 times)
+   - new.html: lines 1014-1047 (9 times)
+   - Usage: Checkmark icon for problem checklist items
+   - Alt: "チェック"
+
+9. images/hero/feature-01.png
+   - index.html: lines 100, 741 (2 times)
+   - new.html: lines 953, 1121 (2 times)
+   - Usage: Icon for "first consultation free" / benefit #5 "compensation check"
+
+10. images/hero/feature-02.png
+    - index.html: line 110
+    - new.html: line 959
+    - Usage: Icon for "no visit needed (phone/Web)"
+
+11. images/hero/feature-03.png
+    - index.html: line 120
+    - new.html: line 965
+    - Usage: Icon for "strict confidentiality"
+
+12. images/hero/feature-04.png
+    - index.html: lines 129, 730 (2 times)
+    - new.html: lines 971, 1116 (2 times)
+    - Usage: Icon for "consult without them knowing" / benefit #4
+
+
+====================================================================
+SECTION 2: LOCAL FILES REFERENCED IN CODE BUT DON'T EXIST
+====================================================================
+(Developer needs to create these assets)
+
+13. images/icons/dialog.png
+    - index.html: lines 428, 433, 1060 (3 times)
+    - new.html: line 1266 (1 time)
+    - Usage: Speech bubble icon for dialogue/flow step
+
+14. images/icons/toggle.svg
+    - index.html: lines 1172, 1188, 1204, 1219, 1241 (5 times)
+    - new.html: lines 1339, 1349, 1358, 1369 (4 times)
+    - Usage: FAQ accordion open/close toggle arrow
+
+15. images/icons/arrow.svg
+    - index.html: lines 1065, 1089, 1110, 1134 (4 times)
+    - new.html: lines 1270, 1284, 1298, 1312 (4 times)
+    - Usage: Down arrow between flow steps
+
+16. images/icons/factor-01.png
+    - index.html: line 450
+    - new.html: NOT USED
+    - Usage: Icon for judgment factor #1
+
+17. images/icons/factor-02.png
+    - index.html: line 455
+    - new.html: NOT USED
+    - Usage: Icon for judgment factor #2
+
+18. images/icons/factor-03.png
+    - index.html: line 460
+    - new.html: NOT USED
+    - Usage: Icon for judgment factor #3
+
+19. images/icons/line.svg
+    - index.html: lines 1302-1308 (7 times, sidebar)
+    - new.html: style line 778 (CSS background on office-table th)
+    - Usage: Decorative line element
+
+20. images/hero/decoration-line.svg
+    - index.html: line 70
+    - new.html: NOT USED
+    - Usage: Decorative line after hero sub-copy
+
+21. images/hero/divider.svg
+    - index.html: line 86
+    - new.html: NOT USED
+    - Usage: Section divider in hero catch area
+
+22. images/backgrounds/philosophy-bg.svg
+    - index.html: style.css line 1330
+    - new.html: NOT USED
+    - Usage: Background for attorney philosophy section
+
+23. images/backgrounds/problems-bg.png
+    - index.html: style.css line 548
+    - new.html: style line 378
+    - Usage: Full background for the problems section
+
+
+====================================================================
+SECTION 3: ORPHAN FILES (EXIST IN FOLDER BUT STATUS VARIES)
+====================================================================
+
+24. images/hero/feature-05.png
+    - index.html: NOT USED (replaced by external URL at line 138)
+    - new.html: line 977 (feature grid - "experienced lawyer")
+    - Status: ORPHAN in index, USED in new.html
+
+25. images/decorations/stamp.png
+    - index.html: NOT USED
+    - new.html: NOT USED
+    - Note: Decorative hanko/stamp - possibly from original design
+
+26. images/backgrounds/wall-texture-background.png
+    - index.html: NOT USED
+    - new.html: NOT USED
+    - Note: Wall texture, unused
+
+27. images/office/message-photo.png
+    - index.html: NOT USED
+    - new.html: NOT USED
+    - Note: Possibly intended for message section lawyer photo
+
+
+====================================================================
+SECTION 4: EXTERNAL URLS (Animaapp Placeholders)
+====================================================================
+
+A. https://c.animaapp.com/mr9bft3hPofYup/img/rectangle-115.png
+   - index.html: line 138 (hero feature #5 - "experienced lawyer")
+   - new.html: NOT USED (replaced by local feature-05.png at line 977)
+   - Status: Can be deleted if feature-05.png is final
+
+B. https://c.animaapp.com/mr9bft3hPofYup/img/union-11.svg
+   - index.html: line 193 (problems heading decorative bg)
+   - new.html: style line 393 (section-heading-box CSS background)
+   - Usage: Decorative background SVG for section heading
+
+C1. https://animaapp.com (BROKEN URL)
+    - index.html: line 356 (concerns__image)
+    - new.html: NOT USED (replaced by anime-woman.png at line 936)
+    - Status: REMOVED in new.html - good
+
+C2. https://c.animaapp.com/mr9bft3hPofYup/img/34775429-m-removebg-preview-1.png
+    - index.html: line 357 (concerns image - restored version)
+    - new.html: NOT USED (replaced by anime-woman.png)
+    - Status: REMOVED in new.html
+
+D. https://c.animaapp.com/mr9bft3hPofYup/img/ellipse-44.png
+   - index.html: line 393 (concerns SNS circular photo)
+   - new.html: NOT USED (concerns section simplified)
+   - Status: REMOVED in new.html
+
+E. https://c.animaapp.com/mr9bft3hPofYup/img/09-removebg-preview-1.png
+   - index.html: line 409 (rights symbol)
+   - new.html: NOT USED
+   - Status: REMOVED in new.html
+
+F. https://c.animaapp.com/mr9bft3hPofYup/img/-----.png
+   - index.html: line 548 (attorney photo)
+   - new.html: NOT USED (replaced by local attorney-intro.png at line 1139)
+   - Status: REMOVED in new.html
+
+G. https://c.animaapp.com/mr9bft3hPofYup/img/classy---pc-1.png
+   - index.html: line 560 (magazine feature)
+   - new.html: NOT USED
+   - Status: REMOVED in new.html
+
+H. https://c.animaapp.com/mr9bft3hPofYup/img/------1.png
+   - index.html: line 639 (consultation image)
+   - new.html: NOT USED
+   - Status: REMOVED in new.html
+
+I. https://c.animaapp.com/mr9bft3hPofYup/img/group-49-1.png
+   - index.html: line 642
+   - new.html: NOT USED
+   - Status: REMOVED in new.html
+
+J. https://c.animaapp.com/mr9bft3hPofYup/img/group-50-1.png
+   - index.html: line 643
+   - new.html: NOT USED
+   - Status: REMOVED in new.html
+
+K. https://c.animaapp.com/mr9bft3hPofYup/img/group-51-1.png
+   - index.html: line 644
+   - new.html: NOT USED
+   - Status: REMOVED in new.html
+
+L. https://c.animaapp.com/mr9bft3hPofYup/img/rectangle-167.png
+   - index.html: line 677 (benefit #1)
+   - new.html: line 1098 (benefit #1)
+   - Usage: Benefit 1 icon - still a placeholder
+
+M. https://c.animaapp.com/mr9bft3hPofYup/img/rectangle-167-1.png
+   - index.html: line 688 (benefit #2)
+   - new.html: line 1104 (benefit #2)
+   - Usage: Benefit 2 icon - still a placeholder
+
+N. https://c.animaapp.com/mr9bft3hPofYup/img/rectangle-167-2.png
+   - index.html: line 699 (benefit #3)
+   - new.html: line 1110 (benefit #3)
+   - Usage: Benefit 3 icon - still a placeholder
+
+O. https://c.animaapp.com/mr9bft3hPofYup/img/rectangle-167-5.png
+   - index.html: line 752 (benefit #6)
+   - new.html: line 1126 (benefit #6)
+   - Usage: Benefit 6 icon - still a placeholder
+
+P. https://c.animaapp.com/mr9bft3hPofYup/img/------2.png
+   - index.html: line 767 (benefits footer image)
+   - new.html: NOT USED
+   - Status: REMOVED in new.html
+
+Q. https://c.animaapp.com/mr9bft3hPofYup/img/line-74.svg
+   - index.html: line 792 (reasons heading decoration)
+   - new.html: NOT USED
+   - Status: REMOVED in new.html
+
+R. https://c.animaapp.com/mr9bft3hPofYup/img/rectangle-170-1.png
+   - index.html: line 1064 (flow step 2)
+   - new.html: line 1279 (flow step 2)
+   - Usage: Flow step 2 visual - still a placeholder
+
+S. https://c.animaapp.com/mr9bft3hPofYup/img/rectangle-170-2.png
+   - index.html: line 1085 (flow step 3)
+   - new.html: line 1293 (flow step 3)
+   - Usage: Flow step 3 visual - still a placeholder
+
+T. https://c.animaapp.com/mr9bft3hPofYup/img/rectangle-170-3.png
+   - index.html: line 1109 (flow step 4)
+   - new.html: line 1307 (flow step 4)
+   - Usage: Flow step 4 visual - still a placeholder
+
+U. https://c.animaapp.com/mr9bft3hPofYup/img/rectangle-170-4.png
+   - index.html: line 1133 (flow step 5)
+   - new.html: line 1321 (flow step 5)
+   - Usage: Flow step 5 visual - still a placeholder
+
+V. https://c.animaapp.com/mr9bft3hPofYup/img/------3.png
+   - index.html: line 1283 (message section lawyer portrait)
+   - new.html: NOT USED
+   - Status: REMOVED in new.html
+
+
+====================================================================
+SECTION 5: DETAILED POSITION MAP - index.html (by section)
+====================================================================
+
+HEADER (lines 23-56):
+  Line 35: images/icons/phone.png - phone icon in header CTA
+  Line 46: images/icons/email.png - email icon in header CTA
+
+HERO SECTION (lines 61-150):
+  Line 70: images/hero/decoration-line.svg - decorative line after sub-copy
+  Line 86: images/hero/divider.svg - section divider in catch
+  Line 100: images/hero/feature-01.png - "first consultation free"
+  Line 110: images/hero/feature-02.png - "no visit needed"
+  Line 120: images/hero/feature-03.png - "strict confidentiality"
+  Line 129: images/hero/feature-04.png - "consult without them knowing"
+  Line 138: URL A (rectangle-115.png) - "experienced lawyer" (EXTERNAL)
+  CSS: style.css:71 - images/backgrounds/hero-bg.png (full hero bg)
+
+CTA BANNER #1 (lines 153-186):
+  Line 165: images/icons/phone.png
+  Line 175: images/icons/email.png
+
+PROBLEMS SECTION (lines 189-255):
+  Line 193: URL B (union-11.svg) - heading decorative bg (EXTERNAL)
+  Lines 199-240: images/icons/check.png x9 - checklist items
+  Line 246: images/icons/warning.png - note box warning
+  CSS: style.css:548 - images/backgrounds/problems-bg.png (section bg)
+
+INTRO PROFILE (lines 261-309):
+  Line 266: images/office/intro-bg.png - background artwork
+  Line 269: images/office/anime-woman.png - woman character
+  Line 305: images/people/attorney-intro.png - lawyer photo
+
+CTA BANNER #2 (lines 313-346):
+  Line 325: images/icons/phone.png
+  Line 335: images/icons/email.png
+
+CONCERNS SECTION (lines 349-493):
+  Line 357: URL C2 (34775429-m-...) - woman illustration (EXTERNAL)
+  Line 393: URL D (ellipse-44.png) - circular SNS photo (EXTERNAL)
+  Line 409: URL E (09-removebg-preview-1.png) - rights symbol (EXTERNAL)
+  Line 416: images/icons/warning.png - warning icon
+  Line 428: images/icons/dialog.png - speech bubble (MISSING FILE)
+  Line 433: images/icons/dialog.png - speech bubble (MISSING FILE)
+  Line 450: images/icons/factor-01.png - factor icon (MISSING FILE)
+  Line 455: images/icons/factor-02.png - factor icon (MISSING FILE)
+  Line 460: images/icons/factor-03.png - factor icon (MISSING FILE)
+
+ATTORNEY SECTION (lines 496-563):
+  Line 548: URL F (-----.png) - lawyer photo (EXTERNAL)
+  Line 560: URL G (classy---pc-1.png) - magazine feature (EXTERNAL)
+  CSS: style.css:1330 - images/backgrounds/philosophy-bg.svg (MISSING)
+
+CTA BANNER #3 (lines 566-599):
+  Line 578: images/icons/phone.png
+  Line 588: images/icons/email.png
+
+BENEFITS SECTION (lines 602-750):
+  Line 639: URL H (------1.png) - consultation image (EXTERNAL)
+  Line 642-644: URLs I, J, K - group icons (EXTERNAL)
+  Line 677: URL L (rectangle-167.png) - benefit 1 (EXTERNAL)
+  Line 688: URL M (rectangle-167-1.png) - benefit 2 (EXTERNAL)
+  Line 699: URL N (rectangle-167-2.png) - benefit 3 (EXTERNAL)
+  Line 710: images/hero/feature-04.png - benefit 4 (reused)
+  Line 721: images/hero/feature-01.png - benefit 5 (reused)
+  Line 732: URL O (rectangle-167-5.png) - benefit 6 (EXTERNAL)
+  Line 747: URL P (------2.png) - footer image (EXTERNAL)
+
+CTA BANNER #4 (lines 753-786):
+  Line 765: images/icons/phone.png
+  Line 775: images/icons/email.png
+
+REASONS SECTION (lines 789-868):
+  Line 792: URL Q (line-74.svg) - heading decoration (EXTERNAL)
+
+CTA BANNER #5 (lines 981-1014):
+  Line 993: images/icons/phone.png
+  Line 1003: images/icons/email.png
+
+SERVICE FLOW (lines 1017-1137):
+  Line 1040: images/icons/dialog.png - step 1 visual (MISSING FILE)
+  Lines 1045, 1069, 1090, 1114: images/icons/arrow.svg x4 (MISSING FILE)
+  Line 1064: URL R (rectangle-170-1.png) - step 2 (EXTERNAL)
+  Line 1085: URL S (rectangle-170-2.png) - step 3 (EXTERNAL)
+  Line 1109: URL T (rectangle-170-3.png) - step 4 (EXTERNAL)
+  Line 1133: URL U (rectangle-170-4.png) - step 5 (EXTERNAL)
+
+FAQ SECTION (lines 1140-1232):
+  Lines 1152, 1168, 1184, 1199, 1221: images/icons/toggle.svg x5 (MISSING FILE)
+
+CTA BANNER #6 (lines 1235-1268):
+  Line 1247: images/icons/phone.png
+  Line 1257: images/icons/email.png
+
+MESSAGE SECTION (lines 1271-1289):
+  Line 1283: URL V (------3.png) - lawyer portrait (EXTERNAL)
+
+OFFICE INFO (lines 1292-1352):
+  Lines 1302-1308: images/icons/line.svg x7 (MISSING FILE)
+
+CTA BANNER #7 (lines 1355-1388):
+  Line 1367: images/icons/phone.png
+  Line 1377: images/icons/email.png
+
+
+====================================================================
+SECTION 6: DETAILED POSITION MAP - new.html (by section)
+====================================================================
+
+HEADER (lines 898-920):
+  Line 905: images/icons/phone.png - phone icon in header
+  Line 912: images/icons/email.png - email icon in header
+
+HERO SECTION (lines 924-939):
+  Line 936: images/office/anime-woman.png - woman illustration (MOVED from intro-profile)
+  CSS: style line 206 - images/backgrounds/hero-bg.png
+
+FEATURES GRID (lines 949-982):
+  Line 953: images/hero/feature-01.png - "free consultation"
+  Line 959: images/hero/feature-02.png - "no visit needed"
+  Line 965: images/hero/feature-03.png - "confidentiality"
+  Line 971: images/hero/feature-04.png - "consult discreetly"
+  Line 977: images/hero/feature-05.png - "experienced lawyer" (WAS orphan, NOW used!)
+
+CTA #1 (lines 985-1005):
+  Line 990: images/icons/phone.png
+  Line 997: images/icons/email.png
+
+PROBLEMS SECTION (lines 1008-1056):
+  Lines 1014-1047: images/icons/check.png x9
+  Line 1052: images/icons/warning.png
+  CSS: style line 378 - images/backgrounds/problems-bg.png
+  CSS: style line 393 - URL B (union-11.svg) heading bg (EXTERNAL)
+
+LEGAL CONTEXT / LAW EXPLANATION (lines 1059-1066):
+  (No images - pure text)
+
+CTA #2 (lines 1069-1089):
+  Line 1074: images/icons/phone.png
+  Line 1081: images/icons/email.png
+
+BENEFITS GRID (lines 1092-1132):
+  Line 1098: URL L (rectangle-167.png) - benefit 1 (EXTERNAL)
+  Line 1104: URL M (rectangle-167-1.png) - benefit 2 (EXTERNAL)
+  Line 1110: URL N (rectangle-167-2.png) - benefit 3 (EXTERNAL)
+  Line 1116: images/hero/feature-04.png - benefit 4 (reused)
+  Line 1121: images/hero/feature-01.png - benefit 5 (reused)
+  Line 1126: URL O (rectangle-167-5.png) - benefit 6 (EXTERNAL)
+
+PROFILE SECTION (lines 1135-1177):
+  Line 1139: images/people/attorney-intro.png - lawyer photo (REPLACED external URL F)
+
+CTA #3 (lines 1179-1200):
+  Line 1185: images/icons/phone.png
+  Line 1192: images/icons/email.png
+
+PRICING SECTION (lines 1203-1250):
+  (No images - pure text)
+
+SERVICE FLOW (lines 1253-1326):
+  Line 1266: images/icons/dialog.png - step 1 (MISSING FILE)
+  Lines 1270, 1284, 1298, 1312: images/icons/arrow.svg x4 (MISSING FILE)
+  Line 1279: URL R (rectangle-170-1.png) - step 2 (EXTERNAL)
+  Line 1293: URL S (rectangle-170-2.png) - step 3 (EXTERNAL)
+  Line 1307: URL T (rectangle-170-3.png) - step 4 (EXTERNAL)
+  Line 1321: URL U (rectangle-170-4.png) - step 5 (EXTERNAL)
+
+FAQ SECTION (lines 1329-1379):
+  Lines 1339, 1349, 1358, 1369: images/icons/toggle.svg x4 (MISSING FILE)
+
+OFFICE SECTION (lines 1382-1420):
+  (No direct img tags - uses line.svg as CSS background)
+  CSS: style line 778 - images/icons/line.svg on office-table th (MISSING FILE)
+
+CTA #4 (lines 1423-1444):
+  Line 1429: images/icons/phone.png
+  Line 1436: images/icons/email.png
+
+
+====================================================================
+SECTION 7: IMAGE MAPPING FEEDBACK - index.html vs new.html
+====================================================================
+
+Below is my confidence assessment for mapping each image from
+index.html to new.html. I have read BOTH files completely.
+
+CONFIDENT (100% sure - images exist in same role):
+
+  images/people/attorney-intro.png
+     index -> intro-profile__photo (lawyer card)
+     new   -> profile section left column (same lawyer photo)
+
+  images/backgrounds/hero-bg.png
+     index -> hero::before CSS background
+     new   -> hero-section CSS background (same role)
+
+  images/icons/phone.png
+     index -> header CTA + 7 banners
+     new   -> header CTA + 4 banners (same role, fewer repeats)
+
+  images/icons/email.png
+     index -> header CTA + 7 banners
+     new   -> header CTA + 4 banners (same role, fewer repeats)
+
+  images/icons/check.png
+     index -> problems checklist x9
+     new   -> problems checklist x9 (same role)
+
+  images/icons/warning.png
+     index -> problems note + concerns warning
+     new   -> problems intro box warning (same icon)
+
+  images/icons/dialog.png
+     index -> flow step 1 + concerns dialogue
+     new   -> flow step 1 only (concerns section removed)
+
+  images/icons/toggle.svg
+     index -> FAQ x5
+     new   -> FAQ x4 (one fewer question)
+
+  images/icons/arrow.svg
+     index -> flow arrows x4
+     new   -> flow arrows x4 (same role)
+
+  images/hero/feature-01.png
+     index -> hero feature #1 + benefit #5
+     new   -> features grid #1 + benefit #5 (same)
+
+  images/hero/feature-02.png
+     index -> hero feature #2
+     new   -> features grid #2 (same)
+
+  images/hero/feature-03.png
+     index -> hero feature #3
+     new   -> features grid #3 (same)
+
+  images/hero/feature-04.png
+     index -> hero feature #4 + benefit #4
+     new   -> features grid #4 + benefit #4 (same)
+
+  images/backgrounds/problems-bg.png
+     index -> problems section CSS background
+     new   -> problem-section CSS background (same)
+
+  URL B (union-11.svg)
+     index -> problems heading decorative bg
+     new   -> section-heading-box CSS background (same role)
+
+  URL L, M, N, O (rectangle-167 series)
+     index -> benefits 1,2,3,6
+     new   -> benefits 1,2,3,6 (same positions)
+
+  URL R, S, T, U (rectangle-170 series)
+     index -> flow steps 2,3,4,5
+     new   -> flow steps 2,3,4,5 (same positions)
+
+
+SLIGHTLY DIFFERENT POSITION (confident about function but location changed):
+
+  images/office/anime-woman.png
+     index -> intro-profile__character (layer 2 in intro hero)
+     new   -> hero-image-wrapper (right side of hero grid)
+     Notes: Moved from intro section to hero section. Same character
+     illustration, different container. CONFIDENT.
+
+  images/icons/line.svg
+     index -> office__sidebar x7 (separate img tags)
+     new   -> office-table th CSS background (different implementation)
+     Notes: Same decorative line, used in a different way. CONFIDENT
+     it belongs to the office section but implementation differs.
+
+  images/hero/feature-05.png
+     index -> NOT USED (was orphan, external URL used instead)
+     new   -> features grid #5 (now actively used)
+     Notes: The EXTERNAL URL A is replaced by this local file in new.html.
+     This is correct mapping. CONFIDENT.
+
+
+REMOVED IN NEW.HTML (no mapping needed):
+
+  images/office/intro-bg.png          - intro bg layer removed
+  images/hero/decoration-line.svg     - decoration removed
+  images/hero/divider.svg             - divider removed
+  images/backgrounds/philosophy-bg.svg - philosophy section removed
+  images/icons/factor-01.png          - concerns factors removed
+  images/icons/factor-02.png          - concerns factors removed
+  images/icons/factor-03.png          - concerns factors removed
+  URL A (rectangle-115.png)           - replaced by feature-05.png
+  URL C1 (animaapp.com)               - broken link, removed
+  URL C2 (34775429-m-...)             - replaced by anime-woman.png
+  URL D (ellipse-44.png)              - concerns SNS photo removed
+  URL E (09-removebg-preview-1.png)   - rights symbol removed
+  URL F (-----.png)                   - replaced by local attorney-intro.png
+  URL G (classy---pc-1.png)           - magazine feature removed
+  URL H (------1.png)                 - consultation image removed
+  URL I, J, K (group-49/50/51)        - why-icons removed
+  URL P (------2.png)                 - benefits footer removed
+  URL Q (line-74.svg)                 - reasons heading removed
+  URL V (------3.png)                 - message section removed
+
+
+STILL NEED REPLACEMENT IN NEW.HTML:
+
+  These 8 external URLs are STILL placeholders in new.html:
+  - URL L, M, N, O (benefit 1,2,3,6 icons) - new.html lines 1098-1126
+  - URL R, S, T, U (flow step 2,3,4,5 visuals) - new.html lines 1279-1321
+
+  These 4 local files are STILL MISSING from filesystem:
+  - images/icons/dialog.png - new.html line 1266
+  - images/icons/toggle.svg - new.html lines 1339-1369
+  - images/icons/arrow.svg - new.html lines 1270-1312
+  - images/icons/line.svg - new.html style line 778
+  - images/backgrounds/problems-bg.png - new.html style line 378
+
+
+STILL UNUSED IN BOTH FILES (can delete):
+
+  - images/decorations/stamp.png
+  - images/backgrounds/wall-texture-background.png
+  - images/office/message-photo.png
+
+====================================================================
+NOTES FOR THE DEVELOPER
+====================================================================
+
+- new.html is a simplified, restructured version of index.html.
+  Layout is different (hero grid, profile card, no intro-hero layer,
+  no concerns section, no reasons section, no message section).
+- new.html uses local file feature-05.png which was orphan in index.
+- new.html replaces several external URLs with local files
+  (feature-05.png replaces URL A, attorney-intro.png replaces URL F).
+- 8 external URLs remain in new.html (benefits 1,2,3,6 + flow 2,3,4,5).
+- 5 missing local files need creation.
+- 3 files are completely unused in both versions.
