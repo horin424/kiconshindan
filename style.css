@@ -1555,10 +1555,13 @@ span.crayon-underline {
 }
 
 .benefits__intro-quote-text {
+    background-color: var(--color-accent-light);
+    width: fit-content;
     font-family: var(--font-serif);
     font-size: 1.15rem;
     font-weight: 700;
     line-height: 1.8;
+    margin-bottom: 15px;
 }
 
 .benefits__intro-desc {
@@ -1569,6 +1572,103 @@ span.crayon-underline {
     color: var(--color-accent);
     font-weight: 700;
 }
+
+
+
+
+
+/* --- SECTION CONTAINER --- */
+.benefits__why {
+    width: 100%;
+    display: block;
+}
+
+/* --- HEADING / TOP ROW --- */
+.benefits__why-heading-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto -60px auto;
+    /* Overlaps butter box below */
+    padding: 0 20px;
+    z-index: 1;
+    /* Lower layer for the heading section */
+}
+
+.benefits__why-photo {
+    flex: 0 0 320px;
+    width: 320px;
+    height: auto;
+    position: relative;
+    z-index: 10;
+    /* Photo sits on top of everything */
+    margin-right: -165px;
+    /* Pulls the white title box behind it */
+}
+
+.benefits__why-title-box {
+    background-color: #ffffff;
+    padding: 30px 125px;
+    /* Large balanced padding on both sides */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    flex: 0 1 auto;
+    /* Box only as wide as content + padding */
+    max-width: max-content;
+    position: relative;
+    z-index: 1;
+    /* Sits behind the image */
+}
+
+/* --- CONTENT / DETAILS BAR (Wide Box) --- */
+.benefits__why-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.benefits__why-details {
+    width: 100%;
+    max-width: 1200px;
+    /* Wide box matching philosophy section */
+    background-color: #fff9e6;
+    /* Butter color */
+    padding: 80px 40px 40px 40px;
+    /* Top padding (80px) for overlapping image */
+    border-radius: 12px;
+    box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 5;
+    /* Sits on top of the image */
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .benefits__why-heading-container {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .benefits__why-photo {
+        margin-right: 0;
+        max-width: 300px;
+        margin-bottom: -30px;
+    }
+
+    .benefits__why-title-box {
+        width: 100%;
+        padding: 50px 20px 20px 20px;
+        max-width: none;
+        text-align: center;
+    }
+
+    .benefits__why-details {
+        padding: 30px 20px;
+    }
+}
+
 
 .benefits__why {
     margin-bottom: 60px;
@@ -1727,23 +1827,71 @@ span.crayon-underline {
 }
 
 .benefits__footer {
-    margin-top: 60px;
     display: flex;
-    flex-direction: column;
     gap: 30px;
     align-items: center;
+        display: flex;
+    flex-direction: row;
+            justify-content: space-between;
+            position: relative;
+            padding: 120px 0;
+            overflow: hidden;
+            /* Keeps slanted lines inside the section */
+            max-width: 1200px;
+            margin: 0 auto;
 }
 
 .benefits__footer-text {
     font-size: 1.1rem;
     text-align: center;
     line-height: 1.8;
+    flex: 1;
+        padding-right: 40px;
+        /* Space between text and the image on the right */
 }
 
 .benefits__footer-image {
     max-width: 480px;
     width: 100%;
+    flex: 0 0 400px;
+/
+        height: auto;
+        position: relative;
+        z-index: 2;
 }
+
+
+
+
+.benefits__footer::before,
+.benefits__footer::after {
+    content: "";
+    position: absolute;
+    left: 0;
+
+    /* FIX: Subtract the width of your image (e.g., 400px) plus some gap (e.g., 40px) */
+    width: calc(100% - 440px);
+
+    height: 2px;
+    background-color: #d96c8a;
+    z-index: 1;
+}
+
+
+/* Top line: Slopes DOWNWARDS from the left */
+.benefits__footer::before {
+    top: 60px;
+    transform: skewY(3deg);
+    transform-origin: left;
+}
+
+/* Bottom line: Slopes UPWARDS from the left */
+.benefits__footer::after {
+    bottom: 60px;
+    transform: skewY(-3deg);
+    transform-origin: left;
+}
+
 
 /* Reasons Area */
 .reasons {
@@ -2459,8 +2607,32 @@ details[open] .faq__question::after {
     }
 
     .benefits__why-details {
-        width: 70%;
+        width: 100%;
     }
+
+    .benefits__why-question-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.pink-highlight{
+    background-color: var(--color-accent-light);
+}
+
+.benefits__why-question-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between icon and text */
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.benefits__why-question-list img {
+    width: 24px; /* Adjust size as needed */
+    height: auto;
+}
 
     .benefits__points-grid {
         grid-template-columns: repeat(2, 1fr);
