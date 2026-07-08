@@ -2117,22 +2117,34 @@ padding: 15px 15px 45px 15px;
         background-color: var(--color-accent);
         border-radius: 8px;
         margin-bottom: 30px;
-        width: 90%;
+        width: fit-content;
         margin-left: auto;
         margin-right: auto;
 }
 
-pricing__cta-triangle {
-position: absolute;
+.pricing__cta-triangle {
+    position: absolute;
+    /* MUST BE ABSOLUTE */
     bottom: -15px;
+    /* Moves it below the bar */
     left: 50%;
+    /* Centers it */
     transform: translateX(-50%);
-    width: 0px;
-    height: 0px;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 15px solid rgb(217, 108, 138);
+    /* Perfectly centers it */
+
+    width: 0;
+    /* MUST BE 0 */
+    height: 0;
+    /* MUST BE 0 */
+
+    /* These three borders create the arrow shape */
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #d96c8a;
+    /* Use your pink color here */
+
     display: block;
+    /* Ensure it's not hidden */
 }
 
 .pricing__cta-bar-text {
@@ -2190,16 +2202,51 @@ margin: 0;
 }
 
 .pricing__badge {
-    background-color: var(--color-accent-dark);
-    color: var(--color-bg-light);
-    border-radius: 8px;
-    padding: 16px;
+position: relative;
+    background-color: #24324a;
+    /* Deep blue */
+    color: #ffffff;
+    width: 480px;
+    height: 280px;
+    border-radius: 50%;
+    /* Creates the ellipse shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    overflow: visible;
+    /* Required so triangle isn't cut off */
     text-align: center;
+}
+
+.pricing__badge-triangle {
+    position: absolute;
+    top: -50px;
+    /* Connected and slightly overlapping */
+    left: 18%;
+    /* Positioned on the top side */
+    width: 0;
+    height: 0;
+
+    /* Create the long, sharp triangle */
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 80px solid #24324a;
+    /* Matching badge color */
+
+    /* Slant the triangle */
+    transform: rotate(-30deg);
+    z-index: 1;
 }
 
 .pricing__badge-text {
     font-size: 1.1rem;
     line-height: 1.4;
+        line-height: 1.8;
+        font-weight: bold;
+        margin: 0;
+        padding: 0 40px;
+        letter-spacing: 0.05em;
 }
 
 .pricing__table {
@@ -2297,13 +2344,25 @@ margin: 0;
 
 .flow__step {
     display: flex;
-    flex-direction: column;
     background-color: var(--color-bg-light);
     border-bottom: 2px solid var(--color-accent-light);
-    padding: 30px 20px;
-    gap: 24px;
     border-radius: 8px;
     box-shadow: var(--box-shadow);
+    display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 30px 20px;
+        gap: 0;
+        /* Managed by internal padding */
+}
+
+.flow__step-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    flex-shrink: 0;
+    padding-right: 40px;
 }
 
 .flow__step--alt {
@@ -2314,6 +2373,7 @@ margin: 0;
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--color-accent);
+    margin-bottom: 10px;
 }
 
 .flow__step-title {
@@ -2793,111 +2853,3 @@ details[open] .faq__question::after {
 
 
 
-        .message {
-            background-color: #f8eaee;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            padding: 40px 50px 0 50px;
-            margin-bottom: 70px;
-        }
-
-        .message__content {
-            flex: 1;
-            padding-bottom: 40px;
-            font-size: 13px;
-            line-height: 1.9;
-            letter-spacing: 0.5px;
-        }
-
-        .message__content p {
-            margin: 0 0 20px 0;
-        }
-
-        .message__content p:last-of-type {
-            margin-bottom: 0;
-        }
-
-        .message__signature {
-            margin-top: 35px !important;
-            font-size: 16px;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-
-        .message__visual {
-            width: 220px;
-            height: 300px;
-            margin-left: 20px;
-        }
-
-        .message__photo-placeholder {
-            width: 100%;
-            height: 100%;
-            background-color: #dcdcdc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #666;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .office__heading {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .office__heading-text {
-            display: inline-block;
-            font-size: 20px;
-            font-weight: 700;
-            margin: 0;
-            padding: 15px 0;
-            border-top: 1px solid #333;
-            border-bottom: 1px solid #333;
-            letter-spacing: 6px;
-        }
-
-        .office__table {
-            width: 85%;
-            margin: 0 auto;
-            border-collapse: collapse;
-            border: 1px solid #a37584;
-            background-color: #fff;
-        }
-
-        .office__table th,
-        .office__table td {
-            padding: 18px 25px;
-            border-bottom: 1px solid #ebebeb;
-            text-align: left;
-            font-size: 13.5px;
-            letter-spacing: 1px;
-            vertical-align: middle;
-        }
-
-        .office__table tr:last-child th,
-        .office__table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .office__table th {
-            width: 35%;
-            font-weight: normal;
-            white-space: nowrap;
-        }
-
-        .office__decorator {
-            display: inline-block;
-            width: 22px;
-            height: 1px;
-            background-color: #b5889a;
-            margin-right: 20px;
-            vertical-align: middle;
-        }
-
-        .office__table td {
-            width: 65%;
-            color: #444;
-        }
