@@ -941,7 +941,7 @@ table {
 }
 
 .concerns__image {
-position: relative;
+    position: relative;
     top: 109.156px;
     z-index: 10;
     margin-bottom: 0px;
@@ -1004,7 +1004,6 @@ position: relative;
     font-weight: 600;
     background-color: #d96c8b53;
     width: fit-content
-
 }
 
 .concerns__desc {
@@ -1137,10 +1136,10 @@ position: relative;
 .concerns__rights-image {
     max-width: 250px;
     align-self: center;
-    position: absolute ;
-    bottom: 0 ;
-    right: -100px ;
-    margin: 0 ;
+    position: absolute;
+    bottom: 0;
+    right: -100px;
+    margin: 0;
 }
 
 .concerns__warning-block {
@@ -1237,7 +1236,7 @@ position: relative;
 }
 
 .concerns__example-line {
-    justify-content: flex-start!important;
+    justify-content: flex-start !important;
     align-items: center !important;
     flex-direction: row;
     display: flex;
@@ -1267,10 +1266,12 @@ position: relative;
 span.crayon-underline {
     display: inline-block;
     background-image: url("images/decorations/crayon-underline.png");
-    background-size: 100% 3px; /* Increased from 0.5px */
+    background-size: 100% 3px;
+    /* Increased from 0.5px */
     background-repeat: no-repeat;
     background-position: 0 100%;
-    padding-bottom: 0px; /* Added space for the image */
+    padding-bottom: 0px;
+    /* Added space for the image */
 }
 
 .concerns__legal-note {
@@ -1318,10 +1319,10 @@ span.crayon-underline {
 
 /* 3. Each individual line (centered text and icon) */
 .concerns__factors-list li {
-    display: flex ;
-    justify-content: center ;
-    align-items: center ;
-    width: 100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     padding: 20px 0;
 
     /* Thicker 3px pink dashed line between items */
@@ -1330,7 +1331,7 @@ span.crayon-underline {
 
 /* Remove the line from the very last item */
 .concerns__factors-list li:last-child {
-    border-bottom: none ;
+    border-bottom: none;
 }
 
 /* 4. The icon styling */
@@ -1469,10 +1470,10 @@ span.crayon-underline {
     max-width: 100%;
     border-radius: 4px;
     width: 100%;
-        height: 100%;
-        object-fit: cover;
-        /* Ensures image fills the container height */
-        display: block;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures image fills the container height */
+    display: block;
 }
 
 .attorney__philosophy {
@@ -1830,15 +1831,15 @@ span.crayon-underline {
     display: flex;
     gap: 30px;
     align-items: center;
-        display: flex;
+    display: flex;
     flex-direction: row;
-            justify-content: space-between;
-            position: relative;
-            padding: 120px 0;
-            overflow: hidden;
-            /* Keeps slanted lines inside the section */
-            max-width: 1200px;
-            margin: 0 auto;
+    justify-content: space-between;
+    position: relative;
+    padding: 5px 0;
+    overflow: hidden;
+    /* Keeps slanted lines inside the section */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .benefits__footer-text {
@@ -1846,18 +1847,17 @@ span.crayon-underline {
     text-align: center;
     line-height: 1.8;
     flex: 1;
-        padding-right: 40px;
-        /* Space between text and the image on the right */
+    padding-right: 40px;
+    /* Space between text and the image on the right */
 }
 
 .benefits__footer-image {
     max-width: 480px;
     width: 100%;
     flex: 0 0 400px;
-/
-        height: auto;
-        position: relative;
-        z-index: 2;
+    / height: auto;
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -1881,14 +1881,14 @@ span.crayon-underline {
 /* Top line: Slopes DOWNWARDS from the left */
 .benefits__footer::before {
     top: 60px;
-    transform: skewY(3deg);
+    transform: skewY(4deg);
     transform-origin: left;
 }
 
 /* Bottom line: Slopes UPWARDS from the left */
 .benefits__footer::after {
     bottom: 60px;
-    transform: skewY(-3deg);
+    transform: skewY(-4deg);
     transform-origin: left;
 }
 
@@ -1932,6 +1932,9 @@ span.crayon-underline {
     box-shadow: var(--box-shadow);
     border-radius: 8px;
     overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
 .reasons__card-header {
@@ -1941,16 +1944,28 @@ span.crayon-underline {
     display: flex;
     align-items: center;
     gap: 16px;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        background-color: transparent;
+        border-bottom: none ;
+        padding: 0
 }
 
 .reasons__card-num-box {
     display: flex;
-    flex-direction: column;
     align-items: center;
     background-color: var(--color-accent);
-    padding: 4px 10px;
-    border-radius: 4px;
-    min-width: 60px;
+padding: 15px 15px 45px 15px;
+
+        flex-direction: row;
+        justify-content: center;
+        gap: 8px;
+        min-width: 100px ;
+        border-radius: 0;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 75%, 0% 100%) ;
+        flex-shrink: 0;
+        white-space: nowrap;
 }
 
 .reasons__card-label {
@@ -1967,21 +1982,89 @@ span.crayon-underline {
 .reasons__card-title {
     font-size: 1.2rem;
     font-weight: 900;
+    flex-grow: 1;
+        display: inline-block;
+        border-bottom: 2px solid #24324a;
+        padding-bottom: 20px ;
+        margin: 0 ;
+        text-align: left ;
+        color: black;
+    }
+
+
+/* Container with the light pink accent background */
+.reasons__list-container {
+    width: fit-content;
+    background-color: #fff0f3;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+/* Reset list defaults */
+.reasons__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual list item layout */
+.reasons__list-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Last item shouldn't have a bottom margin */
+.reasons__list-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Checkmark icon sizing and positioning */
+.reasons__list-icon {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+}
+
+/* List text styling */
+.reasons__list-text {
+    font-weight: bold;
+    color: #333;
+    line-height: 1.5;
 }
 
 .reasons__card-body {
     padding: 30px 20px;
+    display: block ;
+        padding-top: 15px ;
+        padding-left: 120px ;
+    
+        text-align: left ;
 }
 
 .reasons__card-text {
     font-size: 1.05rem;
     line-height: 1.7;
-}
+    border-bottom: none ;
+        margin-left: 0 ;
+        text-align: left ;
+    }
+
 
 .reasons__text-bold {
     font-weight: 700;
 }
-
+.features-2-questions{
+    background-color: var(--color-accent-light);
+    width: fit-content;
+    border-radius: 15px;
+    padding: 15px  20px;
+}
 .reasons__text-strong {
     display: block;
     font-size: 1.2rem;
@@ -2576,20 +2659,21 @@ details[open] .faq__question::after {
     .attorney__profile {
         width: 60%;
         flex: 1;
-            padding: 40px;
-            background-color: #f9f9f9;
-            border-radius: 15px;
-            /* Optional: background for text side */
+        padding: 40px;
+        background-color: #f9f9f9;
+        border-radius: 15px;
+        /* Optional: background for text side */
     }
 
 
-        p.attorney__philosophy-text {
-            background-color: #fff9e6;
-            border-radius: 12px;
-            padding: 30px;
-            /* Box shadow: left (-8px), below (8px), blur (15px) */
-            box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.1);
-        }
+    p.attorney__philosophy-text {
+        background-color: #fff9e6;
+        border-radius: 12px;
+        padding: 30px;
+        /* Box shadow: left (-8px), below (8px), blur (15px) */
+        box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.1);
+    }
+
     .attorney__photo-wrapper {
         width: 40%;
         flex: 0 0 40%;
@@ -2611,28 +2695,30 @@ details[open] .faq__question::after {
     }
 
     .benefits__why-question-list {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-}
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+    }
 
-.pink-highlight{
-    background-color: var(--color-accent-light);
-}
+    .pink-highlight {
+        background-color: var(--color-accent-light);
+    }
 
-.benefits__why-question-list li {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Space between icon and text */
-    margin-bottom: 15px;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
+    .benefits__why-question-list li {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        /* Space between icon and text */
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
 
-.benefits__why-question-list img {
-    width: 24px; /* Adjust size as needed */
-    height: auto;
-}
+    .benefits__why-question-list img {
+        width: 24px;
+        /* Adjust size as needed */
+        height: auto;
+    }
 
     .benefits__points-grid {
         grid-template-columns: repeat(2, 1fr);
