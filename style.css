@@ -529,10 +529,10 @@ table {
 .hero__sub-line {
     display: inline-block;
     width: 48px;
-    height: 0;
+    height: 8px;
     margin-left: 10px;
-    border-top: 2px solid var(--color-text-dark);
     vertical-align: middle;
+    border: 0;
 }
 
 .hero__catch {
@@ -590,9 +590,9 @@ table {
     display: block;
     width: 520px;
     max-width: 100%;
-    height: 0;
+    height: auto;
     margin: 10px 0;
-    border-top: 2px solid var(--color-accent);
+    border: 0;
 }
 
 .hero__support {
@@ -1308,15 +1308,15 @@ img.problems__item-icon {
     font-family: var(--font-mincho);
     font-size: 1.08em;
     font-weight: 900;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     white-space: nowrap;
     display: inline-block;
-    text-emphasis: none;
-    -webkit-text-emphasis: none;
+    text-emphasis: none !important;
+    -webkit-text-emphasis: none !important;
     line-height: 1.85;
-    padding-top: 0.28em;
-    background-image: radial-gradient(circle, currentColor 0.55px, transparent 0.7px);
-    background-size: 1.08em 0.22em;
+    padding-top: 0.22em;
+    background-image: radial-gradient(circle, currentColor 0.4px, transparent 0.55px);
+    background-size: 1em 0.18em;
     background-repeat: repeat-x;
     background-position: top center;
 }
@@ -1963,6 +1963,7 @@ span.crayon-underline {
     width: 100%;
     display: block;
     position: relative;
+    margin-bottom: 69px;
 }
 
 /* --- HEADING / TOP ROW --- */
@@ -1973,37 +1974,29 @@ span.crayon-underline {
     justify-content: center;
     position: relative;
     max-width: 1296px;
-    margin: 0 auto -60px auto;
+    margin: 0 auto -36px auto;
     padding: 0 24px;
     z-index: 6;
 }
 
-.benefits__why-photo {
-    position: absolute;
-    left: 48px;
-    top: -110px;
-    width: 280px;
-    max-width: 32%;
-    height: auto;
-    z-index: 10;
-    pointer-events: none;
-}
-
 .benefits__why-title-box {
     background-color: #ffffff;
-    padding: 36px 150px;
+    padding: 28px 72px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     flex: 0 1 auto;
     max-width: max-content;
     position: relative;
-    z-index: 1;
-    margin-left: 180px;
+    z-index: 2;
+    margin-left: 0;
 }
 
 /* --- CONTENT / DETAILS BAR (Wide Box) --- */
 .benefits__why-content {
     width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
     display: flex;
     justify-content: center;
 }
@@ -2012,12 +2005,78 @@ span.crayon-underline {
     width: 100%;
     max-width: 1296px;
     background-color: #fff9e6;
-    padding: 96px 48px 48px 48px;
+    padding: 64px 56px 48px;
     border-radius: 12px;
     box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.05);
     position: relative;
     z-index: 5;
     overflow: visible;
+    box-sizing: border-box;
+}
+
+/* Photo sits bottom-right inside the cream card */
+.benefits__why-photo {
+    position: absolute;
+    right: 28px;
+    bottom: 0;
+    left: auto;
+    top: auto;
+    width: 220px;
+    max-width: 22%;
+    height: auto;
+    z-index: 4;
+    pointer-events: none;
+    margin: 0;
+}
+
+.benefits__why-lead {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    margin: 0 0 24px;
+    padding-right: 240px;
+    max-width: 920px;
+}
+
+.benefits__why-question-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    padding-right: 240px;
+    max-width: 920px;
+}
+
+.benefits__why-question-list li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.benefits__why-question-list img {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: block;
+}
+
+.benefits__why-text {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    line-height: 1.85;
+    padding-right: 240px;
+    max-width: 920px;
+}
+
+.pink-highlight {
+    background-color: var(--color-accent-light);
+    display: inline;
+    padding: 0.15em 0.35em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
 }
 
 /* --- MOBILE RESPONSIVENESS --- */
@@ -2030,18 +2089,15 @@ span.crayon-underline {
     }
 
     .benefits__why-photo {
-        left: auto;
-        top: auto;
         right: 12px;
         bottom: 0;
         width: 34%;
         max-width: 128px;
-        margin: 0;
     }
 
     .benefits__why-title-box {
         width: 100%;
-        padding: 60px 24px 24px 24px;
+        padding: 16px 24px;
         max-width: none;
         text-align: center;
         margin-left: 0;
@@ -2050,12 +2106,15 @@ span.crayon-underline {
     .benefits__why-details {
         padding: 36px 24px 160px;
     }
+
+    .benefits__why-lead,
+    .benefits__why-question-list,
+    .benefits__why-text {
+        padding-right: 0;
+        max-width: none;
+    }
 }
 
-
-.benefits__why {
-    margin-bottom: 69px;
-}
 
 .benefits__why-heading {
     background-color: var(--color-bg-light);
@@ -2072,26 +2131,6 @@ span.crayon-underline {
     font-weight: 700;
 }
 
-.benefits__why-content {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 46px;
-}
-
-.benefits__why-photo {
-    max-width: 320px;
-}
-
-.benefits__why-details {
-    background-color: var(--color-bg-peach);
-    border-radius: 20px;
-    padding: 36px 24px;
-    box-shadow: var(--box-shadow);
-}
-
 .benefits__why-icons {
     display: flex;
     gap: 14px;
@@ -2101,12 +2140,6 @@ span.crayon-underline {
 .benefits__why-icons img {
     width: 28px;
     height: 28px;
-}
-
-.benefits__why-text {
-    font-family: var(--font-serif);
-    font-size: 1.24rem;
-    line-height: 1.7;
 }
 
 .benefits__text-em {
@@ -2892,11 +2925,9 @@ margin: 0;
 
 .flow__arrow {
     display: block;
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 26px solid var(--color-accent);
+    width: 30px;
+    height: 26px;
+    border: 0;
 }
 
 /* FAQ Area */
@@ -3373,8 +3404,11 @@ details[open] .faq__question::after {
     .concerns__text-kenten,
     .concerns__text-bold.concerns__text-kenten,
     .text-kenten {
-        font-size: 1.2em;
+        font-size: 1.05em;
         font-weight: 900;
+        background-image: radial-gradient(circle, currentColor 0.5px, transparent 0.65px);
+        background-size: 1.05em 0.2em;
+        padding-top: 0.28em;
     }
 
     .concerns__rights-box {
@@ -3432,37 +3466,56 @@ details[open] .faq__question::after {
     }
 
     .benefits__why-photo {
-        width: 30%;
+        width: 220px;
+        max-width: 22%;
+        right: 28px;
+        bottom: 0;
+        left: auto;
+        top: auto;
+        position: absolute;
     }
 
     .benefits__why-details {
         width: 100%;
+        padding: 64px 56px 56px;
+    }
+
+    .benefits__why-lead,
+    .benefits__why-question-list,
+    .benefits__why-text {
+        padding-right: min(260px, 28%);
     }
 
     .benefits__why-question-list {
         list-style: none;
-        padding: 0;
-        margin: 20px 0;
+        padding-left: 0;
+        margin: 20px 0 28px;
     }
 
     .pink-highlight {
         background-color: var(--color-accent-light);
+        display: inline;
+        padding: 0.15em 0.35em;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
     }
 
     .benefits__why-question-list li {
         display: flex;
+        flex-direction: row;
         align-items: center;
-        gap: 17px;
-        /* Space between icon and text */
-        margin-bottom: 17px;
-        font-weight: bold;
-        font-size: 1.3rem;
+        gap: 14px;
+        margin-bottom: 16px;
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 1.4;
     }
 
     .benefits__why-question-list img {
-        width: 28px;
-        /* Adjust size as needed */
-        height: auto;
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+        display: block;
     }
 
     .benefits__points-grid {
@@ -5151,11 +5204,9 @@ details[open] .faq__question::after {
     }
 
     .flow__arrow {
-        width: 0;
-        height: 0;
-        border-left: 12px solid transparent;
-        border-right: 12px solid transparent;
-        border-top: 18px solid var(--color-accent);
+        width: 24px;
+        height: 18px;
+        border: 0;
     }
 
     /* ---------- FAQ ---------- */
