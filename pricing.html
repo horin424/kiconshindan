@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事務所情報</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #faf8f7;
+            font-family: 'Noto Serif JP', serif;
+            color: #333;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            padding: 60px 30px;
+            box-sizing: border-box;
+        }
+
+        .message {
+            background-color: #f8eaee;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 40px 50px 0 50px;
+            margin-bottom: 70px;
+        }
+
+        .message__content {
+            flex: 1;
+            padding-bottom: 40px;
+            font-size: 13px;
+            line-height: 1.9;
+            letter-spacing: 0.5px;
+        }
+
+        .message__content p {
+            margin: 0 0 20px 0;
+        }
+
+        .message__content p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .message__signature {
+            margin-top: 35px !important;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .message__visual {
+            width: 220px;
+            height: 300px;
+            margin-left: 20px;
+        }
+
+        .message__photo-placeholder {
+            width: 100%;
+            height: 100%;
+            background-color: #dcdcdc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .office__heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .office__heading-text {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0;
+            padding: 15px 0;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+            letter-spacing: 6px;
+        }
+
+        .office__table {
+            width: 85%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            border: 1px solid #a37584;
+            background-color: #fff;
+        }
+
+        .office__table th,
+        .office__table td {
+            padding: 18px 25px;
+            border-bottom: 1px solid #ebebeb;
+            text-align: left;
+            font-size: 13.5px;
+            letter-spacing: 1px;
+            vertical-align: middle;
+        }
+
+        .office__table tr:last-child th,
+        .office__table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .office__table th {
+            width: 35%;
+            font-weight: normal;
+            white-space: nowrap;
+        }
+
+        .office__decorator {
+            display: inline-block;
+            width: 22px;
+            height: 1px;
+            background-color: #b5889a;
+            margin-right: 20px;
+            vertical-align: middle;
+        }
+
+        .office__table td {
+            width: 65%;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="message">
+            <div class="message__content">
+                <p class="message__lead">「もしかして既婚者なのかもしれない。」</p>
+                <p>そんな違和感を抱えながら、一人で悩み続けている方は少なくありません。<br>
+                信じたい気持ちがあるからこそ、疑うことに罪悪感を感じたり、<br>
+                「自分の考えすぎかもしれない」と不安になったりすることもあると思います。</p>
+                <p>しかし、その違和感が後になって事実だったと分かるケースもあります。<br>
+                大切なのは、一人で答えを探し続けることではありません。</p>
+                <p>まずは事実を整理し、正しい情報を知ることです。<br>
+                どんな小さな不安でも構いません。<br>
+                お話しいただいた内容をもとに、今後どのような対応が考えられるのか、<br>
+                一緒に整理していきましょう。</p>
+                <p class="message__signature">弁護士 石田 大輔</p>
+            </div>
+            <div class="message__visual">
+                <div class="message__photo-placeholder">写真 (Photo)</div>
+            </div>
+        </section>
+
+        <section class="office">
+            <div class="office__heading">
+                <h3 class="office__heading-text">事務所情報</h3>
+            </div>
+            <table class="office__table">
+                <tbody>
+                    <tr>
+                        <th><span class="office__decorator"></span>事務所名</th>
+                        <td>名城法律事務所サテライトオフィス</td>
+                    </tr>
+                    <tr>
+                        <th><span class="office__decorator"></span>代表弁護士</th>
+                        <td>石田 大輔(登録番号:42317)</td>
+                    </tr>
+                    <tr>
+                        <th><span class="office__decorator"></span>所属弁護士会</th>
+                        <td>愛知県弁護士会</td>
+                    </tr>
+                    <tr>
+                        <th><span class="office__decorator"></span>営業時間</th>
+                        <td>平日9:00〜18:30</td>
+                    </tr>
+                    <tr>
+                        <th><span class="office__decorator"></span>最寄駅</th>
+                        <td>地下鉄桜通線「久屋大通駅」2番A出口</td>
+                    </tr>
+                    <tr>
+                        <th><span class="office__decorator"></span>TEL</th>
+                        <td>052-961-3071</td>
+                    </tr>
+                    <tr>
+                        <th><span class="office__decorator"></span>対応地域</th>
+                        <td>東海地域</td>
+                    </tr>
+                    <tr>
+                        <th><span class="office__decorator"></span>事務所WEBサイト</th>
+                        <td>https://daisukeishida.jp/</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
