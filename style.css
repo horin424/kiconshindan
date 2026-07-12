@@ -19,10 +19,15 @@
     --color-bg-rose-tint: #fff4f6;
     --color-border-dark: #333333;
 
-    /* Typography — site-wide Noto Serif JP */
+    /* Typography
+       Noto Serif JP  — body / most text
+       Shippori Mincho — decorative display headings
+       Noto Sans JP   — minimal UI labels
+       Impact         — CTA phone numbers */
     --font-serif: "Noto Serif JP", serif;
-    --font-sans: "Noto Serif JP", serif;
-    --font-impact: "Noto Serif JP", serif;
+    --font-mincho: "Shippori Mincho", "Noto Serif JP", serif;
+    --font-sans: "Noto Sans JP", sans-serif;
+    --font-impact: "Impact", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
     --font-base: "Noto Serif JP", serif;
 
     /* Layout — Figma frame is 1440 */
@@ -57,12 +62,6 @@ body {
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-}
-
-/* Force Noto Serif JP on all text nodes site-wide */
-body,
-body *:not(script):not(style):not(svg):not(path) {
-    font-family: "Noto Serif JP", serif;
 }
 
 .hero {
@@ -165,7 +164,7 @@ table {
 }
 
 .cta-banner__title-free {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     color: var(--color-accent);
     font-weight: 900;
     font-size: 2.9rem;
@@ -185,7 +184,7 @@ table {
     left: -82px;
     color: var(--color-text-dark);
     padding: 0;
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 1.4rem;
     font-weight: 700;
     transform: rotate(-18deg);
@@ -260,7 +259,7 @@ table {
 }
 
 .cta-banner__hours {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: 0.85rem;
     font-weight: 500;
     letter-spacing: 0.02em;
@@ -269,9 +268,9 @@ table {
 }
 
 .cta-banner__number {
-    font-family: var(--font-serif);
+    font-family: var(--font-impact);
     font-size: 2.6rem;
-    font-weight: 900;
+    font-weight: 400;
     line-height: 1;
     letter-spacing: 0.02em;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
@@ -279,7 +278,7 @@ table {
 }
 
 .cta-banner__label {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: 0.9rem;
     font-weight: 700;
     line-height: 1.2;
@@ -287,7 +286,7 @@ table {
 }
 
 .cta-banner__link {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.2;
@@ -295,7 +294,7 @@ table {
 }
 
 .cta-banner__sub {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: 0.85rem;
     font-weight: 500;
     line-height: 1.2;
@@ -333,7 +332,7 @@ table {
 }
 
 .header__logo-text {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.4;
@@ -341,7 +340,7 @@ table {
 }
 
 .header__logo-sub {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: 1.15rem;
     font-weight: 500;
 }
@@ -433,16 +432,16 @@ table {
 }
 
 .header__cta-number {
-    font-family: var(--font-serif);
+    font-family: var(--font-impact);
     font-size: 2.75rem;
-    font-weight: 900;
+    font-weight: 400;
     line-height: 1;
     letter-spacing: 0.01em;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .header__cta-hours {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: 0.88rem;
     opacity: 0.95;
     font-weight: 500;
@@ -466,6 +465,7 @@ table {
 /* SP compact header labels — hidden on desktop */
 .header__cta-mobile-label {
     display: none;
+    font-family: var(--font-sans);
 }
 
 /* Footer Area */
@@ -519,7 +519,7 @@ table {
 }
 
 .hero__sub-text {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 1.75rem;
     font-weight: 900;
     line-height: 1.45;
@@ -543,19 +543,19 @@ table {
 }
 
 .hero__headline {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     line-height: 1.15;
     margin-bottom: 8px;
 }
 
 .hero__headline-accent {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 2.2rem;
     font-weight: 900;
 }
 
 .hero__headline-em {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 3.8rem;
     font-weight: 900;
     color: var(--color-accent-dark);
@@ -563,7 +563,7 @@ table {
 }
 
 .hero__headline-sub {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 2rem;
     font-weight: 700;
 }
@@ -684,7 +684,7 @@ table {
 }
 
 .hero__feature-sub {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: 0.95rem;
     font-weight: 700;
     line-height: 1.35;
@@ -719,7 +719,7 @@ table {
 }
 
 .hero__banner-text {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 1.25rem;
     font-weight: 500;
     color: var(--color-text-dark);
@@ -771,7 +771,7 @@ table {
     display: inline-block;
     border-radius: 12px;
     background: var(--color-accent);
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 1.7rem;
     font-weight: 900;
     color: var(--color-bg-light);
@@ -1008,7 +1008,7 @@ img.problems__item-icon {
 }
 
 .intro-profile__attorney-name {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 2rem;
     font-weight: 700;
     margin: 0 0 18px;
@@ -1198,7 +1198,7 @@ img.problems__item-icon {
 }
 
 .concerns__header-text {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 1.77rem;
     font-weight: 700;
 }
@@ -1267,6 +1267,7 @@ img.problems__item-icon {
 }
 
 .concerns__text-em {
+    font-family: var(--font-mincho);
     font-size: 1.48rem;
     font-weight: 700;
     color: var(--color-accent);
@@ -1302,16 +1303,32 @@ img.problems__item-icon {
 }
 
 .concerns__text-kenten,
-.concerns__text-bold.concerns__text-kenten {
-    font-size: 2.05rem;
+.concerns__text-bold.concerns__text-kenten,
+.text-kenten {
+    font-family: var(--font-mincho);
+    font-size: 1.08em;
     font-weight: 900;
-    letter-spacing: 0.04em;
-    text-emphasis: filled circle;
-    -webkit-text-emphasis: filled circle;
-    text-emphasis-color: #fff;
-    -webkit-text-emphasis-color: #fff;
-    text-emphasis-position: over right;
-    -webkit-text-emphasis-position: over;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    display: inline-block;
+    text-emphasis: none;
+    -webkit-text-emphasis: none;
+    line-height: 1.85;
+    padding-top: 0.28em;
+    background-image: radial-gradient(circle, currentColor 0.55px, transparent 0.7px);
+    background-size: 1.08em 0.22em;
+    background-repeat: repeat-x;
+    background-position: top center;
+}
+
+.concerns__text-bold.concerns__text-kenten {
+    font-size: 1.12em;
+    color: #fff;
+    background-image: radial-gradient(circle, #fff 0.55px, transparent 0.7px);
+}
+
+.nobreak {
+    white-space: nowrap;
 }
 
 .concerns__text-semi {
@@ -1388,6 +1405,7 @@ img.problems__item-icon {
 
 .concerns__text-claim {
     display: inline-block;
+    font-family: var(--font-mincho);
     font-size: 1.95rem;
     font-weight: 900;
     color: var(--color-accent);
@@ -1418,6 +1436,7 @@ img.problems__item-icon {
 }
 
 .concerns__rights-title {
+    font-family: var(--font-mincho);
     font-size: 1.89rem;
     font-weight: 900;
     margin: 0 0 18px;
@@ -1437,8 +1456,6 @@ img.problems__item-icon {
     max-width: 46%;
     height: auto;
     position: absolute;
-    bottom: -16px;
-    right: -8px;
     margin: 0;
     z-index: 2;
     pointer-events: none;
@@ -1761,7 +1778,7 @@ span.crayon-underline {
 }
 
 .attorney__header-text {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 1.48rem;
     font-weight: 700;
     line-height: 1.6;
@@ -1789,7 +1806,7 @@ span.crayon-underline {
 }
 
 .attorney__name {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 2.6rem;
     font-weight: 700;
     margin-bottom: 28px;
@@ -1879,7 +1896,7 @@ span.crayon-underline {
 }
 
 .benefits__intro-header-text {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 1.59rem;
     font-weight: 700;
 }
@@ -1899,6 +1916,7 @@ span.crayon-underline {
 }
 
 .benefits__intro-card-title {
+    font-family: var(--font-mincho);
     font-size: 1.89rem;
     font-weight: 900;
     margin-bottom: 9px;
@@ -1944,6 +1962,7 @@ span.crayon-underline {
 .benefits__why {
     width: 100%;
     display: block;
+    position: relative;
 }
 
 /* --- HEADING / TOP ROW --- */
@@ -1951,38 +1970,35 @@ span.crayon-underline {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     position: relative;
     max-width: 1296px;
     margin: 0 auto -60px auto;
-    /* Overlaps butter box below */
     padding: 0 24px;
-    z-index: 1;
-    /* Lower layer for the heading section */
+    z-index: 6;
 }
 
 .benefits__why-photo {
-    flex: 0 0 320px;
-    width: 320px;
+    position: absolute;
+    left: 48px;
+    top: -110px;
+    width: 280px;
+    max-width: 32%;
     height: auto;
-    position: relative;
     z-index: 10;
-    /* Photo sits on top of everything */
-    margin-right: -165px;
-    /* Pulls the white title box behind it */
+    pointer-events: none;
 }
 
 .benefits__why-title-box {
     background-color: #ffffff;
     padding: 36px 150px;
-    /* Large balanced padding on both sides */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     flex: 0 1 auto;
-    /* Box only as wide as content + padding */
     max-width: max-content;
     position: relative;
     z-index: 1;
-    /* Sits behind the image */
+    margin-left: 180px;
 }
 
 /* --- CONTENT / DETAILS BAR (Wide Box) --- */
@@ -1995,29 +2011,32 @@ span.crayon-underline {
 .benefits__why-details {
     width: 100%;
     max-width: 1296px;
-    /* Wide box matching philosophy section */
     background-color: #fff9e6;
-    /* Butter color */
     padding: 96px 48px 48px 48px;
-    /* Top padding (80px) for overlapping image */
     border-radius: 12px;
     box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.05);
     position: relative;
     z-index: 5;
-    /* Sits on top of the image */
+    overflow: visible;
 }
 
 /* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
     .benefits__why-heading-container {
         flex-direction: column;
-        margin-bottom: 23px;
+        margin-bottom: 12px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .benefits__why-photo {
-        margin-right: 0;
-        max-width: 300px;
-        margin-bottom: -30px;
+        left: auto;
+        top: auto;
+        right: 12px;
+        bottom: 0;
+        width: 34%;
+        max-width: 128px;
+        margin: 0;
     }
 
     .benefits__why-title-box {
@@ -2025,10 +2044,11 @@ span.crayon-underline {
         padding: 60px 24px 24px 24px;
         max-width: none;
         text-align: center;
+        margin-left: 0;
     }
 
     .benefits__why-details {
-        padding: 36px 24px;
+        padding: 36px 24px 160px;
     }
 }
 
@@ -2047,6 +2067,7 @@ span.crayon-underline {
 }
 
 .benefits__why-title {
+    font-family: var(--font-mincho);
     font-size: 1.89rem;
     font-weight: 700;
 }
@@ -2062,8 +2083,6 @@ span.crayon-underline {
 
 .benefits__why-photo {
     max-width: 320px;
-    width: 100%;
-    align-self: center;
 }
 
 .benefits__why-details {
@@ -2091,6 +2110,7 @@ span.crayon-underline {
 }
 
 .benefits__text-em {
+    font-family: var(--font-mincho);
     font-size: 1.42rem;
     font-weight: 900;
     color: var(--color-primary);
@@ -2114,16 +2134,22 @@ span.crayon-underline {
 .benefits__points-heading {
     text-align: center;
     margin-bottom: 46px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .benefits__points-line {
     border: none;
     border-top: 3px solid var(--color-primary);
-    margin: 10px auto;
-    max-width: 648px;
+    margin: 0;
+    width: min(280px, 72%);
+    max-width: 320px;
 }
 
 .benefits__points-title {
+    font-family: var(--font-mincho);
     font-size: 2.12rem;
     font-weight: 700;
 }
@@ -2160,10 +2186,11 @@ span.crayon-underline {
 .benefits__point-num {
     text-shadow: 1px 1px 5px var(--color-accent-dark);
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-family: var(--font-serif);
+    bottom: 0px;
+    right: 0px;
+    font-family: var(--font-impact);
     font-size: 4.72rem;
+    z-index: -1;
   color: var(--color-accent-light);
     line-height: 1;
 }
@@ -2188,6 +2215,7 @@ span.crayon-underline {
 }
 
 .benefits__text-pink {
+    font-family: var(--font-mincho);
     color: var(--color-accent);
 }
 
@@ -2275,7 +2303,7 @@ span.crayon-underline {
 }
 
 .reasons__heading-text {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 2.48rem;
     font-weight: 900;
     display: inline-block;
@@ -2346,19 +2374,21 @@ span.crayon-underline {
 }
 
 .reasons__card-label {
+    font-family: var(--font-sans);
     font-size: 0.83rem;
     font-weight: 700;
     letter-spacing: 0.04em;
 }
 
 .reasons__card-num {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
     font-size: 2.01rem;
     line-height: 1;
     font-weight: 700;
 }
 
 .reasons__card-title {
+    font-family: var(--font-mincho);
     font-size: 1.42rem;
     font-weight: 900;
     flex-grow: 1;
@@ -2442,9 +2472,25 @@ span.crayon-underline {
 .features-2-questions{
     background-color: var(--color-accent-light);
     width: fit-content;
-    border-radius: 15px;
-    padding: 15px  20px;
+    max-width: 100%;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    box-sizing: border-box;
 }
+
+.features-2-questions__line {
+    display: block;
+    font-weight: 700;
+    line-height: 1.7;
+    text-align: left;
+    margin: 0;
+}
+
+.features-2-questions__line + .features-2-questions__line {
+    margin-top: 6px;
+}
+
 .reasons__text-strong {
     display: block;
     font-size: 1.42rem;
@@ -2468,19 +2514,26 @@ span.crayon-underline {
 .pricing__heading {
     text-align: center;
     margin-bottom: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .pricing__heading-line {
     border: none;
     border-top: 3px solid var(--color-primary);
-    margin: 10px auto;
+    margin: 0;
+    width: min(280px, 72%);
     max-width: 320px;
+    align-self: center;
 }
 
 .pricing__heading-text {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 2.6rem;
     font-weight: 900;
+    margin: 0;
 }
 
 .pricing__subtitle {
@@ -2655,17 +2708,19 @@ margin: 0;
 }
 
 .pricing__table-free {
+    font-family: var(--font-mincho);
     color: var(--color-accent);
     font-weight: 900;
     font-size: 1.65rem;
 }
 
 .pricing__table-label {
+    font-family: var(--font-sans);
     font-size: 1.18rem;
 }
 
 .pricing__table-number {
-    font-family: var(--font-serif);
+    font-family: var(--font-impact);
     color: var(--color-accent);
     font-size: 2.6rem;
 }
@@ -2719,6 +2774,7 @@ margin: 0;
 }
 
 .flow__heading-text {
+    font-family: var(--font-mincho);
     font-size: 2.6rem;
     font-weight: 900;
 }
@@ -2757,6 +2813,7 @@ margin: 0;
 
 
 .flow__step-num {
+    font-family: var(--font-sans);
     font-size: 1.42rem;
     font-weight: 700;
     color: var(--color-accent);
@@ -2784,7 +2841,7 @@ margin: 0;
     /* The requested dashed border */
 }
 .flow__step-title {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 2.12rem;
     font-weight: 900;
     margin-bottom: 18px;
@@ -2857,7 +2914,7 @@ margin: 0;
 }
 
 .faq__heading-text {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 2.18rem;
     font-weight: 900;
     margin: 0;
@@ -2994,7 +3051,7 @@ details[open] .faq__question::after {
 }
 
 .message__lead {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 1.65rem;
     font-weight: 700;
 }
@@ -3004,7 +3061,7 @@ details[open] .faq__question::after {
     font-size: 1.77rem;
     margin-top: 34px;
     text-align: left;
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-weight: 700;
 }
 
@@ -3036,7 +3093,7 @@ details[open] .faq__question::after {
 }
 
 .office__heading-text {
-    font-family: var(--font-serif);
+    font-family: var(--font-mincho);
     font-size: 2.6rem;
     font-weight: 900;
 }
@@ -3314,8 +3371,9 @@ details[open] .faq__question::after {
     }
 
     .concerns__text-kenten,
-    .concerns__text-bold.concerns__text-kenten {
-        font-size: 2.25rem;
+    .concerns__text-bold.concerns__text-kenten,
+    .text-kenten {
+        font-size: 1.2em;
         font-weight: 900;
     }
 
@@ -3335,8 +3393,8 @@ details[open] .faq__question::after {
     .concerns__rights-image {
         width: 420px;
         max-width: 48%;
-        right: -4px;
-        bottom: -20px;
+        right: -60px;
+        bottom: 0px;
     }
 
     /* Attorney Profile Area */
@@ -3840,8 +3898,10 @@ details[open] .faq__question::after {
     }
 
     .cta-banner__number {
-        font-size: 1.55rem;
+        font-size: 1.85rem;
         white-space: nowrap;
+        font-weight: 400;
+        letter-spacing: 0.01em;
     }
 
     .cta-banner__hours,
@@ -4170,16 +4230,22 @@ details[open] .faq__question::after {
 
     .concerns__image-block {
         width: 100%;
+        display: flex;
         justify-content: center;
         order: 2;
+        padding-right: 0;
+        padding-left: 0;
     }
 
     .concerns__image {
         top: 0;
-        margin-bottom: 0;
-        max-width: 260px;
+        margin-bottom: -12px;
+        max-width: 240px;
+        width: 72%;
         margin-left: auto;
         margin-right: auto;
+        align-self: center;
+        object-position: center center;
     }
 
     .concerns__text-block {
@@ -4204,19 +4270,31 @@ details[open] .faq__question::after {
     .concerns__definition {
         width: calc(100% - 32px);
         max-width: 100%;
-        margin: 20px auto 0;
-        padding: 18px 16px;
+        margin: 24px auto 0;
+        padding: 20px 18px 22px;
         box-sizing: border-box;
+        border-radius: 18px;
     }
 
     .concerns__definition-text {
-        font-size: 0.95rem;
-        line-height: 1.7;
+        font-size: 0.92rem;
+        line-height: 1.85;
+        text-align: center;
     }
 
     .concerns__text-kenten,
+    .concerns__text-bold.concerns__text-kenten,
+    .text-kenten {
+        font-size: 1.05em !important;
+        letter-spacing: 0.06em;
+        line-height: 1.9;
+        padding-top: 0.32em;
+        background-size: 1.05em 0.2em;
+        background-image: radial-gradient(circle, currentColor 0.5px, transparent 0.65px);
+    }
+
     .concerns__text-bold.concerns__text-kenten {
-        font-size: 1.35rem !important;
+        background-image: radial-gradient(circle, #fff 0.5px, transparent 0.65px);
     }
 
     .concerns__explanation-inner {
@@ -4251,41 +4329,51 @@ details[open] .faq__question::after {
     }
 
     .concerns__rights-box {
-        flex-direction: column;
-        padding: 18px 14px 20px !important;
-        gap: 12px;
-        width: 100% !important;
+        display: block !important;
+        position: relative !important;
+        padding: 22px 18px 132px !important;
+        gap: 0;
+        width: calc(100% - 32px) !important;
         max-width: 100% !important;
         min-height: 0 !important;
         box-sizing: border-box;
-        margin: 16px 0 0;
+        margin: 20px auto 0;
+        overflow: visible;
+        text-align: left;
     }
 
     .concerns__rights-content {
         max-width: 100% !important;
         width: 100% !important;
+        padding-right: 8px;
+        box-sizing: border-box;
+        text-align: left;
     }
 
     .concerns__rights-title {
         font-size: 1.15rem;
-        margin-bottom: 10px;
+        margin-bottom: 14px;
+        padding-right: 8px;
+        text-align: left;
     }
 
     .concerns__rights-text {
         font-size: 0.88rem !important;
-        line-height: 1.65 !important;
-        padding-right: 0 !important;
+        line-height: 1.75 !important;
+        padding-right: 112px !important;
         width: 100%;
+        box-sizing: border-box;
+        text-align: left;
     }
 
     .concerns__rights-image {
-        position: relative !important;
-        width: 140px !important;
-        max-width: 45% !important;
-        right: auto !important;
-        bottom: auto !important;
-        margin: 8px auto 0;
-        display: block;
+        position: absolute !important;
+        width: 280px !important;
+        right: -20px !important;
+        bottom: 0px !important;
+        margin: 0 !important;
+        display: inline;
+        z-index: 2;
     }
 
     .concerns__warning-block {
@@ -4322,6 +4410,26 @@ details[open] .faq__question::after {
 
     .concerns__text-large {
         font-size: 1.05rem !important;
+    }
+
+    .concerns__text-em {
+        font-size: 1.05rem !important;
+        line-height: 1.7 !important;
+    }
+
+    .concerns__fact .concerns__text-em {
+        font-size: 1.12rem !important;
+        line-height: 1.7 !important;
+    }
+
+    .concerns__text-claim {
+        font-size: 1.15rem !important;
+        line-height: 1.55 !important;
+    }
+
+    .concerns__cta-box-text {
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
     }
 
     .concerns__example-box,
@@ -4477,54 +4585,119 @@ details[open] .faq__question::after {
         line-height: 1.5;
     }
 
+    .benefits__why {
+        position: relative;
+        padding-bottom: 8px;
+    }
+
     .benefits__why-heading-container {
         flex-direction: column;
-        margin-bottom: 16px;
+        align-items: stretch;
+        margin-bottom: 0;
+        padding: 0 16px;
+        position: static;
+        z-index: 2;
     }
 
     .benefits__why-photo {
-        margin: 0 auto -20px;
-        max-width: 220px;
-        width: 70%;
+        position: absolute;
+        left: auto;
+        top: auto;
+        right: 10px;
+        bottom: 0;
+        margin: 0;
+        max-width: 128px;
+        width: 34%;
+        z-index: 4;
+        pointer-events: none;
     }
 
     .benefits__why-title-box {
+        order: 1;
         width: 100%;
         max-width: 100%;
-        padding: 48px 16px 20px;
+        padding: 16px;
         text-align: center;
         box-sizing: border-box;
-    }
-
-    .benefits__why-details {
-        padding: 20px 16px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .benefits__why-text,
-    .benefits__why-question-list li {
-        font-size: 0.92rem !important;
-        line-height: 1.65;
+        border-radius: 12px;
+        margin-left: 0;
     }
 
     .benefits__why-content {
         flex-direction: column;
+        padding: 0 16px;
+        gap: 0;
+        margin-top: 12px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .benefits__why-details {
+        position: relative;
+        padding: 22px 20px 176px;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 12px;
+        overflow: visible;
+    }
+
+    .benefits__why-lead {
+        font-size: 0.95rem !important;
+        line-height: 1.85 !important;
+        margin-bottom: 18px;
+        padding-right: 0;
+    }
+
+    .benefits__why-text {
+        margin-top: 12px;
+        margin-bottom: 0;
+        padding-right: 96px;
+    }
+
+    .benefits__why-text br + br {
+        display: block;
+        content: '';
+        margin-top: 0.4em;
+    }
+
+    .benefits__why-question-list {
+        list-style: none;
         padding: 0;
-        gap: 20px;
+        margin: 18px 0 22px;
+    }
+
+    .benefits__why-question-list li {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 12px !important;
+        margin-bottom: 14px !important;
+        font-weight: 700;
+    }
+
+    .benefits__why-question-list img {
+        width: 28px !important;
+        height: 28px !important;
+        flex-shrink: 0;
+        display: block;
+    }
+
+    .benefits__text-em {
+        font-size: 1em !important;
+        line-height: 1.75;
     }
 
     .benefits__points-grid {
         grid-template-columns: 1fr !important;
-        gap: 20px;
+        gap: 0;
         padding: 0;
         width: 100%;
     }
 
     .benefits__point-card {
-        width: min(260px, 78vw) !important;
-        max-width: min(260px, 78vw) !important;
-        margin: 0 auto;
+        width: min(250px, 76vw) !important;
+        max-width: min(250px, 76vw) !important;
+        margin: 12px auto;
         aspect-ratio: 1;
         box-sizing: border-box;
         padding: 28px 20px !important;
@@ -4670,9 +4843,23 @@ details[open] .faq__question::after {
         flex: 1 1 auto;
     }
 
+    .features-2-questions {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px 16px;
+        margin: 14px 0;
+    }
+
+    .features-2-questions__line {
+        font-size: 0.88rem;
+        line-height: 1.65;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
     .reasons__card-body {
-        padding: 12px 4px 0 !important;
-        padding-left: 4px !important;
+        padding: 12px 14px 0 !important;
+        padding-left: 14px !important;
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
@@ -4684,26 +4871,9 @@ details[open] .faq__question::after {
         max-width: 100% !important;
         min-width: 0 !important;
         font-size: 0.9rem !important;
-        line-height: 1.7 !important;
+        line-height: 1.75 !important;
         display: block;
-    }
-
-    .reasons__list-container {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box;
-        padding: 14px 12px;
-        margin: 12px 0;
-    }
-
-    .reasons__list {
-        width: 100% !important;
-    }
-
-    .reasons__list-item {
-        width: 100%;
-        padding-left: 30px;
-        margin-bottom: 10px;
+        padding: 0 2px;
     }
 
     .reasons__list-text {
@@ -4714,14 +4884,20 @@ details[open] .faq__question::after {
     .features-2-questions {
         width: 100%;
         box-sizing: border-box;
-        padding: 12px;
-        overflow-wrap: anywhere;
-        word-break: break-word;
+        padding: 14px 16px;
+        margin: 14px 0;
+    }
+
+    .features-2-questions__line {
+        font-size: 0.88rem;
+        line-height: 1.65;
+        overflow-wrap: break-word;
+        word-break: normal;
     }
 
     .features-2-questions strong {
-        font-size: 0.88rem;
-        line-height: 1.6;
+        font-size: inherit;
+        line-height: inherit;
     }
 
     /* ---------- Pricing ---------- */
@@ -4731,37 +4907,48 @@ details[open] .faq__question::after {
     }
 
     .pricing__heading-text {
-        font-size: 1.55rem;
+        font-size: 1.45rem;
+        line-height: 1.3;
     }
 
     .pricing__heading-line {
-        max-width: 200px;
-        margin-left: 16px;
-        margin-right: 16px;
-        width: auto;
+        width: min(220px, 58%);
+        max-width: 220px;
+        margin: 0;
+        align-self: center;
+    }
+
+    .pricing__heading {
+        gap: 8px;
+        margin-bottom: 20px;
+        padding: 0 16px;
     }
 
     .pricing__subtitle {
         font-size: 0.92rem;
-        padding: 0 16px;
-        line-height: 1.7;
+        padding: 0 24px;
+        line-height: 1.75;
+        margin-bottom: 24px;
     }
 
     .pricing__cta-bar {
-        width: calc(100% - 32px);
+        width: calc(100% - 48px);
         max-width: 100%;
-        margin: 0 16px 28px;
-        padding: 16px 14px;
+        margin: 0 auto 28px;
+        padding: 16px 18px;
         box-sizing: border-box;
     }
 
     .pricing__cta-bar-text {
-        font-size: 0.95rem;
-        line-height: 1.5;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        text-wrap: pretty;
+        padding: 0 4px;
     }
 
     .pricing__text-em {
-        font-size: 1.2rem;
+        font-size: 1.02rem;
+        white-space: normal;
     }
 
     .pricing__cards-grid {
@@ -4776,18 +4963,69 @@ details[open] .faq__question::after {
         width: 100%;
         max-width: 100%;
         box-sizing: border-box;
+        overflow: visible;
     }
 
-    .pricing__card-title,
-    .pricing__plan-name {
-        font-size: 1.15rem;
+    .pricing__card-body {
+        padding: 18px 16px 24px;
     }
 
     .pricing__card-desc,
     .pricing__note,
     .pricing__plan-desc {
         font-size: 0.9rem;
-        line-height: 1.65;
+        line-height: 1.7;
+        padding: 0 4px;
+    }
+
+    .pricing__note {
+        padding: 0 24px;
+        margin-top: 16px;
+    }
+
+    .pricing__badge {
+        width: calc(100% - 48px);
+        max-width: 340px;
+        height: auto;
+        min-height: 0;
+        margin: 28px auto 8px;
+        position: relative;
+        z-index: 2;
+        border-radius: 50% / 45%;
+        padding: 28px 20px;
+        box-sizing: border-box;
+    }
+
+    .pricing__badge-triangle {
+        top: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left-width: 14px;
+        border-right-width: 14px;
+        border-bottom-width: 18px;
+    }
+
+    .pricing__badge-text {
+        font-size: 0.92rem !important;
+        line-height: 1.55 !important;
+        padding: 0 !important;
+    }
+
+    .pricing__card:last-child {
+        margin-bottom: 8px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .pricing__table th {
+        font-family: var(--font-sans);
+        font-size: 0.85rem;
+        padding: 12px 10px;
+        white-space: nowrap;
+    }
+
+    .pricing__table td {
+        padding: 12px 10px;
     }
 
     .pricing table,
@@ -4804,6 +5042,14 @@ details[open] .faq__question::after {
     .pricing__table td {
         padding: 12px 8px;
         word-break: break-word;
+    }
+
+    .pricing__table-number {
+        font-size: 1.85rem !important;
+    }
+
+    .pricing__table-free {
+        font-size: 1.35rem !important;
     }
 
     /* ---------- Flow — vertical SP cards ---------- */
@@ -4838,7 +5084,7 @@ details[open] .faq__question::after {
         align-items: stretch !important;
         width: 100% !important;
         max-width: 100% !important;
-        padding: 24px 18px !important;
+        padding: 18px 16px !important;
         box-sizing: border-box;
         gap: 0;
         background: #fff;
@@ -4851,19 +5097,19 @@ details[open] .faq__question::after {
     .flow__step-left {
         width: 100% !important;
         max-width: 100% !important;
-        padding: 0 0 16px !important;
+        padding: 0 0 12px !important;
         flex-shrink: 1;
         align-items: center;
         text-align: center;
         border-bottom: 1px dashed var(--color-accent);
-        margin-bottom: 16px;
+        margin-bottom: 12px;
     }
 
     .flow__step-left img,
     .flow__step-image {
-        width: 72px !important;
-        height: 72px !important;
-        max-width: 72px;
+        width: 64px !important;
+        height: 64px !important;
+        max-width: 64px;
         object-fit: contain;
     }
 
@@ -5060,3 +5306,6 @@ details[open] .faq__question::after {
         line-height: 1.55 !important;
     }
 }
+
+.sp-only { display: none; }
+@media (max-width: 768px) { .sp-only { display: inline; } }
