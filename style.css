@@ -1009,6 +1009,22 @@ img.problems__item-icon {
     color: #333333;
 }
 
+.intro-profile__quotes {
+    display: block;
+}
+
+.intro-profile__quote-split {
+    display: none;
+}
+
+.intro-profile__quote-single {
+    display: inline-block;
+}
+
+.intro-profile__text-legal {
+    display: inline;
+}
+
 .intro-profile__text-semi {
     color: var(--color-text-dark);
     background-color: var(--color-accent-light);
@@ -1151,11 +1167,11 @@ img.problems__item-icon {
     pointer-events: none;
     z-index: 3;
     background-image:
-        radial-gradient(circle, #e85a7a 4.5px, transparent 5px),
-        radial-gradient(circle, #e85a7a 4.5px, transparent 5px),
-        radial-gradient(circle, #e85a7a 4.5px, transparent 5px),
-        radial-gradient(circle, #e85a7a 4.5px, transparent 5px);
-    background-size: 12px 12px;
+        radial-gradient(circle, #e85a7a 3.5px, transparent 4px),
+        radial-gradient(circle, #e85a7a 3.5px, transparent 4px),
+        radial-gradient(circle, #e85a7a 3.5px, transparent 4px),
+        radial-gradient(circle, #e85a7a 3.5px, transparent 4px);
+    background-size: 10px 10px;
     background-position: left top, right top, left bottom, right bottom;
     background-repeat: no-repeat;
 }
@@ -4131,12 +4147,10 @@ details[open] .faq__question::after {
     }
 
     .intro-profile__hero-wrap {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
+        display: block;
         height: auto;
         min-height: 0;
-        padding: 36px 14px 32px;
+        padding: 32px 16px 36px;
         overflow: visible;
         position: relative;
         background-color: #ececec;
@@ -4158,16 +4172,18 @@ details[open] .faq__question::after {
     }
 
     .intro-profile__character {
-        position: static;
-        display: inline-block;
-        align-self: flex-end;
-        height: auto;
-        max-height: 220px;
-        max-width: 52%;
+        position: absolute;
+        top: -14px;
+        right: -2%;
+        left: auto;
+        bottom: auto;
+        display: block;
+        height: 260px;
+        max-width: 50%;
         width: auto;
-        margin-top: 12px;
+        margin: 0;
         object-fit: contain;
-        object-position: bottom right;
+        object-position: top right;
         z-index: 2;
         pointer-events: none;
     }
@@ -4175,7 +4191,6 @@ details[open] .faq__question::after {
     .intro-profile__content {
         position: relative;
         z-index: 3;
-        flex: none;
         width: 100%;
         max-width: 100%;
         padding: 0;
@@ -4187,41 +4202,88 @@ details[open] .faq__question::after {
 
     .intro-profile__main-text {
         width: 100%;
-        font-size: 0.9rem;
-        line-height: 1.7;
+        font-size: 1rem;
+        line-height: 1.85;
+    }
+
+    .intro-profile__quotes {
+        display: block;
+        max-width: 56%;
     }
 
     .intro-profile__text-semi {
-        font-size: 0.92rem;
-        padding: 2px 6px;
-        margin-bottom: 4px;
+        font-size: 1.08rem;
+        padding: 4px 8px;
+        margin-bottom: 8px;
         display: inline-block;
         max-width: 100%;
         box-sizing: border-box;
+        line-height: 1.7;
+    }
+
+    .intro-profile__quote-single {
+        display: none;
+    }
+
+    .intro-profile__quote-split {
+        display: block;
+    }
+
+    .intro-profile__quote-split .intro-profile__text-semi {
+        display: inline-block;
+        margin-bottom: 6px;
+    }
+
+    .intro-profile__quote-split .intro-profile__text-semi:last-child {
+        margin-bottom: 8px;
     }
 
     .intro-profile__text-body {
-        font-size: 0.88rem;
-        margin: 10px 0 12px;
         display: block;
+        font-size: 1rem;
+        margin: 20px 0 12px;
         width: 100%;
+        line-height: 1.85;
+        clear: both;
+    }
+
+    .intro-profile__text-legal {
+        display: block;
+        line-height: 1.8;
+    }
+
+    .intro-profile__text-legal .intro-profile__text-bold {
+        font-size: 1.12rem;
+    }
+
+    .intro-profile__text-legal .intro-profile__text-married {
+        font-size: 1.38rem;
+    }
+
+    .intro-profile__text-legal .intro-profile__text-large {
+        font-size: 1.42rem;
+        display: inline;
+    }
+
+    .intro-profile__text-legal .intro-profile__text-small {
+        font-size: 1.05rem;
     }
 
     .intro-profile__text-bold {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .intro-profile__text-married {
-        font-size: 1.05rem;
+        font-size: 1.2rem;
     }
 
     .intro-profile__text-large {
-        font-size: 1.05rem;
+        font-size: 1.22rem;
         display: inline;
     }
 
     .intro-profile__text-small {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
     }
 
     .intro-profile__attorney {
@@ -4254,6 +4316,16 @@ details[open] .faq__question::after {
         overflow: visible;
     }
 
+    .intro-profile__attorney-card::before {
+        inset: 8px;
+        background-image:
+            radial-gradient(circle, #e85a7a 2.5px, transparent 3px),
+            radial-gradient(circle, #e85a7a 2.5px, transparent 3px),
+            radial-gradient(circle, #e85a7a 2.5px, transparent 3px),
+            radial-gradient(circle, #e85a7a 2.5px, transparent 3px);
+        background-size: 8px 8px;
+    }
+
     .intro-profile__attorney-desc {
         padding-right: 0;
         margin-top: 0;
@@ -4263,27 +4335,27 @@ details[open] .faq__question::after {
     }
 
     .intro-profile__attorney-name {
-        font-size: 1rem;
-        line-height: 1.45;
+        font-size: 1.08rem;
+        line-height: 1.5;
         margin-bottom: 10px;
     }
 
     .intro-profile__attorney-name-sub {
-        font-size: 0.85rem;
+        font-size: 0.92rem;
         font-weight: 500;
     }
 
     .intro-profile__attorney-body {
-        font-size: 0.86rem;
-        line-height: 1.7;
+        font-size: 0.96rem;
+        line-height: 1.75;
         margin: 0 0 12px;
     }
 
     .intro-profile__text-quote {
         display: block;
         width: 100%;
-        font-size: 0.88rem;
-        line-height: 1.75;
+        font-size: 0.96rem;
+        line-height: 1.8;
         margin: 4px 0 0;
         padding-left: 0;
         font-weight: 700;
@@ -4293,12 +4365,12 @@ details[open] .faq__question::after {
         display: inline;
         font-size: inherit;
         line-height: inherit;
-        white-space: nowrap;
+        white-space: normal;
     }
 
     .intro-profile__attorney-closing {
-        font-size: 0.86rem;
-        line-height: 1.7;
+        font-size: 0.96rem;
+        line-height: 1.75;
         margin: 0;
         padding-right: 40%;
         padding-bottom: 8px;
@@ -4312,7 +4384,7 @@ details[open] .faq__question::after {
     }
 
     .intro-profile__text-accent {
-        font-size: 1.05rem;
+        font-size: 1.08rem;
         font-weight: 900;
         color: var(--color-accent);
     }
