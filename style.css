@@ -131,8 +131,10 @@ table {
    ========================================================================== */
 /* Reusable CTA Banner */
 .cta-banner {
+    position: relative;
+    z-index: 1;
     background-color: var(--color-bg-peach);
-    padding: 48px 20px 52px;
+    padding: 0;
     width: 100%;
 }
 
@@ -140,10 +142,12 @@ table {
     max-width: none;
     width: 100%;
     margin: 0 auto;
+    padding: 48px 20px 52px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 28px;
+    box-sizing: border-box;
 }
 
 .cta-banner__heading {
@@ -199,6 +203,8 @@ table {
     gap: 20px;
     width: 100%;
     max-width: none;
+    margin: 0;
+    padding: 0;
 }
 
 .cta-banner__btn {
@@ -727,43 +733,85 @@ table {
 
 /* Problems Area */
 .problems {
+    position: relative;
+    background-color: #878787;
+    padding: 120px 0 100px;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+.problems::before {
+    content: "";
+    position: absolute;
+    inset: -16px -4% 0;
     background-color: #878787;
     background-image: url("images/backgrounds/problems-bg.png");
     background-size: cover;
     background-position: center top;
-    padding: 120px 0 100px;
-    overflow: visible;
+    filter: blur(96px);
+    -webkit-filter: blur(96px);
+    transform: scale(1.1);
+    transform-origin: center top;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.problems::after {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+    height: 180px;
+    background: linear-gradient(
+        to bottom,
+        var(--color-bg-peach) 0%,
+        rgba(254, 248, 238, 0.95) 22%,
+        rgba(254, 248, 238, 0.65) 45%,
+        rgba(135, 135, 135, 0.25) 78%,
+        transparent 100%
+    );
+    pointer-events: none;
+    z-index: 0;
 }
 
 .problems__container {
+    position: relative;
+    z-index: 1;
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 48px;
     overflow: visible;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .problems__panel {
     position: relative;
     background-color: #faf1ec;
     border-radius: 22px;
-    padding: 88px 72px 56px;
+    padding: 56px 72px 56px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
     overflow: visible;
+    width: 100%;
 }
 
 .problems__heading {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: auto;
-    max-width: none;
-    text-align: center;
+    position: relative;
     z-index: 2;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 48px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .problems__heading-text {
@@ -3350,7 +3398,7 @@ details[open] .faq__question::after {
 
     /* Problems Area */
     .problems__panel {
-        padding: 88px 72px 56px;
+        padding: 32px 72px 56px;
     }
 
     .problems__heading-text {
@@ -3873,12 +3921,13 @@ details[open] .faq__question::after {
 
     /* ---------- CTA banners ---------- */
     .cta-banner {
-        padding: 28px 16px 32px;
+        padding: 0;
     }
 
     .cta-banner__container {
         gap: 14px;
         width: 100%;
+        padding: 28px 16px 32px;
     }
 
     .cta-banner__heading {
@@ -3886,7 +3935,7 @@ details[open] .faq__question::after {
         justify-content: center;
         gap: 4px 8px;
         position: relative;
-        padding-top: 8px;
+        padding-top: 0;
         width: 100%;
     }
 
@@ -3919,11 +3968,14 @@ details[open] .faq__question::after {
         width: 100%;
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 12px;
+        margin: 0;
+        padding: 0;
     }
 
     .cta-banner__btn {
-        width: 100%;
+        width: fit-content;
         max-width: 100%;
         min-height: 0;
         padding: 14px 16px;
@@ -3932,7 +3984,6 @@ details[open] .faq__question::after {
     }
 
     .cta-banner__btn-inner {
-        width: 100%;
         justify-content: flex-start;
         gap: 12px;
     }
@@ -3947,7 +3998,6 @@ details[open] .faq__question::after {
         align-items: flex-start;
         text-align: left;
         min-width: 0;
-        flex: 1;
     }
 
     .cta-banner__number {
@@ -3973,6 +4023,23 @@ details[open] .faq__question::after {
     .problems {
         padding: 48px 0 40px;
         overflow: visible;
+        gap: 20px;
+    }
+
+    .problems::before {
+        inset: -12px -4% 0;
+        filter: blur(80px);
+        -webkit-filter: blur(80px);
+        transform: scale(1.08);
+    }
+
+    .problems::after {
+        top: -56px;
+        height: 140px;
+    }
+
+    .problems__heading {
+        padding: 0 16px;
     }
 
     .problems__container {
@@ -3985,17 +4052,13 @@ details[open] .faq__question::after {
     .problems__panel {
         width: 100%;
         max-width: 100%;
-        padding: 48px 16px 24px;
+        margin-top: 0;
+        padding: 24px 16px 24px;
         border-radius: 16px;
         gap: 8px;
         align-items: stretch;
         box-sizing: border-box;
         min-width: 0;
-    }
-
-    .problems__heading {
-        width: calc(100% - 24px);
-        max-width: 100%;
     }
 
     .problems__heading-text {
@@ -4011,7 +4074,7 @@ details[open] .faq__question::after {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 0;
-        margin: 28px 0 0;
+        margin: 0;
         align-items: stretch;
     }
 
@@ -4068,11 +4131,12 @@ details[open] .faq__question::after {
     }
 
     .intro-profile__hero-wrap {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
         height: auto;
         min-height: 0;
         padding: 36px 14px 32px;
-        padding-right: 40%;
         overflow: visible;
         position: relative;
         background-color: #ececec;
@@ -4094,17 +4158,16 @@ details[open] .faq__question::after {
     }
 
     .intro-profile__character {
-        position: absolute;
-        left: auto;
-        right: -2%;
-        top: -18px;
-        bottom: auto;
-        transform: none;
-        height: 280px;
-        max-width: 48%;
+        position: static;
+        display: inline-block;
+        align-self: flex-end;
+        height: auto;
+        max-height: 220px;
+        max-width: 52%;
         width: auto;
+        margin-top: 12px;
         object-fit: contain;
-        object-position: top right;
+        object-position: bottom right;
         z-index: 2;
         pointer-events: none;
     }
@@ -4115,13 +4178,15 @@ details[open] .faq__question::after {
         flex: none;
         width: 100%;
         max-width: 100%;
-        padding: 4px 0 0;
+        padding: 0;
         margin: 0;
         text-align: left;
         background: transparent;
+        box-sizing: border-box;
     }
 
     .intro-profile__main-text {
+        width: 100%;
         font-size: 0.9rem;
         line-height: 1.7;
     }
@@ -4131,12 +4196,15 @@ details[open] .faq__question::after {
         padding: 2px 6px;
         margin-bottom: 4px;
         display: inline-block;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .intro-profile__text-body {
         font-size: 0.88rem;
         margin: 10px 0 12px;
         display: block;
+        width: 100%;
     }
 
     .intro-profile__text-bold {
