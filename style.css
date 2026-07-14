@@ -1320,6 +1320,23 @@ img.problems__item-icon {
     padding: 2px 8px;
 }
 
+.concerns__quote-row {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    margin: 0;
+    text-align: center;
+}
+
+.concerns__quote--inline {
+    display: inline;
+    margin: 0;
+}
+
+.concerns__quote-suffix {
+    font-family: var(--font-serif);
+    font-size: inherit;
+}
+
 .concerns__desc {
     font-family: var(--font-serif);
     font-size: 1.3rem;
@@ -1495,7 +1512,8 @@ img.problems__item-icon {
 .concerns__rights-content {
     position: relative;
     z-index: 1;
-    max-width: 58%;
+    max-width: 100%;
+    width: 100%;
     text-align: left;
 }
 
@@ -1505,6 +1523,8 @@ img.problems__item-icon {
     font-weight: 900;
     margin: 0 0 18px;
     text-align: left;
+    position: relative;
+    z-index: 1;
 }
 
 .concerns__rights-text {
@@ -1513,16 +1533,22 @@ img.problems__item-icon {
     text-align: left;
     line-height: 1.85;
     margin: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .concerns__rights-image {
-    width: 420px;
-    max-width: 46%;
+    width: 440px;
+    max-width: 48%;
     height: auto;
     position: absolute;
+    right: -24px;
+    bottom: 0;
     margin: 0;
-    z-index: 2;
+    z-index: 0;
     pointer-events: none;
+    object-fit: contain;
+    object-position: bottom right;
 }
 
 .concerns__warning-block {
@@ -3476,11 +3502,11 @@ details[open] .faq__question::after {
     }
 
     .concerns__rights-box {
-        overflow: visible;
+        overflow: hidden;
     }
 
     .concerns__rights-content {
-        max-width: 58%;
+        max-width: 100%;
     }
 
     .concerns__rights-text {
@@ -3489,10 +3515,11 @@ details[open] .faq__question::after {
     }
 
     .concerns__rights-image {
-        width: 420px;
-        max-width: 48%;
-        right: -60px;
-        bottom: 0px;
+        width: 460px;
+        max-width: 50%;
+        right: -40px;
+        bottom: 0;
+        z-index: 0;
     }
 
     /* Attorney Profile Area */
@@ -4453,6 +4480,17 @@ details[open] .faq__question::after {
         padding: 4px 10px;
     }
 
+    .concerns__quote-row {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    .concerns__quote--inline {
+        font-size: 1rem;
+        padding: 4px 10px;
+    }
+
     .concerns__desc,
     .concerns__warning,
     .concerns__fact {
@@ -4497,76 +4535,109 @@ details[open] .faq__question::after {
         box-sizing: border-box;
     }
 
-    .concerns__sns-row {
-        flex-direction: column;
-        gap: 16px;
-        width: 100%;
-    }
-
     .concerns__sns-block {
         width: 100%;
         max-width: 100%;
+        align-items: stretch;
+        gap: 20px;
     }
 
-    .concerns__sns-text,
-    .concerns__legal-text {
-        font-size: 0.92rem;
-        line-height: 1.7;
+    .concerns__sns-row {
+        position: relative;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 10px;
         width: 100%;
     }
 
+    .concerns__sns-text {
+        font-size: 0.92rem;
+        line-height: 1.75;
+        width: auto;
+        flex: 1;
+        min-width: 0;
+        text-align: left;
+        padding-right: 96px;
+        box-sizing: border-box;
+    }
+
+    .concerns__legal-text {
+        font-size: 0.92rem;
+        line-height: 1.75;
+        width: 100%;
+        text-align: left;
+        margin: 0;
+    }
+
     .concerns__explanation-photo {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto;
+        position: absolute;
+        top: 1.4em;
+        right: 0;
+        width: 92px;
+        height: 92px;
+        margin: 0;
+    }
+
+    .concerns__text-claim {
+        display: inline;
+        font-size: 1.15rem !important;
+        line-height: 1.6 !important;
+        white-space: normal;
     }
 
     .concerns__rights-box {
         display: block !important;
         position: relative !important;
-        padding: 22px 18px 132px !important;
+        padding: 24px 18px 28px !important;
         gap: 0;
         width: calc(100% - 32px) !important;
         max-width: 100% !important;
         min-height: 0 !important;
         box-sizing: border-box;
         margin: 20px auto 0;
-        overflow: visible;
+        overflow: hidden;
         text-align: left;
     }
 
     .concerns__rights-content {
         max-width: 100% !important;
         width: 100% !important;
-        padding-right: 8px;
+        padding-right: 0;
         box-sizing: border-box;
         text-align: left;
     }
 
     .concerns__rights-title {
-        font-size: 1.15rem;
-        margin-bottom: 14px;
-        padding-right: 8px;
+        font-size: 1.28rem;
+        margin-bottom: 16px;
+        padding-right: 0;
         text-align: left;
     }
 
     .concerns__rights-text {
-        font-size: 0.88rem !important;
-        line-height: 1.75 !important;
-        padding-right: 112px !important;
+        font-size: 1rem !important;
+        line-height: 1.8 !important;
+        padding-right: 0 !important;
         width: 100%;
         box-sizing: border-box;
         text-align: left;
     }
 
+    .concerns__rights-text .concerns__text-em {
+        font-size: 1.08rem !important;
+        line-height: 1.75 !important;
+    }
+
     .concerns__rights-image {
         position: absolute !important;
-        width: 280px !important;
-        right: -20px !important;
-        bottom: 0px !important;
+        width: 240px !important;
+        max-width: 62% !important;
+        right: -16px !important;
+        bottom: 0 !important;
         margin: 0 !important;
-        display: inline;
-        z-index: 2;
+        z-index: 0 !important;
+        pointer-events: none;
     }
 
     .concerns__warning-block {
@@ -4611,13 +4682,9 @@ details[open] .faq__question::after {
     }
 
     .concerns__fact .concerns__text-em {
+        display: inline-block;
         font-size: 1.12rem !important;
-        line-height: 1.7 !important;
-    }
-
-    .concerns__text-claim {
-        font-size: 1.15rem !important;
-        line-height: 1.55 !important;
+        line-height: 1.65 !important;
     }
 
     .concerns__cta-box-text {
