@@ -67,7 +67,7 @@ body {
 .hero {
     position: relative;
     width: 100%;
-    margin-top: -124px;
+    margin-top: -140px;
     padding: 160px 0 0;
     min-height: 0;
 }
@@ -184,7 +184,7 @@ table {
 .cta-banner__badge {
     position: absolute;
     top: -30px;
-    left: -82px;
+    left: -42px;
     color: var(--color-text-dark);
     padding: 0;
     font-family: var(--font-mincho);
@@ -669,6 +669,7 @@ table {
     word-break: keep-all;
     line-break: strict;
     overflow-wrap: break-word;
+    text-align: center;
     flex: 1 1 auto;
     min-width: 0;
 }
@@ -720,7 +721,6 @@ table {
     background-color: var(--color-accent-light);
     padding: 16px 16px;
     text-align: center;
-    margin-top: 28px;
 }
 
 .hero__banner-text {
@@ -734,43 +734,26 @@ table {
 .problems {
     position: relative;
     background-color: #878787;
-    padding: 120px 0 100px;
+    padding: 40px 0 80px;
     overflow: visible;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 28px;
+    gap: 20px;
+    border-radius: 8px;
 }
 
 .problems::before {
     content: "";
     position: absolute;
+    inset: 0;
     background-color: #878787;
     background-image: url("images/backgrounds/problems-bg.png");
     background-size: cover;
     background-position: center top;
+    background-repeat: no-repeat;
     filter: blur(10px);
-    transform: scale(1);
-    transform-origin: center top;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.problems::after {
-    content: "";
-    position: absolute;
-    top: -80px;
-    left: 0;
-    right: 0;
-    height: 180px;
-    background: linear-gradient(
-        to bottom,
-        var(--color-bg-peach) 0%,
-        rgba(254, 248, 238, 0.95) 22%,
-        rgba(254, 248, 238, 0.65) 45%,
-        rgba(135, 135, 135, 0.25) 78%,
-        transparent 100%
-    );
+    -webkit-filter: blur(10px);
     pointer-events: none;
     z-index: 0;
 }
@@ -780,7 +763,7 @@ table {
     z-index: 1;
     max-width: 1180px;
     margin: 0 auto;
-    padding: 0 48px;
+    padding: 0 40px;
     overflow: visible;
     width: 100%;
     box-sizing: border-box;
@@ -790,11 +773,11 @@ table {
     position: relative;
     background-color: #faf1ec;
     border-radius: 22px;
-    padding: 56px 72px 56px;
+    padding: 40px 56px 44px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
     overflow: visible;
     width: 100%;
@@ -806,7 +789,7 @@ table {
     width: 100%;
     max-width: 1180px;
     margin: 0 auto;
-    padding: 0 48px;
+    padding: 0 40px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -840,9 +823,9 @@ table {
 }
 
 .problems__list {
-    margin: 20px auto 0;
+    margin: 12px auto 0;
     width: 100%;
-    max-width: 820px;
+    max-width: 900px;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -855,10 +838,11 @@ ul.problems__list {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 820px;
-    margin: 20px auto 0;
+    max-width: 900px;
+    margin: 12px auto 0;
     padding: 0;
     list-style: none;
+    align-items: stretch;
 }
 
 li.problems__item,
@@ -867,14 +851,11 @@ li.problems__item,
     justify-content: flex-start;
     align-items: center;
     gap: 16px;
-    padding: 22px 16px;
+    padding: 16px 8px 16px 56px;
     margin: 0;
+    width: 100%;
     border-bottom: 1px dashed rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
-}
-
-.problems__item--last {
-    border-bottom: none;
 }
 
 .problems__item-icon,
@@ -889,7 +870,7 @@ img.problems__item-icon {
     font-family: var(--font-serif);
     font-size: 1.3rem;
     font-weight: 400;
-    line-height: 1.55;
+    line-height: 1.4;
     color: var(--color-text-dark);
 }
 
@@ -902,16 +883,16 @@ img.problems__item-icon {
     background-color: var(--color-accent-light);
     border: 2px solid #e8b7c6;
     border-radius: 16px;
-    padding: 28px 36px;
+    padding: 24px 32px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 22px;
     width: 100%;
-    max-width: 820px;
+    max-width: 900px;
     text-align: left;
-    margin-top: 16px;
+    margin-top: 12px;
 }
 
 .problems__note-icon {
@@ -1001,8 +982,10 @@ img.problems__item-icon {
 }
 
 .intro-profile__main-text {
+    position: relative;
+    left: -180px;
     font-family: var(--font-serif);
-    line-height: 1.75;
+    line-height: 1.4;
     color: #333333;
 }
 
@@ -1019,7 +1002,11 @@ img.problems__item-icon {
 }
 
 .intro-profile__text-legal {
-    display: inline;
+    display: block;
+}
+
+.intro-profile__text-legal > .intro-profile__text-bold:first-child {
+    white-space: nowrap;
 }
 
 .intro-profile__text-semi {
@@ -1079,7 +1066,7 @@ img.problems__item-icon {
 
 .intro-profile__attorney-name-sub {
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: 600;
     color: #666666;
 }
 
@@ -1092,7 +1079,7 @@ img.problems__item-icon {
 
 .intro-profile__text-skill {
     font-weight: 700;
-    color: var(--color-primary);
+    color: #2d497a;
     font-size: 1.45rem;
 }
 
@@ -1115,6 +1102,10 @@ img.problems__item-icon {
     line-height: 1.75;
     margin: 0;
     color: inherit;
+}
+
+.intro-profile__closing-final-line {
+    display: inline;
 }
 
 .intro-profile__attorney {
@@ -1174,16 +1165,15 @@ img.problems__item-icon {
 }
 
 .intro-profile__photo {
-    width: 320px;
-    max-width: 320px;
+    width: 500px;
     height: auto;
     object-fit: contain;
     object-position: bottom center;
     display: block;
     flex-shrink: 0;
     position: absolute;
-    right: 200px;
-    bottom: 40px;
+    right: -100px;
+    bottom: 0px;
     z-index: 2;
     margin: 0;
 }
@@ -1314,7 +1304,7 @@ img.problems__item-icon {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding: 2px 8px;
+    padding: 0px 0px;
 }
 
 .concerns__quote-row {
@@ -1342,6 +1332,11 @@ img.problems__item-icon {
 .concerns__warning {
     font-family: var(--font-serif);
     font-size: 1.3rem;
+}
+
+.concerns__warning .concerns__text-em {
+    color: var(--color-text-dark);
+    font-weight: 700;
 }
 
 .concerns__text-em {
@@ -1400,9 +1395,11 @@ img.problems__item-icon {
 }
 
 .concerns__text-bold.concerns__text-kenten {
-    font-size: 1.12em;
+    font-size: 1.42em;
+    font-weight: 900;
     color: #fff;
     background-image: radial-gradient(circle, #fff 0.55px, transparent 0.7px);
+    text-shadow: 0 0 0.6px #fff, 0 0 0.6px #fff;
 }
 
 .nobreak {
@@ -1534,7 +1531,6 @@ img.problems__item-icon {
     font-size: 1.32rem;
     padding-right: 300px;
     text-align: left;
-    line-height: 1.85;
     margin: 0;
     position: relative;
     z-index: 1;
@@ -1542,8 +1538,8 @@ img.problems__item-icon {
 
 .concerns__rights-image {
     position: absolute;
-    width: 520px;
-    right: -120px;
+    width: 420px;
+    right: -180px;
     bottom: 0;
     margin: 0;
     z-index: 0;
@@ -1556,7 +1552,6 @@ img.problems__item-icon {
     max-width: none;
     width: 100%;
     margin: 0;
-    padding: 72px 24px 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1577,7 +1572,7 @@ img.problems__item-icon {
     padding: 22px 72px;
     width: auto;
     max-width: none;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
     filter: none;
     margin-bottom: 12px;
 }
@@ -1620,6 +1615,10 @@ img.problems__item-icon {
     width: 100%;
 }
 
+.concerns__warning-sub-line2 {
+    display: inline;
+}
+
 .concerns__text-large {
     font-size: 1.95rem;
     font-weight: 900;
@@ -1636,12 +1635,12 @@ img.problems__item-icon {
     background-color: var(--color-accent-light);
     border: 1.5px solid #e8b7c6;
     border-radius: 16px;
-    padding: 36px 48px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    width: 100%;
+    gap: 12px;
+    align-items: flex-start;
+    width: fit-content;
     margin: 0 auto;
     box-sizing: border-box;
 }
@@ -1711,8 +1710,7 @@ span.crayon-underline {
     background-color: var(--color-accent-light);
     border: 1px solid #e8b7c6;
     border-radius: 16px;
-    padding: 28px 40px;
-    width: 72%;
+    padding: 8px 40px;
     max-width: 980px;
     box-shadow: 0 4px 14px rgba(217, 108, 138, 0.12);
     display: flex;
@@ -1792,6 +1790,12 @@ span.crayon-underline {
     line-height: 1.75;
 }
 
+.concerns__protection-text-tail {
+    color: var(--color-text-dark);
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
 .concerns__divider {
     width: 115px;
     border: none;
@@ -1807,12 +1811,25 @@ span.crayon-underline {
     line-height: 1.75;
 }
 
+.concerns__conclusion-end-mobile {
+    display: none;
+}
+
+.concerns__conclusion-end-desktop {
+    display: inline;
+}
+
+.concerns__conclusion-line3 {
+    display: block;
+    margin-top: 20px;
+}
+
 .concerns__cta-box {
     background-color: var(--color-accent-light);
-    padding: 40px 56px;
+    padding: 24px 128px;
     border-radius: 0;
     border: none;
-    width: 90%;
+    /* width: 90%; */
     max-width: 1200px;
     box-sizing: border-box;
 }
@@ -1838,6 +1855,10 @@ span.crayon-underline {
     max-width: 820px;
     width: 100%;
     line-height: 1.75;
+}
+
+.concerns__final-message .concerns__text-accent {
+    color: var(--color-text-dark);
 }
 
 /* Attorney Profile Area */
@@ -1870,9 +1891,9 @@ span.crayon-underline {
 
 .attorney__header-text {
     font-family: var(--font-mincho);
-    font-size: 1.48rem;
+    font-size: 2.6rem;
     font-weight: 700;
-    line-height: 1.6;
+    line-height: 1.4;
     max-width: 1123px;
     margin: 0 auto;
 }
@@ -1884,14 +1905,14 @@ span.crayon-underline {
 }
 
 .attorney__body {
-    max-width: 1188px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 48px;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    gap: 28px 41px;
-    align-items: start;
+  max-width: 1188px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 0px 25px;
+  align-items: start;
 }
 
 .attorney__photo-wrapper {
@@ -1899,6 +1920,10 @@ span.crayon-underline {
     grid-row: 1 / 3;
     display: flex;
     justify-content: center;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    align-self: start;
 }
 
 .attorney__intro {
@@ -1935,35 +1960,29 @@ span.crayon-underline {
 }
 
 .attorney__career-table th {
-    background-color: transparent;
-    font-weight: 700;
-    padding: 12px 10px;
-    text-align: left;
-    vertical-align: top;
-    width: 160px;
-    font-size: 1.12rem;
-    border-bottom: 1px dashed #d0c8bc;
+  background-color: transparent;
+  font-weight: 700;
+  padding: 4px 3px;
+  text-align: left;
+  vertical-align: top;
+  width: 160px;
+  font-size: 1.12rem;
+  border-bottom: 1px dashed #d0c8bc;
 }
 
 .attorney__career-table td {
-    padding: 12px 10px;
-    vertical-align: top;
-    font-size: 1.12rem;
-    border-bottom: 1px dashed #d0c8bc;
-}
-
-.attorney__photo-wrapper {
-    display: flex;
-    justify-content: center;
+  padding: 4px 4px;
+  vertical-align: top;
+  font-size: 1.12rem;
+  border-bottom: 1px dashed #d0c8bc;
 }
 
 .attorney__photo {
-    max-width: 100%;
-    border-radius: 4px;
     width: 100%;
     height: 100%;
+    border-radius: 4px;
     object-fit: cover;
-    /* Ensures image fills the container height */
+    object-position: center 22%;
     display: block;
 }
 
@@ -2004,7 +2023,7 @@ span.crayon-underline {
 .benefits__intro-header {
     background-color: var(--color-primary);
     color: var(--color-bg-light);
-    padding: 60px 0px;
+    padding: 24px 0px;
     text-align: center;
 }
 
@@ -2014,8 +2033,9 @@ span.crayon-underline {
 
 .benefits__intro-header-text {
     font-family: var(--font-mincho);
-    font-size: 1.59rem;
+    font-size: 2.35rem;
     font-weight: 700;
+    line-height: 1.4;
 }
 
 .benefits__intro-header-text .text-kenten {
@@ -3451,7 +3471,7 @@ details[open] .faq__question::after {
     }
 
     .cta-banner__title-free {
-        font-size: 3.1rem;
+        font-size: 3.6rem;
     }
 
     .cta-banner__title-now {
@@ -3479,7 +3499,7 @@ details[open] .faq__question::after {
     }
 
     .hero::before {
-        background-size: 100% 100%, auto 128%;
+        background-size: 100% 100%, cover;
         background-position: left top, 72% 100%;
     }
 
@@ -3548,12 +3568,12 @@ details[open] .faq__question::after {
     }
 
     .hero__feature-medium {
-        font-size: 1.15rem;
+        font-size: 1rem;
         font-weight: 700;
     }
 
     .hero__feature-sub {
-        font-size: 0.98rem;
+        font-size: 0.86rem;
         font-weight: 700;
     }
 
@@ -3568,23 +3588,66 @@ details[open] .faq__question::after {
 
     /* Problems Area */
     .problems__panel {
-        padding: 32px 72px 56px;
+        padding: 24px 48px 40px;
     }
 
     .problems__heading-text {
         font-size: 1.85rem;
-        padding: 20px 56px;
+        padding: 8px 36px;
     }
 
     .problems__item-text {
         font-size: 1.4rem;
+        white-space: nowrap;
+    }
+
+    .problems__item-text br {
+        display: none;
+    }
+
+    li.problems__item,
+    .problems__item {
+        padding: 16px 8px 16px 148px;
     }
 
     .problems__note-text {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
+        flex: 1 1 auto;
+        min-width: 0;
+        text-align: center;
     }
 
-    /* Intro Profile Area — SP layout owned by final 767.98px block */
+    /* Intro Profile Area — desktop text scale & position */
+    .intro-profile__content {
+        margin-right: 40px;
+        transform: scale(0.92);
+        transform-origin: center right;
+    }
+
+    .intro-profile__attorney-name {
+        font-size: 2.15rem;
+    }
+
+    .intro-profile__attorney-name-sub {
+        font-size: 1.35rem;
+        font-weight: 600;
+    }
+
+    .intro-profile__attorney-body,
+    .intro-profile__attorney-closing,
+    .intro-profile__text-quote {
+        font-size: 1.52rem;
+        line-height: 1.85;
+    }
+
+    .intro-profile__text-skill {
+        font-size: 1.58rem;
+        color: #2d497a;
+    }
+
+    .intro-profile__closing-final-line {
+        white-space: nowrap;
+    }
 
     /* Concerns Area */
     .concerns__intro-body {
@@ -3601,9 +3664,9 @@ details[open] .faq__question::after {
     }
 
     .concerns__image {
-        top: -72px;
-        margin-bottom: -72px;
-        max-width: 400px;
+      top: 150px;
+      left: 108px;
+      max-width: 400px;
     }
 
     .concerns__text-block {
@@ -3619,6 +3682,20 @@ details[open] .faq__question::after {
         max-width: 1160px;
     }
 
+    .concerns__warning-sub-line2 {
+        white-space: nowrap;
+    }
+
+    .concerns__protection-text .concerns__text-large {
+        color: var(--color-text-dark);
+    }
+
+    .concerns__protection-text .concerns__text-accent {
+        font-size: 1.95rem;
+        font-weight: 900;
+        line-height: 1.5;
+    }
+
     .concerns__text-kenten,
     .concerns__text-bold.concerns__text-kenten,
     .text-kenten {
@@ -3627,6 +3704,11 @@ details[open] .faq__question::after {
         background-image: radial-gradient(circle, currentColor 0.5px, transparent 0.65px);
         background-size: 1.05em 0.2em;
         padding-top: 0.28em;
+    }
+
+    .concerns__text-bold.concerns__text-kenten {
+        font-size: 1.58em;
+        text-shadow: 0 0 0.6px #fff, 0 0 0.6px #fff;
     }
 
     .concerns__rights-box {
@@ -3675,6 +3757,8 @@ details[open] .faq__question::after {
 
     .attorney__photo-wrapper {
         display: flex;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
     }
 
     /* Benefits Area */
@@ -4267,15 +4351,10 @@ details[open] .faq__question::after {
     }
 
     .problems::before {
-        inset: -12px -4% 0;
-        filter: blur(80px);
-        -webkit-filter: blur(80px);
-        transform: scale(1.08);
-    }
-
-    .problems::after {
-        top: -56px;
-        height: 140px;
+        inset: 0;
+        filter: blur(10px);
+        -webkit-filter: blur(10px);
+        transform: none;
     }
 
     .problems__heading {
@@ -4323,9 +4402,10 @@ details[open] .faq__question::after {
         width: 100% !important;
         max-width: 100% !important;
         min-width: 0;
-        padding: 14px 4px;
+        padding: 14px 4px 14px 16px;
         gap: 10px;
         align-items: flex-start;
+        justify-content: flex-start;
     }
 
     .problems__item-icon {
@@ -4342,6 +4422,11 @@ details[open] .faq__question::after {
         max-width: none !important;
         font-size: 0.95rem !important;
         line-height: 1.55;
+        white-space: normal;
+    }
+
+    .problems__item-text br {
+        display: inline;
     }
 
     .problems__note {
@@ -4363,6 +4448,7 @@ details[open] .faq__question::after {
         font-size: 0.88rem !important;
         line-height: 1.55;
         min-width: 0;
+        text-align: left;
     }
 
     /* ---------- Intro profile: stripes, girl top-right, lawyer bottom-right ---------- */
@@ -4419,12 +4505,14 @@ details[open] .faq__question::after {
         max-width: 100%;
         padding: 0;
         margin: 0;
+        transform: none;
         text-align: left;
         background: transparent;
         box-sizing: border-box;
     }
 
     .intro-profile__main-text {
+        left: 0px !important;
         width: 100%;
         font-size: 1rem;
         line-height: 1.85;
@@ -4603,8 +4691,12 @@ details[open] .faq__question::after {
 
     .intro-profile__text-skill {
         font-size: inherit;
-        color: #24324a;
+        color: #2d497a;
         font-weight: 700;
+    }
+
+    .intro-profile__closing-final-line {
+        white-space: normal;
     }
 
     .intro-profile__text-accent {
@@ -4673,18 +4765,18 @@ details[open] .faq__question::after {
     }
 
     .concerns__quote {
-        font-size: 1rem;
+        font-size: 1.3rem;
         padding: 4px 10px;
     }
 
     .concerns__quote-row {
-        font-size: 0.95rem;
+        font-size: 1.2rem;
         line-height: 1.7;
         margin: 0;
     }
 
     .concerns__quote--inline {
-        font-size: 1rem;
+        font-size: 1.3rem;
         padding: 4px 10px;
     }
 
@@ -4722,7 +4814,9 @@ details[open] .faq__question::after {
     }
 
     .concerns__text-bold.concerns__text-kenten {
+        font-size: 1.2em !important;
         background-image: radial-gradient(circle, #fff 0.5px, transparent 0.65px);
+        text-shadow: 0 0 0.5px #fff, 0 0 0.5px #fff;
     }
 
     .concerns__explanation-inner {
@@ -4885,6 +4979,10 @@ details[open] .faq__question::after {
         box-sizing: border-box;
     }
 
+    .concerns__warning-sub-line2 {
+        white-space: normal;
+    }
+
     .concerns__warning-block .concerns__text-large {
         font-size: 1.14rem !important;
         line-height: 1.6 !important;
@@ -4899,6 +4997,18 @@ details[open] .faq__question::after {
     .concerns__warning-block .concerns__protection-text strong {
         font-size: 1.02rem;
         font-weight: 700;
+    }
+
+    .concerns__warning-block .concerns__protection-text .concerns__text-accent {
+        font-size: 1.02rem !important;
+        font-weight: 700;
+        line-height: 1.6 !important;
+    }
+
+    .concerns__protection-text-tail {
+        font-size: 0.96rem;
+        font-weight: 400;
+        color: var(--color-text-dark);
     }
 
     .concerns__text-em {
@@ -4983,6 +5093,14 @@ details[open] .faq__question::after {
         white-space: normal;
     }
 
+    .concerns__conclusion-end-mobile {
+        display: inline;
+    }
+
+    .concerns__conclusion-end-desktop {
+        display: none;
+    }
+
     /* ---------- Attorney ---------- */
     .attorney {
         background-color: var(--color-bg-light);
@@ -5002,8 +5120,9 @@ details[open] .faq__question::after {
     }
 
     .attorney__header-text {
-        font-size: 1.02rem;
-        line-height: 1.55;
+        font-size: 1.38rem;
+        font-weight: 700;
+        line-height: 1.4;
     }
 
     .attorney__body {
@@ -5025,13 +5144,16 @@ details[open] .faq__question::after {
         grid-row: auto;
         display: flex;
         justify-content: center;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
     }
 
     .attorney__photo {
         width: 100%;
+        height: 100%;
         max-width: 100%;
-        height: auto;
         object-fit: cover;
+        object-position: center 22%;
         border: 1px solid #c8c8c8;
         border-radius: 4px;
         box-sizing: border-box;
@@ -5185,7 +5307,7 @@ details[open] .faq__question::after {
     .benefits__intro-header-text,
     .benefits__why-title,
     .benefits__points-heading {
-        font-size: 1.15rem;
+        font-size: 1.28rem;
         line-height: 1.5;
     }
 
@@ -5471,7 +5593,7 @@ details[open] .faq__question::after {
     }
 
     .benefits__intro-header-text {
-        font-size: 1.05rem !important;
+        font-size: 1.28rem !important;
         line-height: 1.55;
         padding: 0 8px;
     }
@@ -6121,12 +6243,13 @@ details[open] .faq__question::after {
     }
 
     .attorney__header-text {
-        font-size: 1rem !important;
-        line-height: 1.55 !important;
+        font-size: 1.38rem !important;
+        font-weight: 700;
+        line-height: 1.4 !important;
     }
 }
 
-.sp-only { display: none; }
+.sp-only { display: none;}
 @media (max-width: 768px) { .sp-only { display: inline; } }
 
 .desktop-only { display: none; }
