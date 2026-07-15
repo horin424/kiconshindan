@@ -133,7 +133,6 @@ table {
 .cta-banner {
     position: relative;
     z-index: 1;
-    background-color: var(--color-bg-peach);
     padding: 0;
     width: 100%;
 }
@@ -208,7 +207,7 @@ table {
 }
 
 .cta-banner__btn {
-    border-radius: 20px;
+    border-radius: 38px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.14);
     padding: 14px 28px;
     display: flex;
@@ -358,7 +357,7 @@ table {
 }
 
 .header__cta-item {
-    border-radius: 18px;
+    border-radius: 38px;
     padding: 16px 28px;
     display: flex;
     align-items: center;
@@ -534,11 +533,11 @@ table {
 
 .hero__sub-line {
     display: inline-block;
-    width: 48px;
-    height: 8px;
-    margin-left: 10px;
-    vertical-align: middle;
-    border: 0;
+    width: 3.6em;
+    height: 2px;
+    margin-left: 0.4em;
+    background-color: currentColor;
+    vertical-align: 0.15em;
 }
 
 .hero__catch {
@@ -571,7 +570,7 @@ table {
 .hero__headline-sub {
     font-family: var(--font-mincho);
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .hero__feelings {
@@ -579,17 +578,17 @@ table {
     font-size: 1.3rem;
     line-height: 1.55;
     color: var(--color-text-dark);
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .hero__text-accent {
     color: var(--color-accent-dark);
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .hero__text-normal {
     color: var(--color-text-dark);
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .hero__divider {
@@ -606,12 +605,12 @@ table {
     font-size: 1.4rem;
     line-height: 1.55;
     max-width: 620px;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .hero__text-lawyer {
     color: var(--color-accent-dark);
-    font-weight: 700;
+    font-weight: 800;
     text-decoration: none;
 }
 
@@ -746,14 +745,12 @@ table {
 .problems::before {
     content: "";
     position: absolute;
-    inset: -16px -4% 0;
     background-color: #878787;
     background-image: url("images/backgrounds/problems-bg.png");
     background-size: cover;
     background-position: center top;
-    filter: blur(96px);
-    -webkit-filter: blur(96px);
-    transform: scale(1.1);
+    filter: blur(10px);
+    transform: scale(1);
     transform-origin: center top;
     pointer-events: none;
     z-index: 0;
@@ -3481,6 +3478,15 @@ details[open] .faq__question::after {
         min-height: 0;
     }
 
+    .hero::before {
+        background-size: 100% 100%, auto 128%;
+        background-position: left top, 72% 100%;
+    }
+
+    .hero__features {
+        margin-bottom: 24px;
+    }
+
     .hero__headline-accent {
         font-size: 3.1rem;
     }
@@ -4025,8 +4031,8 @@ details[open] .faq__question::after {
     }
 
     .hero__sub-line {
-        width: 26px;
-        margin-left: 4px;
+        width: 3.2em;
+        margin-left: 0.35em;
     }
 
     .hero__catch {
@@ -4053,7 +4059,7 @@ details[open] .faq__question::after {
 
     .hero__headline-sub {
         font-size: 1.32rem;
-        font-weight: 700;
+        font-weight: 800;
         line-height: 1.35;
     }
 
@@ -4213,7 +4219,7 @@ details[open] .faq__question::after {
         max-width: 100%;
         min-height: 0;
         padding: 14px 16px;
-        border-radius: 14px;
+        border-radius: 38px;
         box-sizing: border-box;
     }
 
