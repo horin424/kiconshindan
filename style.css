@@ -2546,7 +2546,7 @@ span.crayon-underline {
     position: relative;
     width: fit-content;
     bottom: -120px;
-    margin: 0;
+    margin-bottom: -10px;
     padding: 52px 10px 44px;
     box-sizing: border-box;
 }
@@ -6177,7 +6177,7 @@ details[open] .faq__question::after {
 
     /* ---------- Benefits ---------- */
     .benefits {
-        padding: 40px 0 56px !important;
+        padding: 40px 0 0px !important;
     }
 
     .benefits__intro,
@@ -6208,54 +6208,75 @@ details[open] .faq__question::after {
     }
 
     .benefits__footer-copy {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: none !important;
-        padding: 8px 28px 12px;
-        box-sizing: border-box;
+      position: relative;
+      bottom: auto;
+      width: 100% !important;
+      /* max-width: 331px !important; */
+      margin: 0px;
+      margin-bottom: -96px;
+      flex: none !important;
+      padding: 20px 40px 24px;
+      box-sizing: border-box;
     }
 
     .benefits__footer-copy::before,
     .benefits__footer-copy::after {
-        left: auto;
-        right: auto;
-        width: 2px;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 5px;
         max-width: none;
         height: auto;
         border: none;
-        background-color: var(--color-accent);
+        background-color: #d96c8a;
+        pointer-events: none;
     }
 
     .benefits__footer-copy::before {
-        left: 18px;
-        top: 0;
-        bottom: 0;
+        left: 12px;
+        right: auto;
         transform: rotate(-8deg);
-        transform-origin: bottom center;
+        transform-origin: top center;
     }
 
     .benefits__footer-copy::after {
-        right: 18px;
-        top: 0;
-        bottom: 0;
+        right: 12px;
+        left: auto;
         transform: rotate(8deg);
-        transform-origin: bottom center;
+        transform-origin: top center;
     }
 
     .benefits__footer-text {
+        position: relative;
+        z-index: 2;
         width: 100% !important;
-        max-width: 100% !important;
+        max-width: 268px !important;
+        margin-left: auto;
+        margin-right: auto;
         flex: none !important;
         padding: 0 !important;
-        font-size: 0.95rem !important;
-        line-height: 1.75 !important;
+        font-family: var(--font-serif);
+        font-size: 15px !important;
+        line-height: 24px !important;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        color: #333333;
         text-align: center;
         box-sizing: border-box;
     }
 
     .benefits__footer-text + .benefits__footer-text,
     .benefits__footer-text--closing {
-        margin-top: 0.95em !important;
+        margin-top: 7px !important;
+    }
+
+    .benefits__footer-text--closing .benefits__text-accent {
+        color: #d96c8a;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
     }
 
     .benefits__intro-header-text,
@@ -6544,54 +6565,12 @@ details[open] .faq__question::after {
 
     .benefits__footer-copy {
         order: 1;
-        padding: 6px 24px 10px;
-    }
-
-    .benefits__footer-copy::before,
-    .benefits__footer-copy::after {
-        left: auto;
-        right: auto;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        max-width: none;
-        height: auto;
-        border: none;
-        background-color: var(--color-accent);
-    }
-
-    .benefits__footer-copy::before {
-        left: 18px;
-        transform: rotate(-8deg);
-        transform-origin: bottom center;
-    }
-
-    .benefits__footer-copy::after {
-        right: 18px;
-        transform: rotate(8deg);
-        transform-origin: bottom center;
-    }
-
-    .benefits__footer-text {
-        width: 100% !important;
-        max-width: 100% !important;
-        flex: none !important;
-        padding: 0 !important;
-        font-size: 0.95rem !important;
-        line-height: 1.75 !important;
-        text-align: center;
-        box-sizing: border-box;
-    }
-
-    .benefits__footer-text + .benefits__footer-text,
-    .benefits__footer-text--closing {
-        margin-top: 0.95em !important;
     }
 
     .benefits__footer-image {
-        position: static !important;
+        position: relative !important;
         right: auto !important;
-        top: auto !important;
+        top: 30px !important;
         transform: none !important;
         flex: none !important;
         width: 70% !important;
