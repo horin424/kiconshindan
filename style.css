@@ -4994,11 +4994,12 @@ details[open] .faq__question::after {
         padding: 32px 16px 36px;
         overflow: visible;
         position: relative;
-        background-color: #ececec;
+        background-color: #ffffff;
         box-sizing: border-box;
     }
 
     .intro-profile__bg-image {
+        content: url("images/office/intro-border-sp.png");
         position: absolute;
         left: 0;
         right: 0;
@@ -5051,13 +5052,13 @@ details[open] .faq__question::after {
 
     .intro-profile__quotes {
         display: block;
+        padding-top: 20px;
         max-width: 56%;
     }
 
     .intro-profile__text-semi {
         font-size: 1rem;
-        padding: 4px 8px;
-        margin-bottom: 8px;
+        padding: 0px 8px;
         display: inline-block;
         max-width: 100%;
         box-sizing: border-box;
@@ -5130,7 +5131,7 @@ details[open] .faq__question::after {
     }
 
     .intro-profile__attorney {
-        padding: 28px 16px 0;
+        padding: 28px 16px 42px;
         background-color: #fbeff2;
         overflow: visible;
     }
@@ -5189,15 +5190,62 @@ details[open] .faq__question::after {
     }
 
     .intro-profile__attorney-body {
-        font-size: 0.96rem;
+        font-size: 0.91rem;
         line-height: 1.75;
         margin: 0 0 12px;
+    }
+
+    .intro-profile__attorney-line--sp {
+        display: block;
+    }
+
+    .intro-profile__attorney-body .intro-profile__attorney-line--sp {
+        width: fit-content;
+        max-width: 100%;
+    }
+
+    .intro-profile__attorney-body .intro-profile__attorney-line--sp:nth-child(2) {
+        white-space: nowrap !important;
+        max-width: none;
+        font-size: 0.84rem;
+        letter-spacing: -0.02em;
+    }
+
+    .intro-profile__attorney-closing {
+        font-size: 0.91rem;
+        line-height: 1.75;
+        margin: 1.75rem 0 0;
+        padding-right: 0;
+        padding-bottom: 8px;
+        box-sizing: border-box;
+        word-break: keep-all;
+        line-break: strict;
+    }
+
+    .intro-profile__attorney-closing .intro-profile__closing-final-line {
+        display: block;
+    }
+
+    .intro-profile__attorney-closing .intro-profile__attorney-line--sp {
+        width: fit-content;
+        max-width: 100%;
+    }
+
+    .intro-profile__attorney-closing .intro-profile__closing-final-line .intro-profile__attorney-line--sp:nth-last-child(-n+2) {
+        max-width: 58%;
+    }
+
+    .intro-profile__attorney-closing .intro-profile__closing-final-line > .intro-profile__attorney-line--sp:first-child {
+        white-space: nowrap !important;
+        max-width: none;
+        font-size: 0.84rem;
+        letter-spacing: -0.02em;
     }
 
     .intro-profile__text-quote {
         display: block;
         width: 100%;
-        font-size: 0.96rem;
+        font-size: 1.2rem;
         line-height: 1.8;
         margin: 4px 0 0;
         padding-left: 0;
@@ -5209,15 +5257,6 @@ details[open] .faq__question::after {
         font-size: inherit;
         line-height: inherit;
         white-space: normal;
-    }
-
-    .intro-profile__attorney-closing {
-        font-size: 0.96rem;
-        line-height: 1.75;
-        margin: 0;
-        padding-right: 40%;
-        padding-bottom: 8px;
-        box-sizing: border-box;
     }
 
     .intro-profile__text-skill {
@@ -5241,8 +5280,8 @@ details[open] .faq__question::after {
         right: -60px;
         bottom: 0;
         left: auto;
-        width: 240px;
-        max-width: 240px;
+        width: 200px;
+        max-width: 200px;
         height: auto;
         margin: 0;
         order: unset;
@@ -5322,15 +5361,15 @@ details[open] .faq__question::after {
         width: calc(100% - 32px);
         max-width: 100%;
         margin: 24px auto 0;
-        padding: 20px 18px 22px;
+        padding: 20px 4px 22px;
         box-sizing: border-box;
         border-radius: 18px;
     }
 
     .concerns__definition-text {
-        font-size: 0.92rem;
-        line-height: 1.85;
-        text-align: center;
+      font-size: 1.1rem;
+      /* line-height: 1.85; */
+      text-align: center;
     }
 
     .concerns__text-kenten,
