@@ -84,12 +84,12 @@ body {
         linear-gradient(
             to right,
             rgba(252, 249, 247, 0.98) 0%,
-            rgba(252, 249, 247, 0.92) 28%,
-            rgba(252, 249, 247, 0.62) 48%,
-            rgba(252, 249, 247, 0.28) 60%,
-            rgba(252, 249, 247, 0) 72%
+            rgba(252, 249, 247, 0.92) 18%,
+            rgba(252, 249, 247, 0.62) 36%,
+            rgba(252, 249, 247, 0.28) 48%,
+            rgba(252, 249, 247, 0) 60%
         ),
-        url("images/backgrounds/hero-bg.png");
+        url("images/backgrounds/hero-pc-bg.png");
     background-size: 100% 100%, 100% auto;
     background-position: left top, right top;
     background-repeat: no-repeat;
@@ -581,11 +581,27 @@ table {
 }
 
 .hero__headline-em {
+    position: relative;
+    display: inline-block;
     font-family: var(--font-mincho);
     font-size: 3.8rem;
     font-weight: 900;
     color: var(--color-accent-dark);
     letter-spacing: 0.04em;
+    padding: 0 0.05em;
+    z-index: 0;
+}
+
+.hero__headline-em-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.1em;
+    height: 0.16em;
+    border-radius: 12px;
+    background-color: rgba(253, 230, 138, 0.9);
+    z-index: -1;
+    pointer-events: none;
 }
 
 .hero__headline-sub {
@@ -4374,14 +4390,13 @@ details[open] .faq__question::after {
             linear-gradient(
                 to right,
                 rgba(252, 249, 247, 0.92) 0%,
-                rgba(252, 249, 247, 0.68) 28%,
-                rgba(252, 249, 247, 0.25) 44%,
-                rgba(252, 249, 247, 0) 54%
+                rgba(252, 249, 247, 0.68) 18%,
+                rgba(252, 249, 247, 0.25) 34%,
+                rgba(252, 249, 247, 0) 44%
             ),
-            url("images/backgrounds/hero-bg.png");
-        /* Zoom into her face on the right; fill full hero height */
-        background-size: 100% 100%, auto 112%;
-        background-position: left top, 72% 0%;
+            url("images/backgrounds/hero-sp-bg.png");
+        background-size: 100% 100%, cover;
+        background-position: left top, right top;
         background-repeat: no-repeat;
         min-height: 100%;
     }
@@ -4430,7 +4445,7 @@ details[open] .faq__question::after {
     .hero__headline-em {
         font-size: 2.85rem;
         letter-spacing: 0.02em;
-        display: inline;
+        display: inline-block;
         line-height: 1.1;
     }
 
