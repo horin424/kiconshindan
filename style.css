@@ -271,7 +271,7 @@ table {
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 0;
+    gap: 2px;
     line-height: 1;
     flex: 1;
 }
@@ -281,7 +281,7 @@ table {
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 0.1em;
-    line-height: 36px;
+    line-height: 1.2;
     text-align: center;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -290,7 +290,7 @@ table {
     font-family: var(--font-impact);
     font-size: 48px;
     font-weight: 400;
-    line-height: 36px;
+    line-height: 1;
     letter-spacing: 0.05em;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -792,7 +792,7 @@ table {
     filter: blur(10px);
     -webkit-filter: blur(10px);
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
 }
 
 .problems__container {
@@ -1450,6 +1450,7 @@ img.problems__item-icon {
     background-color: var(--color-bg-light);
     padding: 72px 24px 80px;
     overflow: visible;
+    background-color: #fcf9f7;
 }
 
 .concerns__explanation-inner {
@@ -1509,7 +1510,7 @@ img.problems__item-icon {
 .concerns__text-claim {
     display: inline-block;
     font-family: var(--font-mincho);
-    font-size: 1.95rem;
+    font-size: 1.9rem;
     font-weight: 900;
     color: var(--color-accent);
     line-height: 1.5;
@@ -1585,7 +1586,7 @@ img.problems__item-icon {
     align-items: center;
     gap: 28px;
     text-align: center;
-    background-color: #ffffff;
+    background-color: #fcf9f7;
     padding-bottom: 32px;
 }
 
@@ -4036,6 +4037,38 @@ details[open] .faq__question::after {
         white-space: nowrap;
     }
 
+    .concerns__explanation {
+        position: relative;
+        overflow: visible;
+    }
+
+    .concerns__explanation::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0%;
+      width: 100%;
+      height: 540px;
+      transform-origin: center top;
+      background-color: #ffffff;
+      clip-path: polygon(0 0, 100% 0, 100% 68.24%, 50% 100%, 0 68.24%);
+      pointer-events: none;
+      z-index: 0;
+  }
+    }
+
+    .concerns__explanation-inner {
+        position: relative;
+        z-index: 1;
+        overflow: visible;
+    }
+
+    .concerns__sns-block,
+    .concerns__rights-box {
+        position: relative;
+        z-index: 1;
+    }
+
     /* Attorney Profile Area */
     .attorney__body {
         display: grid;
@@ -4761,7 +4794,7 @@ details[open] .faq__question::after {
         font-family: var(--font-impact);
         font-size: 36px;
         font-weight: 400;
-        line-height: 36px;
+        line-height: 1;
         letter-spacing: 0.06em;
         text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
         text-align: center;
@@ -4772,7 +4805,7 @@ details[open] .faq__question::after {
         font-family: var(--font-serif);
         font-size: 14px;
         font-weight: 700;
-        line-height: 20px;
+        line-height: 1.2;
         letter-spacing: 0.06em;
         text-align: center;
         color: #ffffff;
@@ -5405,7 +5438,6 @@ details[open] .faq__question::after {
 
     .concerns__explanation {
         padding: 0;
-        background-color: #ffffff;
     }
 
     .concerns__explanation-inner {
@@ -5608,7 +5640,7 @@ details[open] .faq__question::after {
       padding: 0 0 36px;
       gap: 20px;
       align-items: center;
-      background-color: #ffffff;
+      background-color: #fcf9f7;
       box-sizing: border-box;
     }
 
