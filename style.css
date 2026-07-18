@@ -2768,8 +2768,7 @@ span.crayon-underline {
     font-family: var(--font-serif);
     font-size: 28px;
     font-weight: 900;
-    flex: 1;
-    margin: 37px 0 0;
+    margin: 0;
     padding-top: 0;
     text-align: left;
     color: #333333;
@@ -2777,10 +2776,21 @@ span.crayon-underline {
     letter-spacing: 0.1em;
 }
 
+.reasons__card-heading {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 37px;
+    padding-right: 0;
+}
+
 .reasons__card-divider {
     border: none;
     border-top: 1px solid #333333;
-    margin: 18px 70px 0 166px;
+    margin: 12px 0 0;
+    width: 100%;
 }
 
 .reasons__card-body {
@@ -4281,11 +4291,14 @@ details[open] .faq__question::after {
     .reasons__card-title {
         font-size: 22px;
         line-height: 1.35;
+    }
+
+    .reasons__card-heading {
         margin-top: 28px;
     }
 
     .reasons__card-divider {
-        margin: 14px 28px 0 120px;
+        margin-top: 10px;
     }
 
     .reasons__card-body {
@@ -6843,16 +6856,16 @@ details[open] .faq__question::after {
     }
 
     .reasons__cards {
-        position: relative;
-        z-index: 1;
-        width: 100%;
-        max-width: 390px;
-        height: 1900px;
-        gap: 20px;
-        margin: 0 auto;
-        padding: 0 20px;
-        box-sizing: border-box;
-        background-color: #f7e7eb;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 390px;
+      height: fit-content;
+      gap: 20px;
+      margin: 0 auto;
+      padding: 0 20px 20px;
+      box-sizing: border-box;
+      background-color: #f7e7eb;
     }
 
     .reasons__card {
@@ -6871,19 +6884,18 @@ details[open] .faq__question::after {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
-      height: 64px;
       gap: 8px;
       padding: 0 16px 0 0;
       background: transparent;
     }
-    .reasons__card-header_2 {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      height: 90px;
-      gap: 8px;
-      padding: 0 16px 0 0;
-      background: transparent;
+
+    .reasons__card-heading {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        margin-top: 14px;
+        padding-right: 12px;
     }
 
     .reasons__card-num-box {
@@ -6951,10 +6963,8 @@ details[open] .faq__question::after {
         line-height: 26px;
         letter-spacing: 0.03em;
         color: #333333;
-        flex: 1;
-        min-width: 0;
-        margin: 14px 0 0;
-        padding: 0 12px 0 0;
+        margin: 0;
+        padding: 0;
         text-align: left;
     }
 
@@ -6969,7 +6979,8 @@ details[open] .faq__question::after {
     .reasons__card-divider {
         border: none;
         border-top: 0.5px solid #333333;
-        margin: 8px 16px 0 79px;
+        margin: 8px 0 0;
+        width: 100%;
     }
 
     .reasons__card-body {
