@@ -4876,20 +4876,18 @@ details[open] .faq__question::after {
 
     /* ---------- Problems ---------- */
     .problems {
-        width: 100%;
-        max-width: 390px;
-        min-height: 1029px;
-        margin: 0 auto;
-        padding: 32px 0 40px;
-        overflow: hidden;
-        gap: 0;
-        border-radius: 0;
-        background-color: #878787;
+      width: 100%;
+      max-width: 390px;
+      margin: 80px auto;
+      padding: 12px 0px;
+      gap: 0;
+      border-radius: 0;
+      background-color: #878787;
     }
 
     .problems::before {
         inset: 0;
-        background-image: url("images/backgrounds/problems-bg.png");
+        background-image: url("images/backgrounds/problems-bg-sf.png");
         background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
