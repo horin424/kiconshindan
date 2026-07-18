@@ -2485,12 +2485,12 @@ span.crayon-underline {
     border: none;
     border-top: 3px solid var(--color-primary);
     margin: 0;
-    width: 96%;
+    width: 40%;
 }
 
 .benefits__points-title {
     font-family: var(--font-mincho);
-    font-size: 1.4rem;
+    font-size: 2.3rem;
     font-weight: 700;
 }
 
@@ -2506,21 +2506,19 @@ span.crayon-underline {
 }
 
 .benefits__point-card {
-    background-color: var(--color-bg-rose-tint);
-    border-radius: 50%;
-    /* Recreated circle effect cleanly */
-    aspect-ratio: 1;
-    padding: 48px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: var(--box-shadow);
-    position: relative;
-    max-width: 320px;
-    margin: 0 auto;
-    width: 100%;
+  background-color: var(--color-bg-rose-tint);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .benefits__point-num {
@@ -4127,7 +4125,7 @@ details[open] .faq__question::after {
     }
 
     .benefits__points-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     /* Pricing Area */
@@ -6356,13 +6354,17 @@ details[open] .faq__question::after {
         font-size: 1.38rem;
         line-height: 1.5;
     }
-
+    .benefits__points-line {
+        width: 95% !important;
+    }
     .benefits__why {
         position: relative;
         padding: 0 0 8px;
         overflow: visible;
     }
-
+    .benefits__points-title {
+        font-size: 1.6rem !important;
+    }
     .benefits__why-heading-container {
         display: flex;
         flex-direction: row;
