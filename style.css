@@ -1736,6 +1736,15 @@ span.crayon-underline {
     color: var(--color-accent);
 }
 
+.concerns__text-highlight {
+    display: inline;
+    padding: 0 2px;
+    background-color: transparent;
+    background-image: linear-gradient(transparent 50%, rgba(217, 108, 138, 0.2) 50%);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
 .concerns__factors-card {
     background-color: var(--color-accent-light);
     border: 1px solid #e8b7c6;
@@ -3993,6 +4002,13 @@ details[open] .faq__question::after {
         line-height: 1.5;
     }
 
+    .concerns__protection-text .concerns__text-highlight {
+        font-size: 1.95rem;
+        font-weight: 900;
+        line-height: 1.5;
+        color: var(--color-accent);
+    }
+
     .concerns__text-kenten,
     .concerns__text-bold.concerns__text-kenten,
     .text-kenten {
@@ -5907,6 +5923,15 @@ details[open] .faq__question::after {
         line-height: 26px;
         letter-spacing: 0.05em;
         color: #d96c8a;
+    }
+
+    .concerns__warning-block .concerns__protection-text .concerns__text-highlight {
+        font-family: var(--font-serif);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 26px;
+        letter-spacing: 0.05em;
+        color: var(--color-accent);
     }
 
     .concerns__protection-text-tail {
