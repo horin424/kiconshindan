@@ -13,8 +13,8 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@300;400;500;600;700;900&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="globals.css?v=20260712x">
-  <link rel="stylesheet" href="style.css?v=20260712x">
+  <link rel="stylesheet" href="globals.css?v=20260718scale2">
+  <link rel="stylesheet" href="style.css?v=20260718scale2">
 </head>
 
 <body>
@@ -1599,6 +1599,37 @@
         window.addEventListener('scroll', onScroll, { passive: true });
       }
     });
+
+    /* Scale entire document.body to the viewport (1440 desktop / 390 mobile).
+       Scaling up stops at 1400px — wider screens keep that size, centered. */
+    (function () {
+      var BP = 600;
+      var DESKTOP = 1440;
+      var MOBILE = 390;
+      var MAX_W = 1400;
+
+      function scaleBody() {
+        var vw = window.innerWidth;
+        var design = vw < BP ? MOBILE : DESKTOP;
+        var fitW = Math.min(vw, MAX_W);
+        var scale = fitW / design;
+        var offsetX = vw > MAX_W ? (vw - MAX_W) / 2 : 0;
+
+        document.documentElement.style.height = '';
+        document.body.style.width = design + 'px';
+        document.body.style.transformOrigin = 'top left';
+        document.body.style.transform =
+          'translateX(' + offsetX + 'px) scale(' + scale + ')';
+
+        /* transform does not shrink layout box — match scroll height to visual size */
+        document.documentElement.style.height =
+          (document.body.scrollHeight * scale) + 'px';
+      }
+
+      scaleBody();
+      window.addEventListener('resize', scaleBody);
+      window.addEventListener('load', scaleBody);
+    })();
   </script>
 </body>
 

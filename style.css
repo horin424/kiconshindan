@@ -31,11 +31,24 @@
     --font-impact: "Impact", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
     --font-base: "Noto Serif JP", serif;
 
-    /* Layout — Figma frame is 1440 */
+    /* Layout — two fixed design widths; scale fits viewport */
     --max-width: 1440px;
+    --design-width: 1440px;
     --page-gutter: 88px;
     --transition-fast: 0.25s ease;
     --box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   VIEWPORT SCALE
+   Desktop = 1440px, mobile = 390px. Switch at 600px.
+   JS applies transform: scale() on document.body so the whole page scales
+   as one unit to the viewport width.
+   ========================================================================== */
+@media (max-width: 599.98px) {
+    :root {
+        --design-width: 390px;
+    }
 }
 
 /* ==========================================================================
@@ -52,6 +65,7 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -60,9 +74,10 @@ body {
     font-family: var(--font-serif);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
+    width: var(--design-width);
+    max-width: none;
+    margin: 0;
+    transform-origin: top left;
 }
 
 .hero {
@@ -1220,9 +1235,9 @@ img.problems__item-icon {
 
 /* Position mapping rules for the Hanko Stamp overlap layer */
 /* ==========================================================================
-   Mobile Responsive Alignment Fixes (Viewports under 768px wide)
+   Mobile Responsive Alignment Fixes (Viewports under 600px wide)
    ========================================================================== */
-@media (max-width: 768px) {
+@media (max-width: 599.98px) {
     .header {
         padding: 16px 20px 0;
     }
@@ -1242,10 +1257,10 @@ img.problems__item-icon {
         gap: 24px;
     }
 
-    /* hero__features: see @media (max-width: 767.98px) block */
+    /* hero__features: see @media (max-width: 599.98px) block */
 
     /* Intro-profile mobile layout is fully defined in the final
-       @media (max-width: 767.98px) block further below. */
+       @media (max-width: 599.98px) block further below. */
 
 }
 
@@ -2329,7 +2344,7 @@ span.crayon-underline {
     font-weight: 700;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 600px) {
     .benefits__why-quote-line {
         display: inline;
         padding-left: 0;
@@ -2386,7 +2401,7 @@ span.crayon-underline {
 }
 
 /* --- MOBILE RESPONSIVENESS --- */
-@media (max-width: 768px) {
+@media (max-width: 599.98px) {
     .benefits__why-heading-container {
         flex-direction: column;
         margin-bottom: 12px;
@@ -3761,7 +3776,7 @@ details[open] .faq__question::after {
    6. RESPONSIVE BREAKPOINTS (FLUID & MOBILE FIRST WRAPPER)
    ========================================================================== */
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
 
     /* Header Area */
     .header__container {
@@ -4253,75 +4268,18 @@ details[open] .faq__question::after {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1199.98px) {
-    .pricing__cards-grid {
-        padding: 0 32px 48px;
-        gap: 24px;
-    }
-
-    .pricing__badge {
-        left: auto;
-        right: -40px;
-        bottom: 16px;
-        width: fit-content;
-        min-width: min(320px, 90vw);
-        max-width: 320px;
-        min-height: 150px;
-        height: auto;
-        padding: 28px 24px;
-    }
-
-    .pricing__badge-triangle {
-        left: 88px;
-        top: -36px;
-    }
-
-    .pricing__card-body {
-        padding: 28px 24px 32px;
-    }
-
-    .reasons__cards {
-        padding: 0 32px;
-    }
-
-    .reasons__card-header {
-        gap: 18px;
-        padding-right: 28px;
-    }
-
-    .reasons__card-title {
-        font-size: 22px;
-        line-height: 1.35;
-    }
-
-    .reasons__card-heading {
-        margin-top: 28px;
-    }
-
-    .reasons__card-divider {
-        margin-top: 10px;
-    }
-
-    .reasons__card-body {
-        padding: 20px 28px 0 120px;
-    }
-
-    .reasons__quote-box {
-        width: 100%;
-    }
-}
+/* Intermediate fluid tweaks removed — only two fixed layouts (1440 / 390) + scale. */
 
 /* ==========================================================================
    SMARTPHONE LAYOUT — match SP_相談LP_デザインカンプ (390px)
    Placed last so it wins over desktop base rules & incomplete mobile patches.
    ========================================================================== */
-@media (max-width: 767.98px) {
+@media (max-width: 599.98px) {
     :root {
         --page-gutter: 16px;
     }
 
     body {
-        max-width: 100%;
         overflow-x: hidden;
     }
 
@@ -7650,11 +7608,11 @@ details[open] .faq__question::after {
 }
 
 .sp-only { display: none;}
-@media (max-width: 768px) { .sp-only { display: inline; } }
+@media (max-width: 599.98px) { .sp-only { display: inline; } }
 
 .desktop-only { display: none; }
 .desktop-line { display: inline; }
-@media (min-width: 769px) {
+@media (min-width: 600px) {
     br.desktop-only { display: block; }
     .desktop-line { display: block; }
 }
