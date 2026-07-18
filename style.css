@@ -3323,13 +3323,14 @@ span.crayon-underline {
 }
 
 .flow__step-left {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 231px;
-    flex-shrink: 0;
-    padding-right: 16px;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 230px;
+  flex-shrink: 0;
+  padding-right: 16px;
+  box-sizing: border-box;
+  align-self: center;
 }
 
 .flow__step-num {
