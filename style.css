@@ -743,7 +743,7 @@ table {
 
 .hero__feature-sub {
     font-family: var(--font-sans);
-    font-size: 0.95rem;
+    font-size: 0.76rem;
     font-weight: 700;
     line-height: 1.35;
 }
@@ -4595,8 +4595,8 @@ details[open] .faq__question::after {
     }
 
     .hero__feature:nth-child(2) .hero__feature-text,
-    .hero__feature:nth-child(2) .hero__feature-label,
-    .hero__feature:nth-child(2) .hero__feature-sub {
+    .hero__feature:nth-child(2),
+    .hero__feature:nth-child(2) {
         font-family: var(--font-serif);
         font-size: 16px;
         line-height: 20px;
@@ -4626,8 +4626,8 @@ details[open] .faq__question::after {
     .hero__feature:nth-child(5) .hero__feature-text,
     .hero__feature:nth-child(5) .hero__feature-small,
     .hero__feature:nth-child(5) .hero__feature-medium {
-        font-size: 14px;
-        line-height: 16px;
+        font-size: 12px;
+        line-height: 14px;
         letter-spacing: 0.03em;
         color: #000000;
         font-weight: 700;
