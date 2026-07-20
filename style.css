@@ -3230,7 +3230,7 @@ span.crayon-underline {
 }
 
 .pricing__table td {
-    padding: 0 16px;
+    padding: 8px 20px;
     text-align: center;
     border-bottom: 1px solid #d96c8a;
     vertical-align: middle;
@@ -3252,24 +3252,76 @@ span.crayon-underline {
 
 .pricing__table-fee {
     display: inline-flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 0 2px;
+    flex-wrap: nowrap;
+    gap: 0 4px;
 }
 
 .pricing__table-fee-main {
-    display: inline-flex;
-    align-items: baseline;
-    justify-content: center;
-    gap: 0 2px;
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    align-items: end;
+    justify-items: start;
+    column-gap: 2px;
+    row-gap: 0;
+}
+
+.pricing__table-fee--pct .pricing__table-number {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-self: center;
+}
+
+.pricing__table-fee--pct .pricing__table-tax {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    justify-self: start;
+    margin-bottom: 1px;
+}
+
+.pricing__table-fee--pct .pricing__table-percent {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+}
+
+.pricing__table-fee--amount {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    align-items: end;
+    column-gap: 2px;
+    row-gap: 0;
+}
+
+.pricing__table-fee--amount .pricing__table-number {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-self: center;
+}
+
+.pricing__table-fee--amount .pricing__table-tax {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    justify-self: start;
+    margin-bottom: 1px;
+}
+
+.pricing__table-fee--amount .pricing__table-unit {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
 }
 
 .pricing__table-label {
     font-family: var(--font-serif);
     font-size: 24px;
     font-weight: 900;
-    color: #d96c8a;
+    color: var(--color-text-dark);
     letter-spacing: 0.1em;
 }
 
@@ -3289,22 +3341,16 @@ span.crayon-underline {
     font-weight: 900;
     font-size: 24px;
     letter-spacing: 0.1em;
+    line-height: 1;
 }
 
 .pricing__table-tax {
     font-family: var(--font-serif);
     font-size: 10px;
     font-weight: 500;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     color: #333333;
-}
-
-.pricing__table-tax::before {
-    content: "（";
-}
-
-.pricing__table-tax::after {
-    content: "）";
+    line-height: 1;
 }
 
 .pricing__note {
@@ -7145,6 +7191,7 @@ details[open] .faq__question::after {
     .pricing__heading {
         gap: 13px;
         margin-bottom: 20px;
+        margin-top: 20px;
         padding: 0 40px;
     }
 
@@ -7491,16 +7538,12 @@ details[open] .faq__question::after {
     }
 
     .pricing__table-fee-main {
-        display: inline-flex;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 1px;
-        line-height: 1;
-    }
-
-    .pricing__table-tax::before,
-    .pricing__table-tax::after {
-        content: none;
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        align-items: end;
+        column-gap: 2px;
+        row-gap: 0;
     }
 
     .pricing__table-tax {
@@ -7517,7 +7560,7 @@ details[open] .faq__question::after {
     .pricing__card--success .pricing__table-fee--pct .pricing__table-label {
         display: block;
         font-family: var(--font-serif);
-        font-weight: 700;
+        font-weight: 500;
         font-size: 16px !important;
         line-height: 1.3;
         letter-spacing: 0.05em;
@@ -7525,41 +7568,16 @@ details[open] .faq__question::after {
         margin-bottom: 2px;
     }
 
-    .pricing__card--success .pricing__table-fee--pct .pricing__table-fee-main {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
-        align-items: end;
-        column-gap: 2px;
-        row-gap: 0;
-    }
-
     .pricing__card--success .pricing__table-fee--pct .pricing__table-number {
-        grid-column: 1;
-        grid-row: 1 / 3;
-        align-self: center;
         font-family: var(--font-impact);
-        font-style: normal;
-        font-weight: 400;
+        font-weight: 900;
         font-size: 36px !important;
         line-height: 1;
         letter-spacing: 0.05em;
         color: #D96C8A;
     }
 
-    .pricing__card--success .pricing__table-fee--pct .pricing__table-tax {
-        grid-column: 2;
-        grid-row: 1;
-        align-self: end;
-        justify-self: center;
-        margin-bottom: 1px;
-    }
-
     .pricing__card--success .pricing__table-fee--pct .pricing__table-percent {
-        grid-column: 2;
-        grid-row: 2;
-        align-self: start;
-        justify-self: center;
         font-family: var(--font-serif);
         font-weight: 700;
         font-size: 18px !important;
@@ -7568,18 +7586,18 @@ details[open] .faq__question::after {
         color: #D96C8A;
     }
 
-    /* Retainer: 15万円 with 税込 superscript */
+    /* Retainer: 15万円 with 税込 above 万円 */
     .pricing__card--retainer .pricing__table-fee--amount {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 0;
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        align-items: end;
+        column-gap: 2px;
     }
 
     .pricing__card--retainer .pricing__table-fee--amount .pricing__table-number {
         font-family: var(--font-impact);
-        font-style: normal;
-        font-weight: 400;
+        font-weight: 900;
         font-size: 28px !important;
         line-height: 1;
         letter-spacing: 0.05em;
@@ -7590,40 +7608,26 @@ details[open] .faq__question::after {
         font-family: var(--font-serif);
         font-weight: 900;
         font-size: 20px !important;
-        line-height: 1.15;
+        line-height: 1;
         letter-spacing: 0.05em;
         color: #D96C8A;
-        align-self: flex-end;
-        padding-bottom: 1px;
     }
 
-    .pricing__card--retainer .pricing__table-fee--amount .pricing__table-tax {
-        align-self: flex-start;
-        margin-top: -3px;
-        margin-left: -20px;
-    }
-
-    /* Retainer: 回収額の / 20% with 税抜 superscript */
+    /* Retainer: 回収額の / 20% with 税抜 above % */
     .pricing__card--retainer .pricing__table-fee--pct .pricing__table-label {
-      display: block;
-      font-family: var(--font-serif);
-      font-weight: 700;
-      font-size: 16px !important;
-      line-height: 1.3;
-      letter-spacing: 0.05em;
-      color: #333333;
-      margin-bottom: 2px;
-    }
-
-    .pricing__card--retainer .pricing__table-fee--pct .pricing__table-fee-main {
-        position: relative;
-        align-items: baseline;
+        display: block;
+        font-family: var(--font-serif);
+        font-weight: 500;
+        font-size: 14px !important;
+        line-height: 1.3;
+        letter-spacing: 0.05em;
+        color: #333333;
+        margin-bottom: 2px;
     }
 
     .pricing__card--retainer .pricing__table-fee--pct .pricing__table-number {
         font-family: var(--font-impact);
-        font-style: normal;
-        font-weight: 400;
+        font-weight: 900;
         font-size: 28px !important;
         line-height: 1;
         letter-spacing: 0.05em;
@@ -7637,12 +7641,6 @@ details[open] .faq__question::after {
         line-height: 1;
         letter-spacing: 0.05em;
         color: #D96C8A;
-    }
-
-    .pricing__card--retainer .pricing__table-fee--pct .pricing__table-tax {
-        position: absolute;
-        top: -2px;
-        right: 4px;
     }
 
     .pricing__card--retainer .pricing__table-free {
