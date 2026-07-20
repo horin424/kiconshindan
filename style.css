@@ -2985,6 +2985,15 @@ span.crayon-underline {
     box-sizing: border-box;
 }
 
+.pricing__subtitle-lead,
+.pricing__subtitle-follow {
+    display: block;
+}
+
+.pricing__subtitle-follow {
+    margin-top: 1em;
+}
+
 .pricing__cta-bar {
     color: #ffffff;
     padding: 28px 40px 36px;
@@ -3241,6 +3250,21 @@ span.crayon-underline {
     letter-spacing: 0.1em;
 }
 
+.pricing__table-fee {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 2px;
+}
+
+.pricing__table-fee-main {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0 2px;
+}
+
 .pricing__table-label {
     font-family: var(--font-serif);
     font-size: 24px;
@@ -3273,6 +3297,14 @@ span.crayon-underline {
     font-weight: 500;
     letter-spacing: 0.1em;
     color: #333333;
+}
+
+.pricing__table-tax::before {
+    content: "（";
+}
+
+.pricing__table-tax::after {
+    content: "）";
 }
 
 .pricing__note {
@@ -7111,66 +7143,97 @@ details[open] .faq__question::after {
     }
 
     .pricing__heading {
-        gap: 8px;
+        gap: 13px;
         margin-bottom: 20px;
-        padding: 40px 16px 0;
+        padding: 0 40px;
     }
 
     .pricing__heading-text {
-        font-family: var(--font-mincho);
-        font-size: 1.45rem;
-        line-height: 1.3;
-        letter-spacing: normal;
+        font-family: var(--font-serif);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 130%;
+        letter-spacing: 0.05em;
+        color: #333333;
     }
 
     .pricing__heading-line {
-        width: min(220px, 58%);
-        max-width: 220px;
+        width: 309px;
+        max-width: 309px;
         margin: 0;
         align-self: center;
+        border-top-width: 3px;
+        border-top-color: #24324A;
     }
 
     .pricing__subtitle {
-        font-size: 0.92rem;
-        font-weight: 500;
-        padding: 0 24px;
-        line-height: 1.75;
+        font-family: var(--font-serif);
+        font-style: normal;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: #333333;
+        padding: 0 36px;
         margin-bottom: 24px;
-        letter-spacing: normal;
         width: auto;
         max-width: 100%;
     }
 
+    .pricing__subtitle-lead {
+        font-weight: 600;
+        max-width: 299px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pricing__subtitle-follow {
+        font-weight: 500;
+        margin-top: 10px;
+        max-width: 318px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .pricing__cta-bar {
-        width: calc(100% - 48px);
-        max-width: 100%;
+        width: 350px;
+        max-width: calc(100% - 40px);
         margin: 0 auto 28px;
         padding: 16px 18px 22px;
         border-radius: 10px;
         box-sizing: border-box;
+        background-color: #D96C8A;
     }
 
     .pricing__cta-bar-text {
-        font-size: 0.9rem;
-        font-weight: 600;
-        line-height: 1.6;
+        font-family: var(--font-serif);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
         text-wrap: pretty;
         padding: 0 4px;
-        letter-spacing: normal;
+        max-width: 251px;
+        margin: 0 auto;
     }
 
     .pricing__text-em {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #ffffff;
-      white-space: normal;
+        font-size: 16px;
+        font-weight: 500;
+        color: #FFFFFF;
+        white-space: normal;
     }
 
     .pricing__cta-triangle {
         bottom: -14px;
-        border-left-width: 20px;
-        border-right-width: 20px;
-        border-top-width: 20px;
+        border-left-width: 15px;
+        border-right-width: 15px;
+        border-top-width: 15px;
+        border-top-color: #D96C8A;
     }
 
     .pricing__cards-grid {
@@ -7178,7 +7241,7 @@ details[open] .faq__question::after {
         flex-wrap: wrap;
         align-items: center;
         gap: 28px;
-        padding: 0 16px 28px;
+        padding: 0 20px 28px;
         width: 100%;
         box-sizing: border-box;
     }
@@ -7186,13 +7249,13 @@ details[open] .faq__question::after {
     .pricing__plan-group {
         padding-bottom: 0;
         width: 100%;
-        max-width: 100%;
+        max-width: 350px;
     }
 
     .pricing__plan-group .pricing__card,
     .pricing__card {
         width: 100%;
-        max-width: 100%;
+        max-width: 350px;
         min-width: 0;
     }
 
@@ -7203,91 +7266,148 @@ details[open] .faq__question::after {
     }
 
     .pricing__card-desc + .pricing__card-desc {
-        margin-top: 0.9em;
+        margin-top: 10px;
     }
 
     .pricing__card {
         width: 100%;
-        max-width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        max-width: 350px;
+        border-radius: 0;
+        box-shadow: none;
         box-sizing: border-box;
         overflow: visible;
+        background-color: #FEF8EE;
     }
 
     .pricing__card-header {
-        border-radius: 10px 10px 0 0;
-        min-height: 0;
-        padding: 17px 19px;
+        border-radius: 0;
+        min-height: 60px;
+        padding: 0 19px;
+        height: 60px;
+    }
+
+    .pricing__card--success .pricing__card-header {
+        background-color: #E8B7C6;
+        height: 60px;
+    }
+
+    .pricing__card--retainer .pricing__card-header {
+        background-color: #F4C9D2;
+        height: 53px;
+        min-height: 53px;
     }
 
     .pricing__card-title {
-        font-size: 1.1rem;
-        letter-spacing: normal;
+        font-family: var(--font-serif);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 130%;
+        letter-spacing: 0.05em;
+        color: #333333;
     }
 
     .pricing__card-body {
-        padding: 18px 16px 24px;
-        border-radius: 0 0 10px 10px;
-        gap: 18px;
+        padding: 16px 20px 24px;
+        border-radius: 0;
+        gap: 16px;
+        width: 100%;
+        max-width: 100%;
+        background: #FEF8EE;
     }
 
     .pricing__card-desc,
-    .pricing__note,
     .pricing__plan-desc {
-        font-size: 0.9rem;
-        line-height: 1.7;
-        padding: 0 4px;
-        letter-spacing: normal;
+        font-family: var(--font-serif);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.05em;
+        color: #333333;
+        padding: 0;
+        max-width: 310px;
+    }
+
+    .pricing__card--success .pricing__text-accent {
+        color: #333333;
     }
 
     .pricing__card--retainer .pricing__card-desc {
-        line-height: 1.7;
+        font-weight: 700;
+        color: #24324A;
+        line-height: 24px;
+        max-width: 303px;
+    }
+
+    .pricing__card--retainer .pricing__text-accent,
+    .pricing__card--retainer .pricing__text-strong {
+        color: #24324A;
+        font-weight: 700;
     }
 
     .pricing__note {
-        padding: 22px 24px;
+        padding: 13px 24px;
         margin-top: 0;
+        background-color: #F7E7EB;
+        height: auto;
+        min-height: 166px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .pricing__note-text {
-        font-size: 1rem;
+        font-family: var(--font-serif);
+        font-style: normal;
         font-weight: 500;
-        line-height: 1.75;
-        letter-spacing: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: #333333;
         width: auto;
-        max-width: 100%;
+        max-width: 293px;
     }
 
     .pricing__badge {
         position: relative;
         left: auto;
         bottom: auto;
-        width: calc(100% - 48px);
-        max-width: 340px;
+        width: 310px;
+        max-width: calc(100% - 40px);
         height: auto;
-        min-height: 0;
-        margin: 10px auto 0;
+        min-height: 125px;
+        margin: 0 auto;
         z-index: 2;
-        border-radius: 50% / 45%;
-        padding: 28px 20px;
+        border-radius: 50% / 50%;
+        padding: 32px 14px 20px;
         box-sizing: border-box;
+        background-color: #24324A;
     }
 
     .pricing__badge-triangle {
-        top: -54px;
-        left: 20%;
-        transform: translateX(-50%) rotate(-28deg);
-        border-left-width: 11px;
-        border-right-width: 11px;
-        border-bottom-width: 68px;
+      top: -54px;
+      left: 20%;
+      transform: translateX(75%) rotate(-28deg);
+      border-left-width: 14px;
+      border-right-width: 22px;
+      border-bottom-width: 68px;
+      border-bottom-color: #24324A;
     }
 
     .pricing__badge-text {
-        font-size: 0.92rem !important;
-        line-height: 1.55 !important;
-        padding: 0 !important;
+        font-family: var(--font-serif);
+        font-style: normal;
+        font-weight: 900;
+        font-size: 16px !important;
+        line-height: 26px !important;
+        text-align: center;
         letter-spacing: 0.05em;
+        color: #FFFFFF;
+        padding: 0 !important;
+        max-width: 283px;
+        margin: 0 auto;
     }
 
     .pricing__plan-group .pricing__card {
@@ -7296,51 +7416,240 @@ details[open] .faq__question::after {
     }
 
     .pricing__table {
+        width: 310px;
         max-width: 100%;
+        border: 1px solid #24324A;
+        background-color: #FFFFFF;
     }
 
     .pricing__table th {
-        font-family: var(--font-sans);
-        font-size: 0.85rem;
-        line-height: 1.4;
-        padding: 12px 10px;
+        font-family: var(--font-serif);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        padding: 8px 10px;
         white-space: nowrap;
-        width: 40%;
+        width: 50%;
+        background-color: #D96C8A;
+    }
+
+    .pricing__card--retainer .pricing__table th {
+        background-color: #EC6B92;
+        width: 39%;
+    }
+
+    .pricing__card--retainer .pricing__table th:last-of-type,
+    .pricing__card--success .pricing__table tr:last-child th {
+        letter-spacing: 0.05em;
+    }
+
+    .pricing__card--retainer .pricing__table tr:last-child th {
+        letter-spacing: 0.1em;
     }
 
     .pricing__table td {
-        padding: 12px 10px;
+        padding: 8px 10px;
     }
 
     .pricing table,
     .pricing__table {
-        width: 100%;
+        width: 310px;
         max-width: 100%;
         table-layout: fixed;
-        font-size: 0.88rem;
+        font-size: 16px;
     }
 
     .pricing th,
     .pricing td,
     .pricing__table th,
     .pricing__table td {
-        padding: 12px 8px;
+        padding: 8px 8px;
         word-break: break-word;
     }
 
-    .pricing__table-number {
-        font-size: 1.85rem !important;
+    .pricing__table-free {
+        font-family: var(--font-serif);
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px !important;
+        line-height: 200%;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: #D96C8A;
     }
 
-    .pricing__table-free,
-    .pricing__table-label,
-    .pricing__table-percent,
-    .pricing__table-unit {
-        font-size: 1.35rem !important;
+    .pricing__table-fee {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        width: 100%;
+    }
+
+    .pricing__table-fee-main {
+        display: inline-flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1px;
+        line-height: 1;
+    }
+
+    .pricing__table-tax::before,
+    .pricing__table-tax::after {
+        content: none;
     }
 
     .pricing__table-tax {
-        font-size: 0.75rem;
+        font-family: var(--font-serif);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 8px;
+        line-height: 1;
+        letter-spacing: 0.05em;
+        color: #333333;
+    }
+
+    /* Success plan: 回収額の / large 40 with 税抜 stacked above % */
+    .pricing__card--success .pricing__table-fee--pct .pricing__table-label {
+        display: block;
+        font-family: var(--font-serif);
+        font-weight: 700;
+        font-size: 16px !important;
+        line-height: 1.3;
+        letter-spacing: 0.05em;
+        color: #333333;
+        margin-bottom: 2px;
+    }
+
+    .pricing__card--success .pricing__table-fee--pct .pricing__table-fee-main {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        align-items: end;
+        column-gap: 2px;
+        row-gap: 0;
+    }
+
+    .pricing__card--success .pricing__table-fee--pct .pricing__table-number {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        align-self: center;
+        font-family: var(--font-impact);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px !important;
+        line-height: 1;
+        letter-spacing: 0.05em;
+        color: #D96C8A;
+    }
+
+    .pricing__card--success .pricing__table-fee--pct .pricing__table-tax {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: end;
+        justify-self: center;
+        margin-bottom: 1px;
+    }
+
+    .pricing__card--success .pricing__table-fee--pct .pricing__table-percent {
+        grid-column: 2;
+        grid-row: 2;
+        align-self: start;
+        justify-self: center;
+        font-family: var(--font-serif);
+        font-weight: 700;
+        font-size: 18px !important;
+        line-height: 1;
+        letter-spacing: 0.05em;
+        color: #D96C8A;
+    }
+
+    /* Retainer: 15万円 with 税込 superscript */
+    .pricing__card--retainer .pricing__table-fee--amount {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .pricing__card--retainer .pricing__table-fee--amount .pricing__table-number {
+        font-family: var(--font-impact);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px !important;
+        line-height: 1;
+        letter-spacing: 0.05em;
+        color: #D96C8A;
+    }
+
+    .pricing__card--retainer .pricing__table-fee--amount .pricing__table-unit {
+        font-family: var(--font-serif);
+        font-weight: 900;
+        font-size: 20px !important;
+        line-height: 1.15;
+        letter-spacing: 0.05em;
+        color: #D96C8A;
+        align-self: flex-end;
+        padding-bottom: 1px;
+    }
+
+    .pricing__card--retainer .pricing__table-fee--amount .pricing__table-tax {
+        align-self: flex-start;
+        margin-top: -3px;
+        margin-left: -20px;
+    }
+
+    /* Retainer: 回収額の / 20% with 税抜 superscript */
+    .pricing__card--retainer .pricing__table-fee--pct .pricing__table-label {
+      display: block;
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 16px !important;
+      line-height: 1.3;
+      letter-spacing: 0.05em;
+      color: #333333;
+      margin-bottom: 2px;
+    }
+
+    .pricing__card--retainer .pricing__table-fee--pct .pricing__table-fee-main {
+        position: relative;
+        align-items: baseline;
+    }
+
+    .pricing__card--retainer .pricing__table-fee--pct .pricing__table-number {
+        font-family: var(--font-impact);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px !important;
+        line-height: 1;
+        letter-spacing: 0.05em;
+        color: #D96C8A;
+    }
+
+    .pricing__card--retainer .pricing__table-fee--pct .pricing__table-percent {
+        font-family: var(--font-serif);
+        font-weight: 700;
+        font-size: 22px !important;
+        line-height: 1;
+        letter-spacing: 0.05em;
+        color: #D96C8A;
+    }
+
+    .pricing__card--retainer .pricing__table-fee--pct .pricing__table-tax {
+        position: absolute;
+        top: -2px;
+        right: 4px;
+    }
+
+    .pricing__card--retainer .pricing__table-free {
+        font-size: 20px !important;
+        line-height: 20px;
+        font-weight: 900;
+        color: #D96C8A;
     }
 
     /* ---------- Flow — vertical SP cards ---------- */
@@ -7663,7 +7972,11 @@ body > main > section.faq > div.faq__container > details:nth-child(3) > summary 
     }
 
     .pricing__heading-text {
-        font-size: 1.45rem !important;
+        font-family: var(--font-serif) !important;
+        font-weight: 700 !important;
+        font-size: 24px !important;
+        line-height: 130% !important;
+        letter-spacing: 0.05em !important;
     }
 
     .attorney__header {
