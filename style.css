@@ -734,13 +734,33 @@ table {
 }
 
 .hero__feature-em {
+    position: relative;
     font-family: var(--font-serif);
     color: var(--color-accent);
     font-size: 1.75rem;
     font-weight: 900;
     line-height: 1.15;
+    z-index: 1;
 }
-
+.hero__feature-em-line {
+  position: relative;
+    display: block;
+    left: 30px;
+    bottom: 8px;
+    height: 16px;
+    width: 60px;
+    border-radius: 16px;
+    background-color: rgba(253, 230, 138, 0.9);
+    z-index: 0;
+    pointer-events: none;
+}
+.faq__question-sub-Q {
+  max-width: 20px;
+}
+body > main > section.faq > div.faq__container > details:nth-child(3) > summary > div > span:nth-child(2){
+  display: inline-block;
+  font-size: 19px;
+}
 .hero__feature-sub {
     font-family: var(--font-sans);
     font-size: 0.76rem;
@@ -1277,7 +1297,7 @@ img.problems__item-icon {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    padding-bottom: 58px;
+    padding-bottom: 32px;
     margin-bottom: 0;
     overflow: visible;
     position: relative;
@@ -3502,7 +3522,7 @@ span.crayon-underline {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 18px;
     list-style: none;
     color: #333333;
@@ -4316,7 +4336,7 @@ details[open] .faq__question::after {
         width: auto;
         flex: 1 1 auto;
         min-width: 0;
-        padding: 8px 10px;
+        padding: 4px 0px;
         border: 1px solid #333;
         background: rgba(255, 255, 255, 0.92);
     }
@@ -4326,9 +4346,12 @@ details[open] .faq__question::after {
     }
 
     .header__logo-text {
+      display: flex;
+        flex-direction: column;
         font-size: 0.72rem;
         line-height: 1.35;
         text-align: left;
+        align-items: center;
     }
 
     .header__logo-sub {
@@ -4456,20 +4479,20 @@ details[open] .faq__question::after {
     }
 
     .hero__headline-accent {
-        font-size: 1.38rem;
+        font-size: 2rem;
         font-weight: 900;
         line-height: 1.35;
     }
 
     .hero__headline-em {
-        font-size: 2.85rem;
+        font-size: 4rem;
         letter-spacing: 0.02em;
         display: inline-block;
         line-height: 1.1;
     }
 
     .hero__headline-sub {
-        font-size: 1.32rem;
+        font-size: 2rem;
         font-weight: 800;
         line-height: 1.35;
     }
@@ -4480,7 +4503,7 @@ details[open] .faq__question::after {
     }
 
     .hero__divider {
-        width: 30%;
+        width: 50%;
         max-width: 50%;
         margin: 2px 0;
     }
@@ -4593,7 +4616,24 @@ details[open] .faq__question::after {
         color: #000000;
         font-weight: 700;
     }
-
+    .hero__feature-em {
+        position: relative !important;
+        color: var(--color-accent) !important;
+        font-size: 20px !important;
+        z-index: 1 !important;
+    }
+    .hero__feature-em-line {
+      position: relative;
+        display: block;
+        left: 24px;
+        bottom: 5px;
+        height: 8px;
+        width: 42px;
+        border-radius: 16px;
+        background-color: rgba(253, 230, 138, 0.9);
+        z-index: 0;
+        pointer-events: none;
+    }
     .hero__feature:nth-child(2) .hero__feature-text,
     .hero__feature:nth-child(2),
     .hero__feature:nth-child(2) {
@@ -4836,7 +4876,7 @@ details[open] .faq__question::after {
     .problems {
       width: 100%;
       max-width: 390px;
-      margin: 80px auto;
+      margin: 24px auto 80px;
       padding: 12px 0px;
       gap: 0;
       border-radius: 0;
@@ -5069,6 +5109,7 @@ details[open] .faq__question::after {
         max-width: 100%;
         padding: 0;
         margin: 0;
+        margin-left: 24px;
         transform: none;
         text-align: left;
         background: transparent;
@@ -5329,7 +5370,7 @@ details[open] .faq__question::after {
     }
 
     .concerns__header-text {
-        font-size: 1.15rem;
+        font-size: 1.5rem;
         line-height: 1.45;
     }
 
@@ -5368,18 +5409,13 @@ details[open] .faq__question::after {
 
     .concerns__quote {
         font-size: 1.3rem;
-        padding: 4px 10px;
+        line-height: 20px !important;
     }
 
     .concerns__quote-row {
         font-size: 1.2rem;
         line-height: 1.7;
         margin: 0;
-    }
-
-    .concerns__quote--inline {
-        font-size: 1.3rem;
-        padding: 4px 10px;
     }
 
     .concerns__desc,
@@ -6216,7 +6252,7 @@ details[open] .faq__question::after {
 
     /* ---------- Benefits ---------- */
     .benefits {
-        padding: 40px 0 0px !important;
+      padding: 0px !important;
     }
 
     .benefits__intro,
@@ -7053,7 +7089,7 @@ details[open] .faq__question::after {
 
     /* ---------- Pricing ---------- */
     .pricing {
-        padding: 0 0 56px;
+        padding: 0px;
         overflow: hidden;
         background-color:#fcf9f7;
     }
@@ -7108,10 +7144,10 @@ details[open] .faq__question::after {
     }
 
     .pricing__text-em {
-        font-size: 1.02rem;
-        font-weight: 600;
-        color: #ffffff;
-        white-space: normal;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #ffffff;
+      white-space: normal;
     }
 
     .pricing__cta-triangle {
@@ -7199,7 +7235,7 @@ details[open] .faq__question::after {
     }
 
     .pricing__note-text {
-        font-size: 0.92rem;
+        font-size: 1rem;
         font-weight: 500;
         line-height: 1.75;
         letter-spacing: normal;
@@ -7421,14 +7457,28 @@ details[open] .faq__question::after {
         width: 100%;
         max-width: 100%;
     }
-
+body > main > section.faq > div.faq__container > details:nth-child(3) > summary > div > span:nth-child(2) {
+  font-size: unset !important;
+}
     .faq__question {
-        font-size: 0.92rem;
-        line-height: 1.55;
-        padding: 14px 36px 14px 14px;
-        gap: 6px;
+      font-size: 1rem !important;
+      line-height: 1.55;
+      padding: 4px 24px 4px 12px;
+      gap: 0px;
     }
-
+    .faq__question::after {
+      position: relative !important;
+      bottom: -6px;
+      left: 10px;
+    }
+    .faq__question-sub {
+      display: flex;
+      max-width: 308px;
+      width: 100%;
+    }
+    .faq__question-sub-Q {
+      max-width: 20px;
+    }
     .faq__answer-wrap {
         padding: 14px;
         gap: 6px;
