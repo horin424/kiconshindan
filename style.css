@@ -315,7 +315,7 @@ table {
     font-family: var(--font-serif);
     font-size: 20px;
     font-weight: 700;
-    line-height: 36px;
+    line-height: 30px;
     letter-spacing: 0.08em;
     text-align: center;
     color: #333333;
@@ -325,7 +325,7 @@ table {
     font-family: var(--font-serif);
     font-size: 28px;
     font-weight: 900;
-    line-height: 36px;
+    line-height: 24px;
     letter-spacing: 0.08em;
     text-align: center;
     color: #333333;
@@ -3467,7 +3467,7 @@ span.crayon-underline {
 /* FAQ Area */
 .faq {
     padding: 0 0 72px;
-    background-color: #ffffff;
+    background-color: var(--color-bg-base);
 }
 
 .faq__heading {
@@ -3522,7 +3522,7 @@ span.crayon-underline {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 18px;
     list-style: none;
     color: #333333;
@@ -3681,7 +3681,7 @@ details[open] .faq__question::after {
 /* Office Info Area */
 .office {
     padding: 78px 0;
-    background-color: #ffffff;
+    background-color: var(--color-bg-base);
 }
 
 .office__heading {
@@ -3862,7 +3862,7 @@ details[open] .faq__question::after {
     }
 
     .hero__headline-em {
-        font-size: 5rem;
+        font-size: 7rem;
     }
 
     .hero__headline-sub {
@@ -7465,6 +7465,7 @@ body > main > section.faq > div.faq__container > details:nth-child(3) > summary 
       line-height: 1.55;
       padding: 4px 24px 4px 12px;
       gap: 0px;
+      align-items: center !important;
     }
     .faq__question::after {
       position: relative !important;
