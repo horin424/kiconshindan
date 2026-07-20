@@ -3608,6 +3608,14 @@ details[open] .faq__question::after {
     overflow-wrap: anywhere;
 }
 
+.faq__answer-desktop {
+    display: none;
+}
+
+.faq__answer-mobile {
+    display: block;
+}
+
 /* Final Message Area */
 .message {
     padding: 78px 24px 0;
@@ -4255,6 +4263,14 @@ details[open] .faq__question::after {
         display: block;
         line-height: 26px;
         padding-left: 112px;
+    }
+
+    .faq__answer-mobile {
+        display: none;
+    }
+
+    .faq__answer-desktop {
+        display: block;
     }
 
     .message__visual {
@@ -7487,28 +7503,28 @@ body > main > section.faq > div.faq__container > details:nth-child(3) > summary 
 
     .faq__answer,
     .faq__answer-label {
-        font-size: 0.88rem;
+        font-size: 0.8rem;
         line-height: 1.7;
     }
 
     /* ---------- Message ---------- */
     .message {
-        padding: 40px 16px 0;
+        padding: 40px 0px 0;
         overflow: visible;
     }
 
     .message__container {
-        padding-bottom: 48px;
+        padding-bottom: 112px;
     }
 
     .message__card {
-        padding: 28px 18px 40px;
+        padding: 28px 12px 16px;
     }
 
     .message__text {
-        width: 100%;
-        font-size: 0.92rem;
-        line-height: 1.75;
+      width: 100%;
+      font-size: 15px;
+      line-height: 1.4rem;
     }
 
     .message__text-mobile {
@@ -7519,23 +7535,31 @@ body > main > section.faq > div.faq__container > details:nth-child(3) > summary 
         display: none !important;
     }
 
+    .faq__answer-mobile {
+        display: block;
+    }
+
+    .faq__answer-desktop {
+        display: none !important;
+    }
+
     .message__lead {
         font-size: 1.05rem;
     }
 
     .message__signature {
-        font-size: 1.15rem;
-        margin-top: 20px;
+      font-size: 1.4rem;
+      margin-top: 20px;
     }
 
     .message__visual {
-        width: fit-content !important;
-        max-width: 300px;
-        margin-top: -168px;
-        margin-bottom: -58px;
-        margin-left: 50%;
-        margin-right: 0;
-        justify-content: flex-end;
+      width: fit-content !important;
+      max-width: 217px;
+      /* margin-top: -163px; */
+      margin-bottom: -98px;
+      /* margin-left: 50%; */
+      margin-right: 116px;
+      justify-content: flex-end;
     }
 
     .message__photo {
@@ -7555,18 +7579,17 @@ body > main > section.faq > div.faq__container > details:nth-child(3) > summary 
     }
 
     .office__heading-line {
-        max-width: 220px;
-        border-top-width: 2px;
+        max-width: 92%;
+        border-top-width: 3px;
     }
 
     .office__heading-text {
         font-family: var(--font-mincho);
-        font-size: 1.35rem;
+        font-size: 1.6rem;
         font-weight: 900;
-        line-height: 1.4;
+        line-height: 2.5;
         letter-spacing: 0.05em;
     }
-
     .office__container {
         padding: 0;
         max-width: 100%;
