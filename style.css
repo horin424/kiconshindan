@@ -1976,7 +1976,7 @@ span.crayon-underline {
 .attorney__body {
   max-width: 1188px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 24px;
   padding: 0 48px;
   display: grid;
   grid-template-columns: 40% 60%;
@@ -2081,10 +2081,10 @@ span.crayon-underline {
 }
 
 .attorney__media {
-    max-width: none;
-    width: 100%;
-    margin: 48px auto 0;
-    padding: 0;
+  max-width: none;
+  width: 100%;
+  margin: 0px auto 0;
+  padding: 0;
 }
 
 .attorney__media picture {
@@ -6126,12 +6126,12 @@ details[open] .faq__question::after {
     }
 
     .concerns__warning-block .concerns__text-accent {
-        font-family: var(--font-serif);
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        letter-spacing: 0.05em;
-        color: #333333;
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0.05em;
+      color: var(--color-accent);
     }
 
     .concerns__final-message .concerns__text-large {
@@ -6186,7 +6186,7 @@ details[open] .faq__question::after {
         max-width: 390px;
         width: 100%;
         margin: 0 auto;
-        padding: 42px 20px 24px;
+        padding: 42px 20px 0px;
         background-color: #fcf9f7;
         box-sizing: border-box;
     }
@@ -6645,7 +6645,8 @@ details[open] .faq__question::after {
 
     .benefits__why-quote-line,
     .benefits__why-quote-em {
-        font-weight: 400;
+      font-weight: 700;
+      font-size: 15px;
     }
 
     .pink-highlight {
@@ -6755,18 +6756,18 @@ details[open] .faq__question::after {
         padding-left: 0;
         padding-right: 0;
         background-color: #fcf9f7;
-        margin-bottom: 40px;
+        margin-bottom: 16px;
     }
 
     .benefits__intro-header {
-        padding: 28px 16px;
-        margin: 0;
+      padding: 8px 16px;
+      margin: 0;
     }
 
     .benefits__intro-header-text {
-        font-size: 1.28rem !important;
-        line-height: 1.55;
-        padding: 0 8px;
+      font-size: 1.2rem !important;
+      line-height: 1.5rem;
+      padding: 0 8px;
     }
 
     .benefits__intro-header-text .text-kenten {
@@ -6783,7 +6784,7 @@ details[open] .faq__question::after {
       max-width: fit-content;
       box-sizing: border-box;
       padding: 22px 17px 20px;
-      margin: 20px 16px 0;
+      margin: 20px 16px 10px;
       border: none;
       box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
       background-color: #fef8ee;
@@ -7263,16 +7264,14 @@ details[open] .faq__question::after {
         letter-spacing: 0.05em;
         color: #FFFFFF;
         text-wrap: pretty;
-        padding: 0 4px;
-        max-width: 251px;
         margin: 0 auto;
     }
 
     .pricing__text-em {
-        font-size: 16px;
-        font-weight: 500;
-        color: #FFFFFF;
-        white-space: normal;
+      font-size: 20px;
+      font-weight: 700;
+      color: #FFFFFF;
+      white-space: normal;
     }
 
     .pricing__cta-triangle {
@@ -7414,7 +7413,6 @@ details[open] .faq__question::after {
         letter-spacing: 0.05em;
         color: #333333;
         width: auto;
-        max-width: 293px;
     }
 
     .pricing__badge {
@@ -7743,7 +7741,9 @@ details[open] .faq__question::after {
     .flow__text-note {
         font-size: 0.85rem !important;
     }
-
+    .flow__text-small-mobile {
+      font-size: 12px;
+    }
     .flow__arrow-wrap {
         padding: 4px 0 12px;
     }
@@ -7989,6 +7989,16 @@ body > main > section.faq > div.faq__container > details:nth-child(3) > summary 
         font-size: 1.38rem !important;
         font-weight: 700;
         line-height: 1.4 !important;
+    }
+    .footer__container {
+      gap: 4px;
+    }
+    .footer__link {
+      font-size:14px;
+    }
+    .footer__copyright {
+        font-size: 12px;
+        opacity: 0.8;
     }
 }
 
