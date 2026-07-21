@@ -653,11 +653,12 @@ table {
 }
 
 .hero__support {
-    font-family: var(--font-serif);
+    font-family: var(--font-sans);
+    letter-spacing: 2px;
     font-size: 1.4rem;
     line-height: 1.55;
     max-width: 620px;
-    font-weight: 800;
+    font-weight: 500;
 }
 
 .hero__text-lawyer {
@@ -4532,7 +4533,7 @@ details[open] .faq__question::after {
             ),
             url("images/backgrounds/hero-sp-bg.png");
         background-size: 100% 100%, cover;
-        background-position: left top, right top;
+        background-position: left top, right -40px;
         background-repeat: no-repeat;
         min-height: 100%;
     }
@@ -4552,15 +4553,15 @@ details[open] .faq__question::after {
     }
 
     .hero__sub-text {
-        font-size: 0.9rem;
-        line-height: 1.5;
-        font-weight: 700;
-        letter-spacing: 0;
+      font-size: 1rem;
+      line-height: 24px;
+      font-weight: 700;
+      letter-spacing: 2px;
     }
 
     .hero__sub-line {
-        width: 3.2em;
-        margin-left: 0.35em;
+        width: 2em;
+        margin-left: 0.2em;
     }
 
     .hero__catch {
@@ -4586,9 +4587,12 @@ details[open] .faq__question::after {
     }
 
     .hero__headline-sub {
+        display: inline-block;
         font-size: 2rem;
         font-weight: 800;
         line-height: 1.35;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .hero__feelings {
